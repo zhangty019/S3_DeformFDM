@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/zhang/Documents/My documents/MeshExample/ShapeLabEmpty/ShapeLabEmpty/eigen3/test/vectorization_logic.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "vectorization_logic_2"
+	}
+}

@@ -1,0 +1,87 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"ei_add_test",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake/EigenTesting.cmake",
+			"unsupported/test/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 64,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 276,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "autodiff_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "autodiff_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "autodiff_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "autodiff_1::@a8a634a79751858e4ce0"
+		}
+	],
+	"id" : "autodiff::@a8a634a79751858e4ce0",
+	"name" : "autodiff",
+	"paths" : 
+	{
+		"build" : "unsupported/test",
+		"source" : "unsupported/test"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

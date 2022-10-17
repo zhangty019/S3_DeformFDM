@@ -1,0 +1,57 @@
+﻿  Generate moc_predefs.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(231,5): warning MSB8064: 项“GeneratedFiles\moc_predefs.h.cbt”的自定义生成成功，但指定的依赖项“d:\many_3dp_cnc_cam\qmeshlib\generatedfiles\moc_predefs.h.cbt”不存在。这可能会导致增量生成无法正常工作。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(231,5): warning MSB8065: 项“GeneratedFiles\moc_predefs.h.cbt”的自定义生成成功，但尚未创建指定的输出“d:\many_3dp_cnc_cam\qmeshlib\generatedfiles\release\moc_predefs.h”。这可能会导致增量生成无法正常工作。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 Build.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\PQPLib\Build.cpp, ..\PQPLib\Build.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 BV.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\PQPLib\BV.cpp, ..\PQPLib\BV.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 PQP.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\PQPLib\PQP.cpp, ..\PQPLib\PQP.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 TriDist.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\PQPLib\TriDist.cpp, ..\PQPLib\TriDist.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 geom.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\geom.cpp, QHullLib\geom.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 geom2.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\geom2.cpp, QHullLib\geom2.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 global.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\global.cpp, QHullLib\global.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 io.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\io.cpp, QHullLib\io.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 men.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\men.cpp, QHullLib\men.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 merge.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\merge.cpp, QHullLib\merge.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 poly.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\poly.cpp, QHullLib\poly.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 poly2.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\poly2.cpp, QHullLib\poly2.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 qconvex.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\qconvex.cpp, QHullLib\qconvex.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 qhull.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\qhull.cpp, QHullLib\qhull.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 qset.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\qset.cpp, QHullLib\qset.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 rbox.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\rbox.cpp, QHullLib\rbox.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 stat.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\stat.cpp, QHullLib\stat.cpp。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1006,5): warning MSB8027: 名为 user.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\dependenceFiles\QHullLib\user.cpp, QHullLib\user.cpp。
+  BV.cpp
+  Build.cpp
+  PQP.cpp
+  TriDist.cpp
+c1xx : fatal error C1083: 无法打开源文件: “..\PQPLib\BV.cpp”: No such file or directory
+  geom.cpp
+  geom2.cpp
+c1xx : fatal error C1083: 无法打开源文件: “..\PQPLib\Build.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “..\PQPLib\PQP.cpp”: No such file or directory
+  global.cpp
+  io.cpp
+  men.cpp
+  merge.cpp
+  poly.cpp
+c1xx : fatal error C1083: 无法打开源文件: “..\PQPLib\TriDist.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\geom2.cpp”: No such file or directory
+  poly2.cpp
+  qconvex.cpp
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\io.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\global.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\poly.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\geom.cpp”: No such file or directory
+  qhull.cpp
+  qset.cpp
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\merge.cpp”: No such file or directory
+  rbox.cpp
+  stat.cpp
+  user.cpp
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\men.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\qconvex.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\poly2.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\qset.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\rbox.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\qhull.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\user.cpp”: No such file or directory
+c1xx : fatal error C1083: 无法打开源文件: “QHullLib\stat.cpp”: No such file or directory

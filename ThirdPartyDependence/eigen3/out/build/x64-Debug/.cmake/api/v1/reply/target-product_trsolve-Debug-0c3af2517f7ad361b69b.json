@@ -1,0 +1,187 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"ei_add_test",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake/EigenTesting.cmake",
+			"test/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 214,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 276,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "product_trsolve_14::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "product_trsolve_4::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "product_trsolve_7::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "product_trsolve_6::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "product_trsolve_3::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "product_trsolve_2::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "product_trsolve_1::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "product_trsolve_9::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "product_trsolve_5::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "product_trsolve_13::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "product_trsolve_11::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "product_trsolve_10::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "product_trsolve_12::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "product_trsolve_8::@36f028580bb02cc8272a"
+		}
+	],
+	"id" : "product_trsolve::@36f028580bb02cc8272a",
+	"name" : "product_trsolve",
+	"paths" : 
+	{
+		"build" : "test",
+		"source" : "test"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

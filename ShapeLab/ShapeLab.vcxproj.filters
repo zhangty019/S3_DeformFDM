@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeformTet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fabrication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GcodeGeneration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="heatMethod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="heatmethodfield.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IsoLayerGeneration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PrincipleStressField.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SupportGeneration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="toolpathGeneration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="MainWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="All.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Back">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Bottom">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\FaceNormal.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Folder.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Front">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="In.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\InputSelection.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Isometric">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Left">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Mesh.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Node.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\NodeNormal.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Open">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Out.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Profile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Right">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\SaveSelection.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Save">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Shade.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="ShapeLab.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="resource\Top">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="View.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Window.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\Zoom">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\abaqus">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="as.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\selectEdge.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\selectFace.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\selectFix.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\selectHandle.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource\selectNode.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DeformTet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Fabrication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GcodeGeneration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="heatMethod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="heatmethodfield.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IsoLayerGeneration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrincipleStressField.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SupportGeneration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="toolpathGeneration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

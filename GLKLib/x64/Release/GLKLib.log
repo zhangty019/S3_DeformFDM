@@ -1,0 +1,66 @@
+﻿  Reading Qt configuration (C:\Qt\Qt5.12.3\5.12.3\msvc2017_64\bin\qmake.exe)
+  Generate moc_predefs.h
+  Moc'ing GLKLib.h...
+  GLKGeometry.cpp
+  GLKGraph.cpp
+  GLKHeap.cpp
+  GLKLib.cpp
+  GLKMatrixLib.cpp
+  GLKNearestNeighbor.cpp
+  GLKObList.cpp
+  GLKRational.cpp
+  GLKSparseMatrix.cpp
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKGraph.cpp(64,9): warning C4189: “maxFlow”: 局部变量已初始化但不引用
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKGraph.cpp(68,17): warning C4189: “node”: 局部变量已初始化但不引用
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKGraph.cpp(112,82): warning C4100: “targetNode”: 未引用的形参
+  GLKSparseMatrixDirectSolver.cpp
+  GLKSparseMatrixIterativeSolver.cpp
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKMatrixLib.cpp(138,59): warning C4100: “col”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKMatrixLib.cpp(161,57): warning C4100: “col”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKMatrixLib.cpp(293,55): warning C4100: “col”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKMatrixLib.cpp(305,46): warning C4100: “row”: 未引用的形参
+  InteractiveTool.cpp
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKSparseMatrixIterativeSolver.cpp(78,57): warning C4100: “nmax”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKSparseMatrixIterativeSolver.cpp(362,120): warning C4100: “itrnsp”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKSparseMatrixIterativeSolver.cpp(362,72): warning C4100: “ija”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(163,35): warning C4100: “bVertexNormalShading”: 未引用的形参 (编译源文件 GLKGeometry.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(163,35): warning C4100: “bVertexNormalShading”: 未引用的形参 (编译源文件 GLKLib.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(214,63): warning C4100: “even_type”: 未引用的形参 (编译源文件 GLKGeometry.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(214,39): warning C4100: “event”: 未引用的形参 (编译源文件 GLKGeometry.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(214,63): warning C4100: “even_type”: 未引用的形参 (编译源文件 GLKLib.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(214,39): warning C4100: “event”: 未引用的形参 (编译源文件 GLKLib.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKGeometry.h(493,28): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据 (编译源文件 GLKGeometry.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(163,35): warning C4100: “bVertexNormalShading”: 未引用的形参 (编译源文件 InteractiveTool.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(214,63): warning C4100: “even_type”: 未引用的形参 (编译源文件 InteractiveTool.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(214,39): warning C4100: “event”: 未引用的形参 (编译源文件 InteractiveTool.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.h(7,60): warning C4091: “typedef ”: 没有声明变量时忽略“select_type”的左侧 (编译源文件 InteractiveTool.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKCameraTool.h(9,62): warning C4091: “typedef ”: 没有声明变量时忽略“camera_type”的左侧 (编译源文件 GLKLib.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.h(7,60): warning C4091: “typedef ”: 没有声明变量时忽略“select_type”的左侧 (编译源文件 GLKLib.cpp)
+D:\MANY_3DP_CNC_CAM\QMeshLib\PolygenMesh.h(22,2): warning C4091: “typedef ”: 没有声明变量时忽略“mesh_type”的左侧 (编译源文件 InteractiveTool.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKGeometry.h(493,28): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据 (编译源文件 InteractiveTool.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKGeometry.h(493,28): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据 (编译源文件 GLKLib.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKCameraTool.h(9,62): warning C4091: “typedef ”: 没有声明变量时忽略“camera_type”的左侧 (编译源文件 InteractiveTool.cpp)
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.cpp(198,20): warning C4189: “oldRange”: 局部变量已初始化但不引用
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.cpp(228,12): warning C4189: “f”: 局部变量已初始化但不引用
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.cpp(398,52): warning C4100: “bRefresh”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.cpp(401,11): warning C4189: “oldRange”: 局部变量已初始化但不引用
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.cpp(676,38): warning C4100: “event”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.cpp(720,69): warning C4100: “bFill”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.cpp(873,9): warning C4189: “index”: 局部变量已初始化但不引用
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.cpp(881,13): warning C4189: “in”: 局部变量已初始化但不引用
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(105,68): warning C4100: “event_type”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(105,44): warning C4100: “event”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(138,68): warning C4100: “event_type”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(138,44): warning C4100: “event”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(186,68): warning C4100: “event_type”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(186,44): warning C4100: “event”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(235,68): warning C4100: “event_type”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(235,44): warning C4100: “event”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(277,69): warning C4100: “event_type”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(277,45): warning C4100: “event”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\InteractiveTool.cpp(338,9): warning C4189: “selectNum”: 局部变量已初始化但不引用
+  moc_GLKLib.cpp
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(163,35): warning C4100: “bVertexNormalShading”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(214,63): warning C4100: “even_type”: 未引用的形参
+D:\MANY_3DP_CNC_CAM\GLKLib\GLKLib.h(214,39): warning C4100: “event”: 未引用的形参
+  GLKLib.vcxproj -> D:\MANY_3DP_CNC_CAM\GLKLib\release\GLKLib.lib

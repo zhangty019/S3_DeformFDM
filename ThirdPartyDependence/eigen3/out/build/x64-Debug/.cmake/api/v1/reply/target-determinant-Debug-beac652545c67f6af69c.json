@@ -1,0 +1,107 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"ei_add_test",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake/EigenTesting.cmake",
+			"test/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 222,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 276,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "determinant_6::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "determinant_3::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "determinant_4::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "determinant_2::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "determinant_5::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "determinant_1::@36f028580bb02cc8272a"
+		}
+	],
+	"id" : "determinant::@36f028580bb02cc8272a",
+	"name" : "determinant",
+	"paths" : 
+	{
+		"build" : "test",
+		"source" : "test"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

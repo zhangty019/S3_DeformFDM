@@ -1,0 +1,127 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"ei_add_test",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake/EigenTesting.cmake",
+			"unsupported/test/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 124,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 276,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "polynomialutils_8::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "polynomialutils_9::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "polynomialutils_7::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "polynomialutils_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "polynomialutils_6::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "polynomialutils_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "polynomialutils_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "polynomialutils_2::@a8a634a79751858e4ce0"
+		}
+	],
+	"id" : "polynomialutils::@a8a634a79751858e4ce0",
+	"name" : "polynomialutils",
+	"paths" : 
+	{
+		"build" : "unsupported/test",
+		"source" : "unsupported/test"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,167 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"ei_add_test",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake/EigenTesting.cmake",
+			"test/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 224,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 276,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "qr_4::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "qr_7::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "qr_3::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "qr_2::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "qr_6::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "qr_9::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "qr_8::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "qr_11::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "qr_1::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "qr_10::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "qr_5::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "qr_12::@36f028580bb02cc8272a"
+		}
+	],
+	"id" : "qr::@36f028580bb02cc8272a",
+	"name" : "qr",
+	"paths" : 
+	{
+		"build" : "test",
+		"source" : "test"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

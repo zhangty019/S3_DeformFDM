@@ -1,0 +1,723 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"doc/CMakeLists.txt",
+			"doc/examples/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 2
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "Tutorial_simple_example_dynamic_size::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_colwise::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "class_FixedVectorBlock::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_reductions_norm::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "Tutorial_BlockOperations_vector::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "Tutorial_BlockOperations_print_block::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "Tutorial_ArrayClass_addition::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "class_CwiseUnaryOp::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "Tutorial_ArrayClass_cwise_other::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "class_CwiseUnaryOp_ptrfun::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "class_VectorBlock::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "Tutorial_ArrayClass_interop_matrix::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "TutorialLinAlgSetThreshold::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "Tutorial_BlockOperations_block_assignment::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "function_taking_eigenbase::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 18,
+			"id" : "tut_arithmetic_redux_basic::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "Tutorial_ArrayClass_mult::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 20,
+			"id" : "Tutorial_BlockOperations_colrow::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 21,
+			"id" : "make_circulant::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 22,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_visitors::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 23,
+			"id" : "tut_matrix_resize::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 24,
+			"id" : "tut_arithmetic_matrix_mul::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 25,
+			"id" : "tut_arithmetic_scalar_mul_div::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 26,
+			"id" : "tut_matrix_resize_fixed_size::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 27,
+			"id" : "class_FixedBlock::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 28,
+			"id" : "matrixfree_cg::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 29,
+			"id" : "class_Block::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 30,
+			"id" : "tut_arithmetic_add_sub::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 31,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_rowwise::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 32,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_reductions_operatornorm::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 33,
+			"id" : "tut_arithmetic_dot_cross::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 34,
+			"id" : "tut_matrix_coefficient_accessors::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 35,
+			"id" : "DenseBase_template_int_middleRows::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 36,
+			"id" : "Tutorial_simple_example_fixed_size::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 37,
+			"id" : "make_circulant2::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 38,
+			"id" : "QuickStart_example::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 39,
+			"id" : "QuickStart_example2_dynamic::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 40,
+			"id" : "DenseBase_middleRows_int::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 41,
+			"id" : "DenseBase_template_int_middleCols::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 42,
+			"id" : "CustomizingEigen_Inheritance::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 43,
+			"id" : "DenseBase_middleCols_int::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 44,
+			"id" : "TutorialLinAlgSVDSolve::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 45,
+			"id" : "TutorialLinAlgExSolveColPivHouseholderQR::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 46,
+			"id" : "Cwise_lgamma::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 47,
+			"id" : "Cwise_erf::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 48,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_broadcast_simple::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 49,
+			"id" : "Cwise_erfc::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 50,
+			"id" : "class_CwiseBinaryOp::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 51,
+			"id" : "nullary_indexing::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 52,
+			"id" : "Tutorial_PartialLU_solve::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 53,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_reductions_bool::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 54,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_maxnorm::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 55,
+			"id" : "Tutorial_BlockOperations_corner::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 56,
+			"id" : "TutorialLinAlgInverseDeterminant::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 57,
+			"id" : "Tutorial_ArrayClass_interop::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 58,
+			"id" : "TutorialLinAlgRankRevealing::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 59,
+			"id" : "TutorialLinAlgSelfAdjointEigenSolver::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 60,
+			"id" : "TemplateKeyword_simple::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 61,
+			"id" : "QuickStart_example2_fixed::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 62,
+			"id" : "function_taking_ref::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 63,
+			"id" : "TemplateKeyword_flexible::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 64,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_broadcast_1nn::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 65,
+			"id" : "TutorialLinAlgExSolveLDLT::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 66,
+			"id" : "TutorialLinAlgExComputeSolveError::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 67,
+			"id" : "TutorialInplaceLU::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 68,
+			"id" : "Tutorial_ArrayClass_accessors::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 69,
+			"id" : "TutorialLinAlgComputeTwice::@a644e134540d2bdf51aa"
+		},
+		{
+			"backtrace" : 70,
+			"id" : "Tutorial_ReductionsVisitorsBroadcasting_broadcast_simple_rowwise::@a644e134540d2bdf51aa"
+		}
+	],
+	"id" : "all_examples::@c2466c91de71b9c692d9",
+	"name" : "all_examples",
+	"paths" : 
+	{
+		"build" : "doc",
+		"source" : "doc"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

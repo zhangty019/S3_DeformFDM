@@ -1,0 +1,97 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"ei_add_test",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake/EigenTesting.cmake",
+			"test/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 229,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 276,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "schur_real_1::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "schur_real_2::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "schur_real_5::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "schur_real_4::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "schur_real_3::@36f028580bb02cc8272a"
+		}
+	],
+	"id" : "schur_real::@36f028580bb02cc8272a",
+	"name" : "schur_real",
+	"paths" : 
+	{
+		"build" : "test",
+		"source" : "test"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

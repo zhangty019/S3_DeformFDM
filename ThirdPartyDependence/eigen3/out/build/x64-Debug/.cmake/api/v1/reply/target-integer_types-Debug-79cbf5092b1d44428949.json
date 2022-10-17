@@ -1,0 +1,137 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"ei_add_test",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake/EigenTesting.cmake",
+			"test/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 175,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 276,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 280,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "integer_types_3::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "integer_types_5::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "integer_types_8::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "integer_types_1::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "integer_types_2::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "integer_types_6::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "integer_types_4::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "integer_types_9::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "integer_types_7::@36f028580bb02cc8272a"
+		}
+	],
+	"id" : "integer_types::@36f028580bb02cc8272a",
+	"name" : "integer_types",
+	"paths" : 
+	{
+		"build" : "test",
+		"source" : "test"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

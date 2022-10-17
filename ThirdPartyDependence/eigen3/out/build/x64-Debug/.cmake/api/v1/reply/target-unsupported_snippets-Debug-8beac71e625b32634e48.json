@@ -1,0 +1,35 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET"
+		],
+		"files" : 
+		[
+			"unsupported/doc/snippets/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			}
+		]
+	},
+	"id" : "unsupported_snippets::@a22a4a486176261561d6",
+	"name" : "unsupported_snippets",
+	"paths" : 
+	{
+		"build" : "unsupported/doc/snippets",
+		"source" : "unsupported/doc/snippets"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

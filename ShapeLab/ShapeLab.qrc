@@ -1,0 +1,31 @@
+<RCC>
+  <qresource prefix="/">
+    <file>resource/InputSelection.png</file>
+    <file>resource/SaveSelection.png</file>
+    <file>resource/selectHandle.png</file>
+    <file>resource/Open Folder.png</file>
+    <file>resource/selectFix.png</file>
+    <file>resource/Back View.png</file>
+    <file>resource/Bottom View.png</file>
+    <file>resource/Front View.png</file>
+    <file>resource/abaqus logo.png</file>
+    <file>resource/Left View.png</file>
+    <file>resource/Right View.png</file>
+    <file>resource/Top View.png</file>
+    <file>resource/Isometric View.png</file>
+    <file>resource/Zoom All.png</file>
+    <file>resource/Zoom In.png</file>
+    <file>resource/Zoom Out.png</file>
+    <file>resource/Zoom Window.png</file>
+    <file>resource/Shade.png</file>
+    <file>resource/Mesh.png</file>
+    <file>resource/Node.png</file>
+    <file>resource/Save as.png</file>
+    <file>resource/selectNode.png</file>
+    <file>resource/selectFace.png</file>
+    <file>resource/Profile.png</file>
+    <file>resource/FaceNormal.png</file>
+    <file>resource/NodeNormal.png</file>
+    <file>resource/selectEdge.png</file>
+  </qresource>
+</RCC>

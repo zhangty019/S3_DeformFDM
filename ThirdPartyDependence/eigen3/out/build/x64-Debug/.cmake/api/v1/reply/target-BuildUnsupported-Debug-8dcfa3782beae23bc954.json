@@ -1,0 +1,2066 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"add_dependencies",
+			"ei_add_test_internal",
+			"ei_add_test"
+		],
+		"files" : 
+		[
+			"unsupported/test/CMakeLists.txt",
+			"cmake/EigenTesting.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 145,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 63,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 72,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 9
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 12
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 15
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 123,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 20
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 22
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 24
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 26
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 28
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 30
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 32
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 34
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 35
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 37
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 39
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 40
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 42
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 44
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 45
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 47
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 67,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 49
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 50
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 52
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 151,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 54
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 55
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 57
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 59
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 60
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 62
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 64
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 49
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 66
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 49
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 68
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 70
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 64,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 72
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 73
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 75
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 77
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 73,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 79
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 80
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 82
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 84
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 72
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 86
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 124,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 88
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 89
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 72
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 91
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 93
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 95
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 79
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 97
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 99
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 101
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 103
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 72
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 105
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 79
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 107
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 138,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 109
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 110
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 79
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 112
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 114
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 116
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 118
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 120
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 59
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 122
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 124
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 126
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 59
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 128
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 79
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 130
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 132
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 134
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 142,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 136
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 137
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 91,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 139
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 140
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 142
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 144
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 146
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 148
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 127,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 150
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 151
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 150
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 153
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 59
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 155
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 130,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 157
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 158
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 76,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 160
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 161
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 163
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 88
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 165
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 157
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 167
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 88
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 169
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 125,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 171
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 172
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 174
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 175
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 154,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 177
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 178
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 88
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 180
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 182
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 88
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 184
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 88
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 186
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 188
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 126,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 190
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 191
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 129,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 193
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 194
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 196
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 190
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 198
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 139
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 200
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 193
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 202
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 204
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 139
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 206
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 208
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 88
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 210
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 139,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 212
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 213
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 141,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 215
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 216
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 143,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 218
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 219
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 144,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 221
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 222
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 88
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 224
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 140,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 226
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 227
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 139
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 229
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 231
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 233
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 148,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 235
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 236
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 177
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 238
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 240
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 147,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 242
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 243
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 245
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 150,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 247
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 248
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 177
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 250
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 177
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 252
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 177
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 254
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 149,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 256
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 257
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 177
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 259
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 146,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 288,
+				"parent" : 261
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 106,
+				"parent" : 262
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "cxx11_tensor_intdiv_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "autodiff_scalar_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "matrix_power_10::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "matrix_function_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "matrix_exponential_7::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "polynomialsolver_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 21,
+			"id" : "autodiff_scalar_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 23,
+			"id" : "matrix_power_12::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 25,
+			"id" : "cxx11_tensor_intdiv_6::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 27,
+			"id" : "cxx11_tensor_intdiv_7::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 29,
+			"id" : "autodiff_scalar_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 31,
+			"id" : "cxx11_tensor_intdiv_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 33,
+			"id" : "autodiff_scalar_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 36,
+			"id" : "NumericalDiff::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 38,
+			"id" : "autodiff_scalar_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 41,
+			"id" : "NonLinearOptimization::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 43,
+			"id" : "matrix_power_8::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 46,
+			"id" : "alignedvector3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 48,
+			"id" : "matrix_exponential_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 51,
+			"id" : "BVH_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 53,
+			"id" : "matrix_exponential_6::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 56,
+			"id" : "cxx11_tensor_io::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 58,
+			"id" : "matrix_exponential_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 61,
+			"id" : "EulerAngles_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 63,
+			"id" : "matrix_function_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 65,
+			"id" : "polynomialsolver_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 67,
+			"id" : "BVH_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 69,
+			"id" : "BVH_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 71,
+			"id" : "matrix_function_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 74,
+			"id" : "autodiff_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 76,
+			"id" : "matrix_exponential_8::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 78,
+			"id" : "matrix_exponential_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 81,
+			"id" : "matrix_square_root_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 83,
+			"id" : "polynomialsolver_6::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 85,
+			"id" : "matrix_exponential_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 87,
+			"id" : "autodiff_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 90,
+			"id" : "polynomialutils_8::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 92,
+			"id" : "autodiff_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 94,
+			"id" : "matrix_exponential_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 96,
+			"id" : "matrix_exponential_9::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 98,
+			"id" : "matrix_square_root_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 100,
+			"id" : "polynomialsolver_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 102,
+			"id" : "matrix_function_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 104,
+			"id" : "matrix_function_7::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 106,
+			"id" : "autodiff_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 108,
+			"id" : "matrix_square_root_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 111,
+			"id" : "cxx11_tensor_dimension::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 113,
+			"id" : "matrix_square_root_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 115,
+			"id" : "matrix_power_7::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 117,
+			"id" : "matrix_power_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 119,
+			"id" : "matrix_function_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 121,
+			"id" : "matrix_power_6::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 123,
+			"id" : "EulerAngles_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 125,
+			"id" : "matrix_power_11::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 127,
+			"id" : "matrix_power_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 129,
+			"id" : "EulerAngles_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 131,
+			"id" : "matrix_square_root_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 133,
+			"id" : "polynomialsolver_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 135,
+			"id" : "matrix_power_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 138,
+			"id" : "cxx11_tensor_forced_eval::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 141,
+			"id" : "sparse_extra_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 143,
+			"id" : "matrix_power_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 145,
+			"id" : "polynomialsolver_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 147,
+			"id" : "matrix_function_6::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 149,
+			"id" : "matrix_power_9::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 152,
+			"id" : "minres_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 154,
+			"id" : "minres_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 156,
+			"id" : "EulerAngles_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 159,
+			"id" : "special_functions_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 162,
+			"id" : "FFT::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 164,
+			"id" : "matrix_power_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 166,
+			"id" : "polynomialutils_9::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 168,
+			"id" : "special_functions_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 170,
+			"id" : "polynomialutils_7::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 173,
+			"id" : "splines::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 176,
+			"id" : "levenberg_marquardt::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 179,
+			"id" : "cxx11_tensor_uint128_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 181,
+			"id" : "polynomialutils_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 183,
+			"id" : "polynomialsolver_10::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 185,
+			"id" : "polynomialutils_6::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 187,
+			"id" : "polynomialutils_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 189,
+			"id" : "polynomialsolver_12::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 192,
+			"id" : "gmres_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 195,
+			"id" : "kronecker_product_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 197,
+			"id" : "polynomialsolver_8::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 199,
+			"id" : "gmres_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 201,
+			"id" : "sparse_extra_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 203,
+			"id" : "kronecker_product_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 205,
+			"id" : "polynomialsolver_7::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 207,
+			"id" : "sparse_extra_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 209,
+			"id" : "polynomialsolver_11::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 211,
+			"id" : "polynomialutils_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 214,
+			"id" : "cxx11_tensor_map::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 217,
+			"id" : "cxx11_tensor_comparisons::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 220,
+			"id" : "cxx11_tensor_math::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 223,
+			"id" : "cxx11_tensor_const::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 225,
+			"id" : "polynomialutils_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 228,
+			"id" : "cxx11_tensor_assign::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 230,
+			"id" : "sparse_extra_4::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 232,
+			"id" : "polynomialsolver_9::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 234,
+			"id" : "cxx11_tensor_intdiv_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 237,
+			"id" : "cxx11_tensor_sugar::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 239,
+			"id" : "cxx11_tensor_uint128_1::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 241,
+			"id" : "cxx11_tensor_intdiv_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 244,
+			"id" : "cxx11_tensor_empty::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 246,
+			"id" : "cxx11_tensor_intdiv_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 249,
+			"id" : "cxx11_tensor_layout_swap::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 251,
+			"id" : "cxx11_tensor_uint128_2::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 253,
+			"id" : "cxx11_tensor_uint128_3::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 255,
+			"id" : "cxx11_tensor_uint128_6::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 258,
+			"id" : "cxx11_tensor_roundings::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 260,
+			"id" : "cxx11_tensor_uint128_5::@a8a634a79751858e4ce0"
+		},
+		{
+			"backtrace" : 263,
+			"id" : "cxx11_tensor_casts::@a8a634a79751858e4ce0"
+		}
+	],
+	"id" : "BuildUnsupported::@a8a634a79751858e4ce0",
+	"name" : "BuildUnsupported",
+	"paths" : 
+	{
+		"build" : "unsupported/test",
+		"source" : "unsupported/test"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}
