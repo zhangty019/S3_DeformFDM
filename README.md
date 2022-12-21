@@ -41,7 +41,7 @@ Move to the next page **Slicing_Toolpath**, click button **3.0 Layer Generation 
 **Step 4: Curved layer remesh**
 The remesh operation is conducted by running .bat file integrated in the MeshLab.
 
-- **Note**: The **remesh_slimmedLayer.bat** file is in **\DataSet\remesh_operation**, and the directory line should be modified. Please check this github link for more details [here](https://dl.acm.org/doi/10.1145/3550454.3555516).
+- **Note**: The **remesh_slimmedLayer.bat** file is in **\DataSet\remesh_operation**, and the directory line should be modified. Please check this github link for more details [here](https://github.com/zhangty019/remesh_bat).
 
 **Step 5: Toolpath generation**
 Click button '**Get Tool-Path**' to generate toolpath with parameters - Width and Distance. And **Output** to save the layers and toolpath into **\DataSet\CURVED_LAYER** and **\DataSet\TOOL_PATH**.

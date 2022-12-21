@@ -155,7 +155,7 @@ void MainWindow::createActions()
 
     //File IO
     //connect(ui->pushButton_tet2surface, SIGNAL(released()), this, SLOT(run_tet2surface()));
-    //connect(ui->pushButton_outputIsoLayerSet, SIGNAL(released()), this, SLOT(output_IsoLayer_set()));
+    connect(ui->pushButton_outputIsoLayerSet, SIGNAL(released()), this, SLOT(output_IsoLayer_set()));
     connect(ui->pushButton_outputToolpath, SIGNAL(released()), this, SLOT(output_Toolpath_set()));
     //connect(ui->pushButton_output_vectorVSobjective, SIGNAL(released()), this, SLOT(output_vectorVSobjective()));
     //connect(ui->pushButton_output_userWaypoints, SIGNAL(released()), this, SLOT(output_userWaypoints()));
