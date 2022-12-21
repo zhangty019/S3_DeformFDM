@@ -13,10 +13,8 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDockWidget>
 #include <QtWidgets/QDoubleSpinBox>
-#include <QtWidgets/QFormLayout>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -28,7 +26,6 @@
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
-#include <QtWidgets/QSlider>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
@@ -120,9 +117,6 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_8;
     QDoubleSpinBox *doubleSpinBox_supportFreeAngle;
-    QHBoxLayout *horizontalLayout_28;
-    QPushButton *pushButton_calBestOrientation;
-    QCheckBox *checkBox_computeBestOrientation;
     QPushButton *pushButton_s3DeformFDM_supportLess_ASAP;
     QFrame *line_4;
     QHBoxLayout *horizontalLayout_30;
@@ -145,61 +139,13 @@ public:
     QDoubleSpinBox *doubleSpinBox_keepWeight_SQC;
     QLabel *label_54;
     QDoubleSpinBox *doubleSpinBox_keepWeight_SQV;
-    QHBoxLayout *horizontalLayout_37;
     QPushButton *pushButton_s3DeformFDM_hybrid_SL_SQ_ASAP;
     QPushButton *pushButton_s3DeformFDM_hybrid_SR_SQ_ASAP;
     QPushButton *pushButton_s3DeformFDM_hybrid_SL_SR_ASAP;
     QPushButton *pushButton_s3DeformFDM_hybrid_SL_SR_SQ_ASAP;
+    QFrame *line_16;
     QPushButton *pushButton_s3DeformFDM_inverseDeform;
     QSpacerItem *verticalSpacer_2;
-    QWidget *tab_4;
-    QVBoxLayout *verticalLayout_5;
-    QLabel *label_7;
-    QHBoxLayout *horizontalLayout_6;
-    QLabel *label_14;
-    QSlider *horizontalSlider_slice_Multi_dir;
-    QComboBox *comboBox_planeDir;
-    QHBoxLayout *horizontalLayout_5;
-    QPushButton *pushButton_drawScaleValue;
-    QComboBox *comboBox_scaleValueDirection;
-    QLabel *label_9;
-    QHBoxLayout *horizontalLayout_4;
-    QLabel *label_12;
-    QSpinBox *spinBox_ShowLayerIndex;
-    QSpacerItem *horizontalSpacer_6;
-    QCheckBox *checkBox_EachLayerSwitch;
-    QHBoxLayout *horizontalLayout_8;
-    QPushButton *pushButton_ShowAllLayers;
-    QRadioButton *radioButton_compatibleLayer;
-    QFrame *line_3;
-    QLabel *label_3;
-    QHBoxLayout *horizontalLayout_23;
-    QLabel *label_36;
-    QLabel *label_39;
-    QDoubleSpinBox *doubleSpinBox_rot_phi;
-    QLabel *label_40;
-    QDoubleSpinBox *doubleSpinBox_rot_theta;
-    QHBoxLayout *horizontalLayout_24;
-    QLabel *label_41;
-    QSpacerItem *horizontalSpacer_5;
-    QLabel *label_43;
-    QDoubleSpinBox *doubleSpinBox_modelHeight_y;
-    QPushButton *pushButton_model_move_rotation;
-    QFrame *line_13;
-    QLabel *label_45;
-    QPushButton *pushButton_tet2surface;
-    QPushButton *pushButton_output_vectorVSobjective;
-    QPushButton *pushButton_output_userWaypoints;
-    QPushButton *pushButton_output_streeField;
-    QPushButton *pushButton_output2Robot;
-    QPushButton *pushButton_output_QvectorField;
-    QHBoxLayout *horizontalLayout_38;
-    QPushButton *pushButton_output_ScalarOrHeight_Field;
-    QCheckBox *checkBox_scalarOrHeight_field;
-    QPushButton *pushButton_output_deformedTet;
-    QPushButton *pushButton_output_discretedTet;
-    QPushButton *pushButton_output_discretedTet_obj;
-    QPushButton *pushButton_output_materialRot_4CAE;
     QWidget *tab_2;
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout_3;
@@ -208,35 +154,6 @@ public:
     QPushButton *pushButton_outputIsoLayerSet;
     QPushButton *pushButton_isoLayerGeneration;
     QPushButton *pushButton_adaptiveHeightSlicing;
-    QFrame *line_12;
-    QLabel *label_38;
-    QHBoxLayout *horizontalLayout_27;
-    QLabel *label_37;
-    QPushButton *pushButton_collisionChecking_vector;
-    QPushButton *pushButton_concaveSmooth;
-    QPushButton *pushButton_concaveRelaxLoop;
-    QSpinBox *spinBox_concaveDetecSmooth_loopTime;
-    QPushButton *pushButton_collisionChecking;
-    QHBoxLayout *horizontalLayout_25;
-    QPushButton *pushButton_remarkCollisionTetra;
-    QPushButton *pushButton_collisionAware_flattening;
-    QFrame *line_11;
-    QFrame *line_5;
-    QLabel *label_15;
-    QLabel *label_18;
-    QFormLayout *formLayout_4;
-    QPushButton *pushButton_Comp_initialGuess_envelopSupport;
-    QLabel *label_19;
-    QPushButton *pushButton_MeshCombination;
-    QLabel *label_20;
-    QHBoxLayout *horizontalLayout_7;
-    QPushButton *pushButton_compatibleLayer_generation;
-    QLabel *label_16;
-    QHBoxLayout *horizontalLayout_26;
-    QPushButton *pushButton_markOverhangFace;
-    QPushButton *pushButton_remarkOverhangFace;
-    QPushButton *pushButton_treeSkeletonGeneration;
-    QPushButton *pushButton_slimmedSupportGeneration;
     QFrame *line_7;
     QLabel *label_17;
     QHBoxLayout *horizontalLayout_10;
@@ -249,6 +166,17 @@ public:
     QHBoxLayout *horizontalLayout_9;
     QPushButton *pushButton_outputToolpath;
     QCheckBox *checkBox_outputCompatiblewaypoint;
+    QFrame *line_5;
+    QLabel *label_9;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *label_12;
+    QSpinBox *spinBox_ShowLayerIndex;
+    QSpacerItem *horizontalSpacer_6;
+    QCheckBox *checkBox_EachLayerSwitch;
+    QHBoxLayout *horizontalLayout_8;
+    QPushButton *pushButton_ShowAllLayers;
+    QRadioButton *radioButton_compatibleLayer;
+    QSpacerItem *verticalSpacer_3;
     QWidget *tab_3;
     QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout_11;
@@ -598,6 +526,7 @@ public:
 
         spinBox_shapeUpIterNum = new QSpinBox(tab);
         spinBox_shapeUpIterNum->setObjectName(QString::fromUtf8("spinBox_shapeUpIterNum"));
+        spinBox_shapeUpIterNum->setEnabled(false);
         spinBox_shapeUpIterNum->setFont(font2);
         spinBox_shapeUpIterNum->setValue(0);
 
@@ -611,6 +540,7 @@ public:
 
         spinBox_innerIterNum = new QSpinBox(tab);
         spinBox_innerIterNum->setObjectName(QString::fromUtf8("spinBox_innerIterNum"));
+        spinBox_innerIterNum->setEnabled(false);
         spinBox_innerIterNum->setFont(font2);
 
         horizontalLayout_31->addWidget(spinBox_innerIterNum);
@@ -634,6 +564,7 @@ public:
 
         doubleSpinBox_criticalTETWeight_SL = new QDoubleSpinBox(tab);
         doubleSpinBox_criticalTETWeight_SL->setObjectName(QString::fromUtf8("doubleSpinBox_criticalTETWeight_SL"));
+        doubleSpinBox_criticalTETWeight_SL->setEnabled(false);
         doubleSpinBox_criticalTETWeight_SL->setFont(font2);
         doubleSpinBox_criticalTETWeight_SL->setSingleStep(1.000000000000000);
         doubleSpinBox_criticalTETWeight_SL->setValue(0.000000000000000);
@@ -647,6 +578,7 @@ public:
 
         doubleSpinBox_criticalTETWeight_SR = new QDoubleSpinBox(tab);
         doubleSpinBox_criticalTETWeight_SR->setObjectName(QString::fromUtf8("doubleSpinBox_criticalTETWeight_SR"));
+        doubleSpinBox_criticalTETWeight_SR->setEnabled(false);
         doubleSpinBox_criticalTETWeight_SR->setFont(font2);
 
         horizontalLayout_32->addWidget(doubleSpinBox_criticalTETWeight_SR);
@@ -670,6 +602,7 @@ public:
 
         doubleSpinBox_criticalTETWeight_SQC = new QDoubleSpinBox(tab);
         doubleSpinBox_criticalTETWeight_SQC->setObjectName(QString::fromUtf8("doubleSpinBox_criticalTETWeight_SQC"));
+        doubleSpinBox_criticalTETWeight_SQC->setEnabled(false);
         doubleSpinBox_criticalTETWeight_SQC->setFont(font2);
 
         horizontalLayout_33->addWidget(doubleSpinBox_criticalTETWeight_SQC);
@@ -681,6 +614,7 @@ public:
 
         doubleSpinBox_criticalTETWeight_SQV = new QDoubleSpinBox(tab);
         doubleSpinBox_criticalTETWeight_SQV->setObjectName(QString::fromUtf8("doubleSpinBox_criticalTETWeight_SQV"));
+        doubleSpinBox_criticalTETWeight_SQV->setEnabled(false);
         doubleSpinBox_criticalTETWeight_SQV->setFont(font2);
 
         horizontalLayout_33->addWidget(doubleSpinBox_criticalTETWeight_SQV);
@@ -698,6 +632,7 @@ public:
 
         doubleSpinBox_neighborScaleWeight = new QDoubleSpinBox(tab);
         doubleSpinBox_neighborScaleWeight->setObjectName(QString::fromUtf8("doubleSpinBox_neighborScaleWeight"));
+        doubleSpinBox_neighborScaleWeight->setEnabled(false);
         doubleSpinBox_neighborScaleWeight->setFont(font2);
         doubleSpinBox_neighborScaleWeight->setValue(0.000000000000000);
 
@@ -710,6 +645,7 @@ public:
 
         doubleSpinBox_regularScaleWeight = new QDoubleSpinBox(tab);
         doubleSpinBox_regularScaleWeight->setObjectName(QString::fromUtf8("doubleSpinBox_regularScaleWeight"));
+        doubleSpinBox_regularScaleWeight->setEnabled(false);
         doubleSpinBox_regularScaleWeight->setFont(font2);
         doubleSpinBox_regularScaleWeight->setValue(0.000000000000000);
 
@@ -722,6 +658,7 @@ public:
 
         doubleSpinBox_globalQuatSmoothWeight = new QDoubleSpinBox(tab);
         doubleSpinBox_globalQuatSmoothWeight->setObjectName(QString::fromUtf8("doubleSpinBox_globalQuatSmoothWeight"));
+        doubleSpinBox_globalQuatSmoothWeight->setEnabled(false);
         doubleSpinBox_globalQuatSmoothWeight->setFont(font2);
         doubleSpinBox_globalQuatSmoothWeight->setMaximum(999.899999999999977);
         doubleSpinBox_globalQuatSmoothWeight->setValue(0.000000000000000);
@@ -749,30 +686,13 @@ public:
 
         doubleSpinBox_supportFreeAngle = new QDoubleSpinBox(tab);
         doubleSpinBox_supportFreeAngle->setObjectName(QString::fromUtf8("doubleSpinBox_supportFreeAngle"));
+        doubleSpinBox_supportFreeAngle->setEnabled(false);
         doubleSpinBox_supportFreeAngle->setValue(0.000000000000000);
 
         horizontalLayout_2->addWidget(doubleSpinBox_supportFreeAngle);
 
 
         verticalLayout_3->addLayout(horizontalLayout_2);
-
-        horizontalLayout_28 = new QHBoxLayout();
-        horizontalLayout_28->setSpacing(6);
-        horizontalLayout_28->setObjectName(QString::fromUtf8("horizontalLayout_28"));
-        pushButton_calBestOrientation = new QPushButton(tab);
-        pushButton_calBestOrientation->setObjectName(QString::fromUtf8("pushButton_calBestOrientation"));
-        pushButton_calBestOrientation->setFont(font2);
-
-        horizontalLayout_28->addWidget(pushButton_calBestOrientation);
-
-        checkBox_computeBestOrientation = new QCheckBox(tab);
-        checkBox_computeBestOrientation->setObjectName(QString::fromUtf8("checkBox_computeBestOrientation"));
-        checkBox_computeBestOrientation->setFont(font2);
-
-        horizontalLayout_28->addWidget(checkBox_computeBestOrientation);
-
-
-        verticalLayout_3->addLayout(horizontalLayout_28);
 
         pushButton_s3DeformFDM_supportLess_ASAP = new QPushButton(tab);
         pushButton_s3DeformFDM_supportLess_ASAP->setObjectName(QString::fromUtf8("pushButton_s3DeformFDM_supportLess_ASAP"));
@@ -804,6 +724,7 @@ public:
 
         doubleSpinBox_tensileRegionRatio = new QDoubleSpinBox(tab);
         doubleSpinBox_tensileRegionRatio->setObjectName(QString::fromUtf8("doubleSpinBox_tensileRegionRatio"));
+        doubleSpinBox_tensileRegionRatio->setEnabled(false);
         doubleSpinBox_tensileRegionRatio->setFont(font2);
         doubleSpinBox_tensileRegionRatio->setSingleStep(0.100000000000000);
         doubleSpinBox_tensileRegionRatio->setValue(0.000000000000000);
@@ -818,6 +739,7 @@ public:
 
         doubleSpinBox_compressRegionRatio = new QDoubleSpinBox(tab);
         doubleSpinBox_compressRegionRatio->setObjectName(QString::fromUtf8("doubleSpinBox_compressRegionRatio"));
+        doubleSpinBox_compressRegionRatio->setEnabled(false);
         doubleSpinBox_compressRegionRatio->setFont(font2);
         doubleSpinBox_compressRegionRatio->setSingleStep(0.100000000000000);
         doubleSpinBox_compressRegionRatio->setValue(0.000000000000000);
@@ -860,6 +782,7 @@ public:
 
         doubleSpinBox_keepWeight_SL = new QDoubleSpinBox(tab);
         doubleSpinBox_keepWeight_SL->setObjectName(QString::fromUtf8("doubleSpinBox_keepWeight_SL"));
+        doubleSpinBox_keepWeight_SL->setEnabled(false);
         doubleSpinBox_keepWeight_SL->setFont(font2);
         doubleSpinBox_keepWeight_SL->setMinimum(0.010000000000000);
         doubleSpinBox_keepWeight_SL->setMaximum(999.990000000000009);
@@ -875,6 +798,7 @@ public:
 
         doubleSpinBox_keepWeight_SR = new QDoubleSpinBox(tab);
         doubleSpinBox_keepWeight_SR->setObjectName(QString::fromUtf8("doubleSpinBox_keepWeight_SR"));
+        doubleSpinBox_keepWeight_SR->setEnabled(false);
         doubleSpinBox_keepWeight_SR->setFont(font2);
         doubleSpinBox_keepWeight_SR->setMinimum(0.010000000000000);
         doubleSpinBox_keepWeight_SR->setMaximum(999.990000000000009);
@@ -896,6 +820,7 @@ public:
 
         doubleSpinBox_keepWeight_SQC = new QDoubleSpinBox(tab);
         doubleSpinBox_keepWeight_SQC->setObjectName(QString::fromUtf8("doubleSpinBox_keepWeight_SQC"));
+        doubleSpinBox_keepWeight_SQC->setEnabled(false);
         doubleSpinBox_keepWeight_SQC->setFont(font2);
         doubleSpinBox_keepWeight_SQC->setMinimum(0.010000000000000);
         doubleSpinBox_keepWeight_SQC->setMaximum(999.990000000000009);
@@ -911,6 +836,7 @@ public:
 
         doubleSpinBox_keepWeight_SQV = new QDoubleSpinBox(tab);
         doubleSpinBox_keepWeight_SQV->setObjectName(QString::fromUtf8("doubleSpinBox_keepWeight_SQV"));
+        doubleSpinBox_keepWeight_SQV->setEnabled(false);
         doubleSpinBox_keepWeight_SQV->setFont(font2);
         doubleSpinBox_keepWeight_SQV->setMinimum(0.010000000000000);
         doubleSpinBox_keepWeight_SQV->setMaximum(999.990000000000009);
@@ -921,33 +847,34 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_35);
 
-        horizontalLayout_37 = new QHBoxLayout();
-        horizontalLayout_37->setSpacing(6);
-        horizontalLayout_37->setObjectName(QString::fromUtf8("horizontalLayout_37"));
         pushButton_s3DeformFDM_hybrid_SL_SQ_ASAP = new QPushButton(tab);
         pushButton_s3DeformFDM_hybrid_SL_SQ_ASAP->setObjectName(QString::fromUtf8("pushButton_s3DeformFDM_hybrid_SL_SQ_ASAP"));
         pushButton_s3DeformFDM_hybrid_SL_SQ_ASAP->setEnabled(true);
 
-        horizontalLayout_37->addWidget(pushButton_s3DeformFDM_hybrid_SL_SQ_ASAP);
+        verticalLayout_3->addWidget(pushButton_s3DeformFDM_hybrid_SL_SQ_ASAP);
 
         pushButton_s3DeformFDM_hybrid_SR_SQ_ASAP = new QPushButton(tab);
         pushButton_s3DeformFDM_hybrid_SR_SQ_ASAP->setObjectName(QString::fromUtf8("pushButton_s3DeformFDM_hybrid_SR_SQ_ASAP"));
         pushButton_s3DeformFDM_hybrid_SR_SQ_ASAP->setEnabled(true);
 
-        horizontalLayout_37->addWidget(pushButton_s3DeformFDM_hybrid_SR_SQ_ASAP);
+        verticalLayout_3->addWidget(pushButton_s3DeformFDM_hybrid_SR_SQ_ASAP);
 
         pushButton_s3DeformFDM_hybrid_SL_SR_ASAP = new QPushButton(tab);
         pushButton_s3DeformFDM_hybrid_SL_SR_ASAP->setObjectName(QString::fromUtf8("pushButton_s3DeformFDM_hybrid_SL_SR_ASAP"));
 
-        horizontalLayout_37->addWidget(pushButton_s3DeformFDM_hybrid_SL_SR_ASAP);
-
-
-        verticalLayout_3->addLayout(horizontalLayout_37);
+        verticalLayout_3->addWidget(pushButton_s3DeformFDM_hybrid_SL_SR_ASAP);
 
         pushButton_s3DeformFDM_hybrid_SL_SR_SQ_ASAP = new QPushButton(tab);
         pushButton_s3DeformFDM_hybrid_SL_SR_SQ_ASAP->setObjectName(QString::fromUtf8("pushButton_s3DeformFDM_hybrid_SL_SR_SQ_ASAP"));
 
         verticalLayout_3->addWidget(pushButton_s3DeformFDM_hybrid_SL_SR_SQ_ASAP);
+
+        line_16 = new QFrame(tab);
+        line_16->setObjectName(QString::fromUtf8("line_16"));
+        line_16->setFrameShape(QFrame::HLine);
+        line_16->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_3->addWidget(line_16);
 
         pushButton_s3DeformFDM_inverseDeform = new QPushButton(tab);
         pushButton_s3DeformFDM_inverseDeform->setObjectName(QString::fromUtf8("pushButton_s3DeformFDM_inverseDeform"));
@@ -960,291 +887,6 @@ public:
         verticalLayout_3->addItem(verticalSpacer_2);
 
         tabWidget->addTab(tab, QString());
-        tab_4 = new QWidget();
-        tab_4->setObjectName(QString::fromUtf8("tab_4"));
-        verticalLayout_5 = new QVBoxLayout(tab_4);
-        verticalLayout_5->setSpacing(6);
-        verticalLayout_5->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
-        label_7 = new QLabel(tab_4);
-        label_7->setObjectName(QString::fromUtf8("label_7"));
-
-        verticalLayout_5->addWidget(label_7);
-
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setSpacing(6);
-        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
-        label_14 = new QLabel(tab_4);
-        label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setFont(font2);
-
-        horizontalLayout_6->addWidget(label_14);
-
-        horizontalSlider_slice_Multi_dir = new QSlider(tab_4);
-        horizontalSlider_slice_Multi_dir->setObjectName(QString::fromUtf8("horizontalSlider_slice_Multi_dir"));
-        horizontalSlider_slice_Multi_dir->setFont(font2);
-        horizontalSlider_slice_Multi_dir->setSliderPosition(50);
-        horizontalSlider_slice_Multi_dir->setOrientation(Qt::Horizontal);
-
-        horizontalLayout_6->addWidget(horizontalSlider_slice_Multi_dir);
-
-        comboBox_planeDir = new QComboBox(tab_4);
-        comboBox_planeDir->addItem(QString());
-        comboBox_planeDir->addItem(QString());
-        comboBox_planeDir->addItem(QString());
-        comboBox_planeDir->setObjectName(QString::fromUtf8("comboBox_planeDir"));
-        comboBox_planeDir->setFont(font2);
-
-        horizontalLayout_6->addWidget(comboBox_planeDir);
-
-
-        verticalLayout_5->addLayout(horizontalLayout_6);
-
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setSpacing(6);
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        pushButton_drawScaleValue = new QPushButton(tab_4);
-        pushButton_drawScaleValue->setObjectName(QString::fromUtf8("pushButton_drawScaleValue"));
-        pushButton_drawScaleValue->setFont(font2);
-
-        horizontalLayout_5->addWidget(pushButton_drawScaleValue);
-
-        comboBox_scaleValueDirection = new QComboBox(tab_4);
-        comboBox_scaleValueDirection->addItem(QString());
-        comboBox_scaleValueDirection->addItem(QString());
-        comboBox_scaleValueDirection->addItem(QString());
-        comboBox_scaleValueDirection->addItem(QString());
-        comboBox_scaleValueDirection->addItem(QString());
-        comboBox_scaleValueDirection->setObjectName(QString::fromUtf8("comboBox_scaleValueDirection"));
-        comboBox_scaleValueDirection->setFont(font2);
-
-        horizontalLayout_5->addWidget(comboBox_scaleValueDirection);
-
-
-        verticalLayout_5->addLayout(horizontalLayout_5);
-
-        label_9 = new QLabel(tab_4);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
-
-        verticalLayout_5->addWidget(label_9);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setSpacing(6);
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        label_12 = new QLabel(tab_4);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setFont(font2);
-
-        horizontalLayout_4->addWidget(label_12);
-
-        spinBox_ShowLayerIndex = new QSpinBox(tab_4);
-        spinBox_ShowLayerIndex->setObjectName(QString::fromUtf8("spinBox_ShowLayerIndex"));
-        spinBox_ShowLayerIndex->setFont(font2);
-        spinBox_ShowLayerIndex->setMaximum(999);
-
-        horizontalLayout_4->addWidget(spinBox_ShowLayerIndex);
-
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_6);
-
-        checkBox_EachLayerSwitch = new QCheckBox(tab_4);
-        checkBox_EachLayerSwitch->setObjectName(QString::fromUtf8("checkBox_EachLayerSwitch"));
-        checkBox_EachLayerSwitch->setFont(font2);
-
-        horizontalLayout_4->addWidget(checkBox_EachLayerSwitch);
-
-
-        verticalLayout_5->addLayout(horizontalLayout_4);
-
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setSpacing(6);
-        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
-        pushButton_ShowAllLayers = new QPushButton(tab_4);
-        pushButton_ShowAllLayers->setObjectName(QString::fromUtf8("pushButton_ShowAllLayers"));
-        pushButton_ShowAllLayers->setFont(font2);
-
-        horizontalLayout_8->addWidget(pushButton_ShowAllLayers);
-
-        radioButton_compatibleLayer = new QRadioButton(tab_4);
-        radioButton_compatibleLayer->setObjectName(QString::fromUtf8("radioButton_compatibleLayer"));
-        radioButton_compatibleLayer->setEnabled(false);
-        radioButton_compatibleLayer->setFont(font2);
-
-        horizontalLayout_8->addWidget(radioButton_compatibleLayer);
-
-
-        verticalLayout_5->addLayout(horizontalLayout_8);
-
-        line_3 = new QFrame(tab_4);
-        line_3->setObjectName(QString::fromUtf8("line_3"));
-        line_3->setFrameShape(QFrame::HLine);
-        line_3->setFrameShadow(QFrame::Sunken);
-
-        verticalLayout_5->addWidget(line_3);
-
-        label_3 = new QLabel(tab_4);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-
-        verticalLayout_5->addWidget(label_3);
-
-        horizontalLayout_23 = new QHBoxLayout();
-        horizontalLayout_23->setSpacing(6);
-        horizontalLayout_23->setObjectName(QString::fromUtf8("horizontalLayout_23"));
-        label_36 = new QLabel(tab_4);
-        label_36->setObjectName(QString::fromUtf8("label_36"));
-        label_36->setFont(font2);
-
-        horizontalLayout_23->addWidget(label_36);
-
-        label_39 = new QLabel(tab_4);
-        label_39->setObjectName(QString::fromUtf8("label_39"));
-        label_39->setFont(font2);
-
-        horizontalLayout_23->addWidget(label_39);
-
-        doubleSpinBox_rot_phi = new QDoubleSpinBox(tab_4);
-        doubleSpinBox_rot_phi->setObjectName(QString::fromUtf8("doubleSpinBox_rot_phi"));
-        doubleSpinBox_rot_phi->setFont(font2);
-        doubleSpinBox_rot_phi->setMinimum(-180.000000000000000);
-        doubleSpinBox_rot_phi->setMaximum(180.000000000000000);
-
-        horizontalLayout_23->addWidget(doubleSpinBox_rot_phi);
-
-        label_40 = new QLabel(tab_4);
-        label_40->setObjectName(QString::fromUtf8("label_40"));
-        label_40->setFont(font2);
-
-        horizontalLayout_23->addWidget(label_40);
-
-        doubleSpinBox_rot_theta = new QDoubleSpinBox(tab_4);
-        doubleSpinBox_rot_theta->setObjectName(QString::fromUtf8("doubleSpinBox_rot_theta"));
-        doubleSpinBox_rot_theta->setFont(font2);
-        doubleSpinBox_rot_theta->setMaximum(360.000000000000000);
-
-        horizontalLayout_23->addWidget(doubleSpinBox_rot_theta);
-
-
-        verticalLayout_5->addLayout(horizontalLayout_23);
-
-        horizontalLayout_24 = new QHBoxLayout();
-        horizontalLayout_24->setSpacing(6);
-        horizontalLayout_24->setObjectName(QString::fromUtf8("horizontalLayout_24"));
-        label_41 = new QLabel(tab_4);
-        label_41->setObjectName(QString::fromUtf8("label_41"));
-        label_41->setFont(font2);
-
-        horizontalLayout_24->addWidget(label_41);
-
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_24->addItem(horizontalSpacer_5);
-
-        label_43 = new QLabel(tab_4);
-        label_43->setObjectName(QString::fromUtf8("label_43"));
-        label_43->setFont(font2);
-
-        horizontalLayout_24->addWidget(label_43);
-
-        doubleSpinBox_modelHeight_y = new QDoubleSpinBox(tab_4);
-        doubleSpinBox_modelHeight_y->setObjectName(QString::fromUtf8("doubleSpinBox_modelHeight_y"));
-        doubleSpinBox_modelHeight_y->setFont(font2);
-
-        horizontalLayout_24->addWidget(doubleSpinBox_modelHeight_y);
-
-
-        verticalLayout_5->addLayout(horizontalLayout_24);
-
-        pushButton_model_move_rotation = new QPushButton(tab_4);
-        pushButton_model_move_rotation->setObjectName(QString::fromUtf8("pushButton_model_move_rotation"));
-
-        verticalLayout_5->addWidget(pushButton_model_move_rotation);
-
-        line_13 = new QFrame(tab_4);
-        line_13->setObjectName(QString::fromUtf8("line_13"));
-        line_13->setFrameShape(QFrame::HLine);
-        line_13->setFrameShadow(QFrame::Sunken);
-
-        verticalLayout_5->addWidget(line_13);
-
-        label_45 = new QLabel(tab_4);
-        label_45->setObjectName(QString::fromUtf8("label_45"));
-
-        verticalLayout_5->addWidget(label_45);
-
-        pushButton_tet2surface = new QPushButton(tab_4);
-        pushButton_tet2surface->setObjectName(QString::fromUtf8("pushButton_tet2surface"));
-
-        verticalLayout_5->addWidget(pushButton_tet2surface);
-
-        pushButton_output_vectorVSobjective = new QPushButton(tab_4);
-        pushButton_output_vectorVSobjective->setObjectName(QString::fromUtf8("pushButton_output_vectorVSobjective"));
-
-        verticalLayout_5->addWidget(pushButton_output_vectorVSobjective);
-
-        pushButton_output_userWaypoints = new QPushButton(tab_4);
-        pushButton_output_userWaypoints->setObjectName(QString::fromUtf8("pushButton_output_userWaypoints"));
-        pushButton_output_userWaypoints->setEnabled(false);
-
-        verticalLayout_5->addWidget(pushButton_output_userWaypoints);
-
-        pushButton_output_streeField = new QPushButton(tab_4);
-        pushButton_output_streeField->setObjectName(QString::fromUtf8("pushButton_output_streeField"));
-
-        verticalLayout_5->addWidget(pushButton_output_streeField);
-
-        pushButton_output2Robot = new QPushButton(tab_4);
-        pushButton_output2Robot->setObjectName(QString::fromUtf8("pushButton_output2Robot"));
-        pushButton_output2Robot->setEnabled(false);
-
-        verticalLayout_5->addWidget(pushButton_output2Robot);
-
-        pushButton_output_QvectorField = new QPushButton(tab_4);
-        pushButton_output_QvectorField->setObjectName(QString::fromUtf8("pushButton_output_QvectorField"));
-        pushButton_output_QvectorField->setEnabled(false);
-
-        verticalLayout_5->addWidget(pushButton_output_QvectorField);
-
-        horizontalLayout_38 = new QHBoxLayout();
-        horizontalLayout_38->setSpacing(6);
-        horizontalLayout_38->setObjectName(QString::fromUtf8("horizontalLayout_38"));
-        pushButton_output_ScalarOrHeight_Field = new QPushButton(tab_4);
-        pushButton_output_ScalarOrHeight_Field->setObjectName(QString::fromUtf8("pushButton_output_ScalarOrHeight_Field"));
-        pushButton_output_ScalarOrHeight_Field->setEnabled(false);
-
-        horizontalLayout_38->addWidget(pushButton_output_ScalarOrHeight_Field);
-
-        checkBox_scalarOrHeight_field = new QCheckBox(tab_4);
-        checkBox_scalarOrHeight_field->setObjectName(QString::fromUtf8("checkBox_scalarOrHeight_field"));
-        checkBox_scalarOrHeight_field->setFont(font2);
-
-        horizontalLayout_38->addWidget(checkBox_scalarOrHeight_field);
-
-
-        verticalLayout_5->addLayout(horizontalLayout_38);
-
-        pushButton_output_deformedTet = new QPushButton(tab_4);
-        pushButton_output_deformedTet->setObjectName(QString::fromUtf8("pushButton_output_deformedTet"));
-
-        verticalLayout_5->addWidget(pushButton_output_deformedTet);
-
-        pushButton_output_discretedTet = new QPushButton(tab_4);
-        pushButton_output_discretedTet->setObjectName(QString::fromUtf8("pushButton_output_discretedTet"));
-
-        verticalLayout_5->addWidget(pushButton_output_discretedTet);
-
-        pushButton_output_discretedTet_obj = new QPushButton(tab_4);
-        pushButton_output_discretedTet_obj->setObjectName(QString::fromUtf8("pushButton_output_discretedTet_obj"));
-        pushButton_output_discretedTet_obj->setEnabled(true);
-
-        verticalLayout_5->addWidget(pushButton_output_discretedTet_obj);
-
-        pushButton_output_materialRot_4CAE = new QPushButton(tab_4);
-        pushButton_output_materialRot_4CAE->setObjectName(QString::fromUtf8("pushButton_output_materialRot_4CAE"));
-
-        verticalLayout_5->addWidget(pushButton_output_materialRot_4CAE);
-
-        tabWidget->addTab(tab_4, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
         verticalLayout_2 = new QVBoxLayout(tab_2);
@@ -1289,188 +931,6 @@ public:
 
         verticalLayout_2->addWidget(pushButton_adaptiveHeightSlicing);
 
-        line_12 = new QFrame(tab_2);
-        line_12->setObjectName(QString::fromUtf8("line_12"));
-        line_12->setFrameShape(QFrame::HLine);
-        line_12->setFrameShadow(QFrame::Sunken);
-
-        verticalLayout_2->addWidget(line_12);
-
-        label_38 = new QLabel(tab_2);
-        label_38->setObjectName(QString::fromUtf8("label_38"));
-
-        verticalLayout_2->addWidget(label_38);
-
-        horizontalLayout_27 = new QHBoxLayout();
-        horizontalLayout_27->setSpacing(6);
-        horizontalLayout_27->setObjectName(QString::fromUtf8("horizontalLayout_27"));
-        label_37 = new QLabel(tab_2);
-        label_37->setObjectName(QString::fromUtf8("label_37"));
-        label_37->setFont(font2);
-
-        horizontalLayout_27->addWidget(label_37);
-
-        pushButton_collisionChecking_vector = new QPushButton(tab_2);
-        pushButton_collisionChecking_vector->setObjectName(QString::fromUtf8("pushButton_collisionChecking_vector"));
-        QFont font3;
-        font3.setPointSize(8);
-        font3.setBold(false);
-        font3.setWeight(50);
-        pushButton_collisionChecking_vector->setFont(font3);
-
-        horizontalLayout_27->addWidget(pushButton_collisionChecking_vector);
-
-        pushButton_concaveSmooth = new QPushButton(tab_2);
-        pushButton_concaveSmooth->setObjectName(QString::fromUtf8("pushButton_concaveSmooth"));
-        pushButton_concaveSmooth->setFont(font3);
-
-        horizontalLayout_27->addWidget(pushButton_concaveSmooth);
-
-        pushButton_concaveRelaxLoop = new QPushButton(tab_2);
-        pushButton_concaveRelaxLoop->setObjectName(QString::fromUtf8("pushButton_concaveRelaxLoop"));
-        pushButton_concaveRelaxLoop->setFont(font3);
-
-        horizontalLayout_27->addWidget(pushButton_concaveRelaxLoop);
-
-        spinBox_concaveDetecSmooth_loopTime = new QSpinBox(tab_2);
-        spinBox_concaveDetecSmooth_loopTime->setObjectName(QString::fromUtf8("spinBox_concaveDetecSmooth_loopTime"));
-        spinBox_concaveDetecSmooth_loopTime->setFont(font2);
-        spinBox_concaveDetecSmooth_loopTime->setMaximum(999);
-        spinBox_concaveDetecSmooth_loopTime->setValue(25);
-
-        horizontalLayout_27->addWidget(spinBox_concaveDetecSmooth_loopTime);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_27);
-
-        pushButton_collisionChecking = new QPushButton(tab_2);
-        pushButton_collisionChecking->setObjectName(QString::fromUtf8("pushButton_collisionChecking"));
-
-        verticalLayout_2->addWidget(pushButton_collisionChecking);
-
-        horizontalLayout_25 = new QHBoxLayout();
-        horizontalLayout_25->setSpacing(6);
-        horizontalLayout_25->setObjectName(QString::fromUtf8("horizontalLayout_25"));
-        pushButton_remarkCollisionTetra = new QPushButton(tab_2);
-        pushButton_remarkCollisionTetra->setObjectName(QString::fromUtf8("pushButton_remarkCollisionTetra"));
-        pushButton_remarkCollisionTetra->setEnabled(false);
-        pushButton_remarkCollisionTetra->setFont(font2);
-
-        horizontalLayout_25->addWidget(pushButton_remarkCollisionTetra);
-
-        pushButton_collisionAware_flattening = new QPushButton(tab_2);
-        pushButton_collisionAware_flattening->setObjectName(QString::fromUtf8("pushButton_collisionAware_flattening"));
-        pushButton_collisionAware_flattening->setEnabled(false);
-
-        horizontalLayout_25->addWidget(pushButton_collisionAware_flattening);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_25);
-
-        line_11 = new QFrame(tab_2);
-        line_11->setObjectName(QString::fromUtf8("line_11"));
-        line_11->setFrameShape(QFrame::HLine);
-        line_11->setFrameShadow(QFrame::Sunken);
-
-        verticalLayout_2->addWidget(line_11);
-
-        line_5 = new QFrame(tab_2);
-        line_5->setObjectName(QString::fromUtf8("line_5"));
-        line_5->setFrameShape(QFrame::HLine);
-        line_5->setFrameShadow(QFrame::Sunken);
-
-        verticalLayout_2->addWidget(line_5);
-
-        label_15 = new QLabel(tab_2);
-        label_15->setObjectName(QString::fromUtf8("label_15"));
-
-        verticalLayout_2->addWidget(label_15);
-
-        label_18 = new QLabel(tab_2);
-        label_18->setObjectName(QString::fromUtf8("label_18"));
-        label_18->setFont(font2);
-
-        verticalLayout_2->addWidget(label_18);
-
-        formLayout_4 = new QFormLayout();
-        formLayout_4->setSpacing(6);
-        formLayout_4->setObjectName(QString::fromUtf8("formLayout_4"));
-        pushButton_Comp_initialGuess_envelopSupport = new QPushButton(tab_2);
-        pushButton_Comp_initialGuess_envelopSupport->setObjectName(QString::fromUtf8("pushButton_Comp_initialGuess_envelopSupport"));
-        pushButton_Comp_initialGuess_envelopSupport->setFont(font2);
-
-        formLayout_4->setWidget(0, QFormLayout::LabelRole, pushButton_Comp_initialGuess_envelopSupport);
-
-        label_19 = new QLabel(tab_2);
-        label_19->setObjectName(QString::fromUtf8("label_19"));
-        label_19->setFont(font2);
-
-        formLayout_4->setWidget(0, QFormLayout::FieldRole, label_19);
-
-        pushButton_MeshCombination = new QPushButton(tab_2);
-        pushButton_MeshCombination->setObjectName(QString::fromUtf8("pushButton_MeshCombination"));
-        pushButton_MeshCombination->setFont(font2);
-
-        formLayout_4->setWidget(1, QFormLayout::LabelRole, pushButton_MeshCombination);
-
-        label_20 = new QLabel(tab_2);
-        label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setFont(font2);
-
-        formLayout_4->setWidget(1, QFormLayout::FieldRole, label_20);
-
-
-        verticalLayout_2->addLayout(formLayout_4);
-
-        horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setSpacing(6);
-        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        pushButton_compatibleLayer_generation = new QPushButton(tab_2);
-        pushButton_compatibleLayer_generation->setObjectName(QString::fromUtf8("pushButton_compatibleLayer_generation"));
-        pushButton_compatibleLayer_generation->setFont(font2);
-
-        horizontalLayout_7->addWidget(pushButton_compatibleLayer_generation);
-
-        label_16 = new QLabel(tab_2);
-        label_16->setObjectName(QString::fromUtf8("label_16"));
-        label_16->setFont(font2);
-
-        horizontalLayout_7->addWidget(label_16);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_7);
-
-        horizontalLayout_26 = new QHBoxLayout();
-        horizontalLayout_26->setSpacing(6);
-        horizontalLayout_26->setObjectName(QString::fromUtf8("horizontalLayout_26"));
-        pushButton_markOverhangFace = new QPushButton(tab_2);
-        pushButton_markOverhangFace->setObjectName(QString::fromUtf8("pushButton_markOverhangFace"));
-        pushButton_markOverhangFace->setFont(font2);
-
-        horizontalLayout_26->addWidget(pushButton_markOverhangFace);
-
-        pushButton_remarkOverhangFace = new QPushButton(tab_2);
-        pushButton_remarkOverhangFace->setObjectName(QString::fromUtf8("pushButton_remarkOverhangFace"));
-        pushButton_remarkOverhangFace->setEnabled(false);
-        pushButton_remarkOverhangFace->setFont(font2);
-
-        horizontalLayout_26->addWidget(pushButton_remarkOverhangFace);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_26);
-
-        pushButton_treeSkeletonGeneration = new QPushButton(tab_2);
-        pushButton_treeSkeletonGeneration->setObjectName(QString::fromUtf8("pushButton_treeSkeletonGeneration"));
-        pushButton_treeSkeletonGeneration->setEnabled(false);
-
-        verticalLayout_2->addWidget(pushButton_treeSkeletonGeneration);
-
-        pushButton_slimmedSupportGeneration = new QPushButton(tab_2);
-        pushButton_slimmedSupportGeneration->setObjectName(QString::fromUtf8("pushButton_slimmedSupportGeneration"));
-        pushButton_slimmedSupportGeneration->setEnabled(false);
-
-        verticalLayout_2->addWidget(pushButton_slimmedSupportGeneration);
-
         line_7 = new QFrame(tab_2);
         line_7->setObjectName(QString::fromUtf8("line_7"));
         line_7->setFrameShape(QFrame::HLine);
@@ -1496,7 +956,7 @@ public:
         doubleSpinBox_toolPathWidth->setObjectName(QString::fromUtf8("doubleSpinBox_toolPathWidth"));
         doubleSpinBox_toolPathWidth->setFont(font2);
         doubleSpinBox_toolPathWidth->setSingleStep(0.100000000000000);
-        doubleSpinBox_toolPathWidth->setValue(0.700000000000000);
+        doubleSpinBox_toolPathWidth->setValue(0.800000000000000);
 
         horizontalLayout_10->addWidget(doubleSpinBox_toolPathWidth);
 
@@ -1538,16 +998,80 @@ public:
 
         checkBox_outputCompatiblewaypoint = new QCheckBox(tab_2);
         checkBox_outputCompatiblewaypoint->setObjectName(QString::fromUtf8("checkBox_outputCompatiblewaypoint"));
-        QFont font4;
-        font4.setPointSize(9);
-        font4.setBold(true);
-        font4.setWeight(75);
-        checkBox_outputCompatiblewaypoint->setFont(font4);
+        QFont font3;
+        font3.setPointSize(9);
+        font3.setBold(true);
+        font3.setWeight(75);
+        checkBox_outputCompatiblewaypoint->setFont(font3);
 
         horizontalLayout_9->addWidget(checkBox_outputCompatiblewaypoint);
 
 
         verticalLayout_2->addLayout(horizontalLayout_9);
+
+        line_5 = new QFrame(tab_2);
+        line_5->setObjectName(QString::fromUtf8("line_5"));
+        line_5->setFrameShape(QFrame::HLine);
+        line_5->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_2->addWidget(line_5);
+
+        label_9 = new QLabel(tab_2);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+
+        verticalLayout_2->addWidget(label_9);
+
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        label_12 = new QLabel(tab_2);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        label_12->setFont(font2);
+
+        horizontalLayout_4->addWidget(label_12);
+
+        spinBox_ShowLayerIndex = new QSpinBox(tab_2);
+        spinBox_ShowLayerIndex->setObjectName(QString::fromUtf8("spinBox_ShowLayerIndex"));
+        spinBox_ShowLayerIndex->setFont(font2);
+        spinBox_ShowLayerIndex->setMaximum(999);
+
+        horizontalLayout_4->addWidget(spinBox_ShowLayerIndex);
+
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_6);
+
+        checkBox_EachLayerSwitch = new QCheckBox(tab_2);
+        checkBox_EachLayerSwitch->setObjectName(QString::fromUtf8("checkBox_EachLayerSwitch"));
+        checkBox_EachLayerSwitch->setFont(font2);
+
+        horizontalLayout_4->addWidget(checkBox_EachLayerSwitch);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_4);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setSpacing(6);
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        pushButton_ShowAllLayers = new QPushButton(tab_2);
+        pushButton_ShowAllLayers->setObjectName(QString::fromUtf8("pushButton_ShowAllLayers"));
+        pushButton_ShowAllLayers->setFont(font2);
+
+        horizontalLayout_8->addWidget(pushButton_ShowAllLayers);
+
+        radioButton_compatibleLayer = new QRadioButton(tab_2);
+        radioButton_compatibleLayer->setObjectName(QString::fromUtf8("radioButton_compatibleLayer"));
+        radioButton_compatibleLayer->setEnabled(false);
+        radioButton_compatibleLayer->setFont(font2);
+
+        horizontalLayout_8->addWidget(radioButton_compatibleLayer);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_8);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_3);
 
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
@@ -1589,7 +1113,7 @@ public:
         doubleSpinBox_toolLength->setObjectName(QString::fromUtf8("doubleSpinBox_toolLength"));
         doubleSpinBox_toolLength->setMinimum(-1.000000000000000);
         doubleSpinBox_toolLength->setMaximum(300.000000000000000);
-        doubleSpinBox_toolLength->setValue(77.849999999999994);
+        doubleSpinBox_toolLength->setValue(77.359999999999999);
 
         horizontalLayout_29->addWidget(doubleSpinBox_toolLength);
 
@@ -2041,7 +1565,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2099,9 +1623,7 @@ public:
         label_56->setText(QApplication::translate("MainWindow", "Wr", nullptr));
         label_57->setText(QApplication::translate("MainWindow", "Ws", nullptr));
         label_8->setText(QApplication::translate("MainWindow", "Overhang angle", nullptr));
-        pushButton_calBestOrientation->setText(QApplication::translate("MainWindow", "Get Best Posture", nullptr));
-        checkBox_computeBestOrientation->setText(QApplication::translate("MainWindow", "compute", nullptr));
-        pushButton_s3DeformFDM_supportLess_ASAP->setText(QApplication::translate("MainWindow", "1.1 Support-less ASAP", nullptr));
+        pushButton_s3DeformFDM_supportLess_ASAP->setText(QApplication::translate("MainWindow", "1.1 Support-free ASAP", nullptr));
         label_10->setText(QApplication::translate("MainWindow", "Ratio:", nullptr));
         label_44->setText(QApplication::translate("MainWindow", "tensile", nullptr));
         label_11->setText(QApplication::translate("MainWindow", "compress", nullptr));
@@ -2112,83 +1634,28 @@ public:
         label_58->setText(QApplication::translate("MainWindow", "Wk_sr", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "Wk_sqc", nullptr));
         label_54->setText(QApplication::translate("MainWindow", "Wk_sqv", nullptr));
-        pushButton_s3DeformFDM_hybrid_SL_SQ_ASAP->setText(QApplication::translate("MainWindow", "1.4 SL_SQ", nullptr));
+        pushButton_s3DeformFDM_hybrid_SL_SQ_ASAP->setText(QApplication::translate("MainWindow", "1.4 SF_SQ", nullptr));
         pushButton_s3DeformFDM_hybrid_SR_SQ_ASAP->setText(QApplication::translate("MainWindow", "1.5 SR_SQ", nullptr));
-        pushButton_s3DeformFDM_hybrid_SL_SR_ASAP->setText(QApplication::translate("MainWindow", "6. SL_SR", nullptr));
-        pushButton_s3DeformFDM_hybrid_SL_SR_SQ_ASAP->setText(QApplication::translate("MainWindow", "1.7 SL_SR_SQ", nullptr));
+        pushButton_s3DeformFDM_hybrid_SL_SR_ASAP->setText(QApplication::translate("MainWindow", "1.6 SF_SR", nullptr));
+        pushButton_s3DeformFDM_hybrid_SL_SR_SQ_ASAP->setText(QApplication::translate("MainWindow", "1.7 SF_SR_SQ", nullptr));
         pushButton_s3DeformFDM_inverseDeform->setText(QApplication::translate("MainWindow", "2. Inverse Deformation", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Deformation", nullptr));
-        label_7->setText(QApplication::translate("MainWindow", "TET", nullptr));
-        label_14->setText(QApplication::translate("MainWindow", "Cross-Section", nullptr));
-        comboBox_planeDir->setItemText(0, QApplication::translate("MainWindow", "X plane", nullptr));
-        comboBox_planeDir->setItemText(1, QApplication::translate("MainWindow", "Y plane", nullptr));
-        comboBox_planeDir->setItemText(2, QApplication::translate("MainWindow", "Z plane", nullptr));
-
-        comboBox_planeDir->setCurrentText(QApplication::translate("MainWindow", "X plane", nullptr));
-        pushButton_drawScaleValue->setText(QApplication::translate("MainWindow", "Show Tetra Scale", nullptr));
-        comboBox_scaleValueDirection->setItemText(0, QApplication::translate("MainWindow", "None", nullptr));
-        comboBox_scaleValueDirection->setItemText(1, QApplication::translate("MainWindow", "X direction", nullptr));
-        comboBox_scaleValueDirection->setItemText(2, QApplication::translate("MainWindow", "Y direction", nullptr));
-        comboBox_scaleValueDirection->setItemText(3, QApplication::translate("MainWindow", "Z direction", nullptr));
-        comboBox_scaleValueDirection->setItemText(4, QApplication::translate("MainWindow", "Average", nullptr));
-
+        label_13->setText(QApplication::translate("MainWindow", "Slicing Layer Num", nullptr));
+        pushButton_outputIsoLayerSet->setText(QApplication::translate("MainWindow", "Output", nullptr));
+        pushButton_isoLayerGeneration->setText(QApplication::translate("MainWindow", "3.0 Layer Generation (scalar)", nullptr));
+        pushButton_adaptiveHeightSlicing->setText(QApplication::translate("MainWindow", "3.1 Adaptive Height Slicing  ", nullptr));
+        label_17->setText(QApplication::translate("MainWindow", "Tool-Path Generation", nullptr));
+        label_22->setText(QApplication::translate("MainWindow", "Width", nullptr));
+        label_21->setText(QApplication::translate("MainWindow", "Distance", nullptr));
+        pushButton_toolPathGeneration->setText(QApplication::translate("MainWindow", "5. Get Tool-Path", nullptr));
+        pushButton_outputToolpath->setText(QApplication::translate("MainWindow", "Output", nullptr));
+        checkBox_outputCompatiblewaypoint->setText(QApplication::translate("MainWindow", "Compatible", nullptr));
         label_9->setText(QApplication::translate("MainWindow", "LAYER", nullptr));
         label_12->setText(QApplication::translate("MainWindow", "Display", nullptr));
         checkBox_EachLayerSwitch->setText(QApplication::translate("MainWindow", "Single", nullptr));
         pushButton_ShowAllLayers->setText(QApplication::translate("MainWindow", "All", nullptr));
         radioButton_compatibleLayer->setText(QApplication::translate("MainWindow", "Compatible Layer", nullptr));
-        label_3->setText(QApplication::translate("MainWindow", "Move & Rotate model", nullptr));
-        label_36->setText(QApplication::translate("MainWindow", "Rot:", nullptr));
-        label_39->setText(QApplication::translate("MainWindow", "phi", nullptr));
-        label_40->setText(QApplication::translate("MainWindow", "theta", nullptr));
-        label_41->setText(QApplication::translate("MainWindow", "Move: Height", nullptr));
-        label_43->setText(QApplication::translate("MainWindow", "Y", nullptr));
-        pushButton_model_move_rotation->setText(QApplication::translate("MainWindow", "Rotate / Move Model", nullptr));
-        label_45->setText(QApplication::translate("MainWindow", "IO operation", nullptr));
-        pushButton_tet2surface->setText(QApplication::translate("MainWindow", "Output boundary mesh of Tet", nullptr));
-        pushButton_output_vectorVSobjective->setText(QApplication::translate("MainWindow", "Output vectorField VS objective", nullptr));
-        pushButton_output_userWaypoints->setText(QApplication::translate("MainWindow", "Output userWaypoints", nullptr));
-        pushButton_output_streeField->setText(QApplication::translate("MainWindow", "Output stress field", nullptr));
-        pushButton_output2Robot->setText(QApplication::translate("MainWindow", "Output Layer/Waypoint for ROBOT", nullptr));
-        pushButton_output_QvectorField->setText(QApplication::translate("MainWindow", "Output Quaternion vectorField", nullptr));
-        pushButton_output_ScalarOrHeight_Field->setText(QApplication::translate("MainWindow", "Output Scalar/Height Field", nullptr));
-        checkBox_scalarOrHeight_field->setText(QApplication::translate("MainWindow", "S/H", nullptr));
-        pushButton_output_deformedTet->setText(QApplication::translate("MainWindow", "Output deformed tetMesh", nullptr));
-        pushButton_output_discretedTet->setText(QApplication::translate("MainWindow", "Output discretedTet", nullptr));
-        pushButton_output_discretedTet_obj->setText(QApplication::translate("MainWindow", "Output discreteTet obj", nullptr));
-        pushButton_output_materialRot_4CAE->setText(QApplication::translate("MainWindow", "Output material rotation for CAE", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MainWindow", "Display/IO", nullptr));
-        label_13->setText(QApplication::translate("MainWindow", "Slicing Layer Num", nullptr));
-        pushButton_outputIsoLayerSet->setText(QApplication::translate("MainWindow", "Output", nullptr));
-        pushButton_isoLayerGeneration->setText(QApplication::translate("MainWindow", "3.1.0 Layer Generation (scalar)", nullptr));
-        pushButton_adaptiveHeightSlicing->setText(QApplication::translate("MainWindow", "3.1.1 Adaptive Height Slicing  ", nullptr));
-        label_38->setText(QApplication::translate("MainWindow", "Collision Elimination", nullptr));
-        label_37->setText(QApplication::translate("MainWindow", "Concave", nullptr));
-        pushButton_collisionChecking_vector->setText(QApplication::translate("MainWindow", "detect", nullptr));
-        pushButton_concaveSmooth->setText(QApplication::translate("MainWindow", " smooth", nullptr));
-        pushButton_concaveRelaxLoop->setText(QApplication::translate("MainWindow", "Loop", nullptr));
-        pushButton_collisionChecking->setText(QApplication::translate("MainWindow", "3.2 Collision Checking (layer)", nullptr));
-        pushButton_remarkCollisionTetra->setText(QApplication::translate("MainWindow", "Re-Mark Collision", nullptr));
-        pushButton_collisionAware_flattening->setText(QApplication::translate("MainWindow", "3.3 Flattening", nullptr));
-        label_15->setText(QApplication::translate("MainWindow", "Support Generation", nullptr));
-        label_18->setText(QApplication::translate("MainWindow", "4.0 Get Initial Guess Envelop", nullptr));
-        pushButton_Comp_initialGuess_envelopSupport->setText(QApplication::translate("MainWindow", "Envelop Generation", nullptr));
-        label_19->setText(QApplication::translate("MainWindow", "-> Remesh", nullptr));
-        pushButton_MeshCombination->setText(QApplication::translate("MainWindow", " Mesh Combination ", nullptr));
-        label_20->setText(QApplication::translate("MainWindow", "-> Voxelization", nullptr));
-        pushButton_compatibleLayer_generation->setText(QApplication::translate("MainWindow", "4.1 Get Compatible Layers", nullptr));
-        label_16->setText(QApplication::translate("MainWindow", "-> Remesh", nullptr));
-        pushButton_markOverhangFace->setText(QApplication::translate("MainWindow", "Mark Overhang Face", nullptr));
-        pushButton_remarkOverhangFace->setText(QApplication::translate("MainWindow", "Re-Mark", nullptr));
-        pushButton_treeSkeletonGeneration->setText(QApplication::translate("MainWindow", "4.2 Get Tree Skeleton", nullptr));
-        pushButton_slimmedSupportGeneration->setText(QApplication::translate("MainWindow", "4.3 Get Slimmed Support", nullptr));
-        label_17->setText(QApplication::translate("MainWindow", "Tool-Path Generation", nullptr));
-        label_22->setText(QApplication::translate("MainWindow", "Width", nullptr));
-        label_21->setText(QApplication::translate("MainWindow", "Distance", nullptr));
-        pushButton_toolPathGeneration->setText(QApplication::translate("MainWindow", "5.1 Get Tool-Path", nullptr));
-        pushButton_outputToolpath->setText(QApplication::translate("MainWindow", "Output", nullptr));
-        checkBox_outputCompatiblewaypoint->setText(QApplication::translate("MainWindow", "Compatible", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Support", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Slicing_Toolpath", nullptr));
         label_23->setText(QApplication::translate("MainWindow", "Coordinate System", nullptr));
         checkBox_Yup2Zup->setText(QApplication::translate("MainWindow", "Yup->Zup", nullptr));
         label_42->setText(QApplication::translate("MainWindow", "Tool length (also CAD)", nullptr));
@@ -2197,7 +1664,7 @@ public:
         label_26->setText(QApplication::translate("MainWindow", "Z", nullptr));
         pushButton_readGcodeSourceData->setText(QApplication::translate("MainWindow", "Read Data", nullptr));
         label_30->setText(QApplication::translate("MainWindow", "from", nullptr));
-        lineEdit_SorceDataDir->setText(QApplication::translate("MainWindow", "curvedBar_hybrid", nullptr));
+        lineEdit_SorceDataDir->setText(QApplication::translate("MainWindow", "turbine_blade_surface", nullptr));
         label_27->setText(QApplication::translate("MainWindow", "Show:", nullptr));
         label_28->setText(QApplication::translate("MainWindow", "from", nullptr));
         label_29->setText(QApplication::translate("MainWindow", "to", nullptr));

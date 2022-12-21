@@ -71,6 +71,47 @@ bool PrincipleStressField::InputFEMResult(std::string filename)
 	return true;
 }
 
+bool PrincipleStressField::InputFEMResult_stressLine(std::string filename)
+{
+
+	// read FEA analysis result with stress tensor
+	std::string stressPath = "../DataSet/fem_result/" + filename + ".txt";
+	char* stressPath_char = new char[stressPath.length() + 1]; strcpy(stressPath_char, stressPath.c_str());
+	FILE* fp = fopen(stressPath_char, "r");
+	if (!fp) { printf("Can not open the field data file\n"); return false; }
+
+	Eigen::MatrixXd fieldValue = Eigen::MatrixXd::Zero(tetMesh->GetTetraNumber(), 8);
+	for (int faceIndex = 0; faceIndex < tetMesh->GetTetraNumber(); faceIndex++) {
+		fscanf(fp, "%lf %lf %lf %lf %lf %lf %lf %lf\n", &fieldValue(faceIndex, 0), &fieldValue(faceIndex, 1), &fieldValue(faceIndex, 2),
+			&fieldValue(faceIndex, 3), &fieldValue(faceIndex, 4), &fieldValue(faceIndex, 5), &fieldValue(faceIndex, 6), &fieldValue(faceIndex, 7));
+	}
+	fclose(fp); //std::cout << fieldValue << std::endl;
+
+	int tetIndex = 0;
+	for (GLKPOSITION Pos = tetMesh->GetTetraList().GetHeadPosition(); Pos;) {
+		QMeshTetra* tetra = (QMeshTetra*)tetMesh->GetTetraList().GetNext(Pos);
+		tetra->eleStress = Eigen::VectorXd::Zero(7);
+		tetra->SetIndexNo(tetIndex); for (int i = 0; i < 7; i++) tetra->eleStress(i) = fieldValue(tetIndex, i);
+		tetra->PSLNum = fieldValue(tetIndex, 7);
+		tetIndex++;
+	}
+
+	tetMesh->drawStressField = true;
+
+	double max = 0, min = 0;
+	for (GLKPOSITION Pos = tetMesh->GetTetraList().GetHeadPosition(); Pos;) {
+		QMeshTetra* element = (QMeshTetra*)tetMesh->GetTetraList().GetNext(Pos);
+		double thisStress = element->eleStress[0];
+		if (thisStress > max) max = thisStress;
+		if (thisStress < min) min = thisStress;
+	}
+	tetMesh->minStressValue = min;
+	tetMesh->maxStressValue = max;
+
+	printf(" Principle Stress Field -- Finish input FEM result including stress line!\n\n");
+	return true;
+}
+
 void PrincipleStressField::ComputeElementPrincipleStress() {
 
 	//---- Compute the principle stress from the Tensor by SVD
@@ -122,6 +163,126 @@ void PrincipleStressField::ComputeElementPrincipleStress() {
 	}
 	tetMesh->minPrincipleStressValue = min;
 	tetMesh->maxPrincipleStressValue = max;
+}
+
+void PrincipleStressField::PrincipalStressAnalysis(bool ABSResult, bool isTensileCase) {
+
+	Eigen::Matrix3d stressTensor;
+
+	for (GLKPOSITION Pos = tetMesh->GetTetraList().GetHeadPosition(); Pos;) {
+		QMeshTetra* Tet = (QMeshTetra*)tetMesh->GetTetraList().GetNext(Pos);
+
+		stressTensor <<
+			Tet->eleStress(1), Tet->eleStress(4), Tet->eleStress(5),
+			Tet->eleStress(4), Tet->eleStress(2), Tet->eleStress(6),
+			Tet->eleStress(5), Tet->eleStress(6), Tet->eleStress(3);
+
+		Eigen::SelfAdjointEigenSolver<Eigen::Matrix3d> eigenSolver(stressTensor, Eigen::ComputeEigenvectors);
+		Eigen::Matrix3d eigenvectorsMatrix = eigenSolver.eigenvectors();
+		Eigen::Vector3d eigenvalue = eigenSolver.eigenvalues();
+
+		std::ptrdiff_t first_index, last_index;
+		//eigenvalue.maxCoeff(&index); //Max principle stress
+
+		Eigen::Vector3d eigenvalueABS; for (int i = 0; i < 3; i++) eigenvalueABS(i) = abs(eigenvalue(i));
+		Eigen::Vector3d eigenvalueCompress; for (int i = 0; i < 3; i++) eigenvalueCompress(i) = -eigenvalue(i);
+
+		//(eigenvalue.cwiseAbs()).maxCoeff(&index); //Max principle stress (ABS)
+
+		if (ABSResult) {
+			eigenvalueABS.maxCoeff(&first_index); //Max principle stress (ABS)
+			eigenvalueABS.minCoeff(&last_index); //Third principle stress (ABS)
+		}
+		else {
+			if (isTensileCase) {
+				eigenvalue.maxCoeff(&first_index); //Max principle stress
+				eigenvalue.minCoeff(&last_index); //Third principle stress
+			}
+			else {
+				eigenvalueCompress.maxCoeff(&first_index); //Max principle stress
+				eigenvalueCompress.minCoeff(&last_index); //Third principle stress
+			}
+		}
+
+		Tet->tau_max = eigenvectorsMatrix.col(first_index);
+		Tet->tau_min = eigenvectorsMatrix.col(last_index);
+
+		Tet->sigma_max = eigenvalue(first_index);
+		Tet->sigma_min = eigenvalue(last_index);
+
+		////Tet->tau_max = eigenvectorsMatrix.col(first_index);
+		//Tet->tau_max = eigenvectorsMatrix.col(last_index);
+
+		////Tet->sigma_max = eigenvalue(first_index);
+		//Tet->sigma_max = eigenvalue(last_index);
+
+		for (int i = 0; i < 3; i++) {
+			if (i != first_index && i != last_index) {
+				Tet->tau_mid = eigenvectorsMatrix.col(i);
+				Tet->sigma_mid = eigenvalue(i);
+			}
+		}
+	}
+
+	tetMesh->drawStressField = true;
+
+	//---- Compute min and max principle stress value
+	double max = 0, min = 0;
+	for (GLKPOSITION Pos = tetMesh->GetTetraList().GetHeadPosition(); Pos;) {
+		QMeshTetra* element = (QMeshTetra*)tetMesh->GetTetraList().GetNext(Pos);
+		double thisStress = element->sigma_max;
+		//std::cout << element->sigma_max << std::endl;
+		if (thisStress > max) max = thisStress;
+		if (thisStress < min) min = thisStress;
+	}
+	tetMesh->minPrincipleStressValue = min;
+	tetMesh->maxPrincipleStressValue = max;
+
+	std::cout << "PrincipleStressValue: [min, max]      " << min << ", " << max << std::endl;
+
+}
+
+bool PrincipleStressField::PrincipalStressRead(std::string filename) {
+
+	// read FEA analysis result with stress tensor
+	std::string stressPath = "../DataSet/fem_result/" + filename + ".txt";
+	char* stressPath_char = new char[stressPath.length() + 1]; strcpy(stressPath_char, stressPath.c_str());
+	FILE* fp = fopen(stressPath_char, "r");
+	if (!fp) { printf("Can not open the field data file\n"); return false; }
+
+	Eigen::MatrixXd fieldValue = Eigen::MatrixXd::Zero(tetMesh->GetTetraNumber(), 5);
+	for (int tetIndex = 0; tetIndex < tetMesh->GetTetraNumber(); tetIndex++) {
+		fscanf(fp, "%lf %lf %lf %lf %lf\n", &fieldValue(tetIndex, 0), &fieldValue(tetIndex, 1), &fieldValue(tetIndex, 2),
+			&fieldValue(tetIndex, 3), &fieldValue(tetIndex, 4));
+	}
+	fclose(fp); //std::cout << fieldValue << std::endl;
+
+	int tetIndex = 0;
+	for (GLKPOSITION Pos = tetMesh->GetTetraList().GetHeadPosition(); Pos;) {
+		QMeshTetra* tetra = (QMeshTetra*)tetMesh->GetTetraList().GetNext(Pos);
+
+		tetra->sigma_max = fieldValue(tetIndex, 0);
+		tetra->tau_max = { fieldValue(tetIndex, 1), fieldValue(tetIndex, 2), fieldValue(tetIndex, 3) };
+		tetra->PSLNum = fieldValue(tetIndex, 4);
+
+		tetIndex++;
+	}
+
+	tetMesh->drawStressField = true;
+
+	double max = 0, min = 0;
+	for (GLKPOSITION Pos = tetMesh->GetTetraList().GetHeadPosition(); Pos;) {
+		QMeshTetra* element = (QMeshTetra*)tetMesh->GetTetraList().GetNext(Pos);
+		double thisStress = element->sigma_max;
+		if (thisStress > max) max = thisStress;
+		if (thisStress < min) min = thisStress;
+	}
+	tetMesh->maxStressValue = min;
+	tetMesh->maxStressValue = max;
+
+	printf(" Principle Stress Field -- Finish input FEM result including stress line!\n\n");
+	return true;
+
 }
 
 void PrincipleStressField::DetermineCriticalTensileandCompressRegion(double rangeT, double rangeC) {
@@ -335,6 +496,21 @@ void PrincipleStressField::_detectNeighbor_criticalTet(
 			}
 			if (exist_in_set) continue;	
 			TetraSet.push_back(ConnectTetra);
+		}
+	}
+}
+
+
+void PrincipleStressField::SelectTensileandCompressiveElements_stressLine() {
+
+	int initialGuessRegionNum = 0;
+	for (GLKPOSITION Pos = tetMesh->GetTetraList().GetHeadPosition(); Pos;) {
+		QMeshTetra* Tet = (QMeshTetra*)tetMesh->GetTetraList().GetNext(Pos);
+		Tet->isTensileorCompressSelect = false;
+
+		if (Tet->PSLNum > 0) {
+			
+			Tet->isTensileorCompressSelect = true;
 		}
 	}
 }

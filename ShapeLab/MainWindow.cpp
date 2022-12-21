@@ -135,7 +135,7 @@ void MainWindow::createActions()
     //For S^3 DeformFDM
    
     //Deformation
-    connect(ui->pushButton_calBestOrientation, SIGNAL(released()), this, SLOT(runBest_Orientation_calculation()));
+    //connect(ui->pushButton_calBestOrientation, SIGNAL(released()), this, SLOT(runBest_Orientation_calculation()));
     connect(ui->pushButton_s3DeformFDM_supportLess_ASAP, SIGNAL(released()), this, SLOT(runDeformation_supportLess_ASAP()));
     //connect(ui->pushButton_test, SIGNAL(released()), this, SLOT(runDeformation_supportLess_ASAP_test()));
     connect(ui->pushButton_s3DeformFDM_strengthReinforcement_ASAP, SIGNAL(released()), this, SLOT(runDeformation_strengthReinforcement_ASAP()));
@@ -144,24 +144,28 @@ void MainWindow::createActions()
     connect(ui->pushButton_s3DeformFDM_hybrid_SR_SQ_ASAP, SIGNAL(released()), this, SLOT(runDeformation_SR_SQ_ASAP()));
     connect(ui->pushButton_s3DeformFDM_hybrid_SL_SR_ASAP, SIGNAL(released()), this, SLOT(runDeformation_SL_SR_ASAP()));
     connect(ui->pushButton_s3DeformFDM_hybrid_SL_SR_SQ_ASAP, SIGNAL(released()), this, SLOT(runDeformation_SL_SR_SQ_ASAP()));
+
+    //connect(ui->pushButton_readStressField, SIGNAL(released()), this, SLOT(readStressField_strengthReinforcement_ASAP_stressLine()));
+    //connect(ui->pushButton_deleteFEAselection, SIGNAL(released()), this, SLOT(deleteFEAselection_strengthReinforcement_ASAP_stressLine()));
+    //connect(ui->pushButton_s3DeformFDM_strengthReinforcement_ASAP_stressLine, SIGNAL(released()), this, SLOT(runDeformation_strengthReinforcement_ASAP_stressLine()));
     
     connect(ui->pushButton_s3DeformFDM_inverseDeform, SIGNAL(released()), this, SLOT(inverseDeformation()));
     connect(ui->pushButton_isoLayerGeneration, SIGNAL(released()), this, SLOT(curvedLayer_Generation()));
     connect(ui->pushButton_adaptiveHeightSlicing, SIGNAL(released()), this, SLOT(adaptiveHeight_curvedLayer_Generation()));
 
     //File IO
-    connect(ui->pushButton_tet2surface, SIGNAL(released()), this, SLOT(run_tet2surface()));
-    connect(ui->pushButton_outputIsoLayerSet, SIGNAL(released()), this, SLOT(output_IsoLayer_set()));
+    //connect(ui->pushButton_tet2surface, SIGNAL(released()), this, SLOT(run_tet2surface()));
+    //connect(ui->pushButton_outputIsoLayerSet, SIGNAL(released()), this, SLOT(output_IsoLayer_set()));
     connect(ui->pushButton_outputToolpath, SIGNAL(released()), this, SLOT(output_Toolpath_set()));
-    connect(ui->pushButton_output_vectorVSobjective, SIGNAL(released()), this, SLOT(output_vectorVSobjective()));
-    connect(ui->pushButton_output_userWaypoints, SIGNAL(released()), this, SLOT(output_userWaypoints()));
-    connect(ui->pushButton_output_streeField, SIGNAL(released()), this, SLOT(output_stress_field()));
-    connect(ui->pushButton_output_QvectorField, SIGNAL(released()), this, SLOT(output_Qvector_field()));
-    connect(ui->pushButton_output_ScalarOrHeight_Field, SIGNAL(released()), this, SLOT(output_ScalarOrHeight_field()));
-    connect(ui->pushButton_output_deformedTet, SIGNAL(released()), this, SLOT(output_deformedTet()));
-    connect(ui->pushButton_output_discretedTet, SIGNAL(released()), this, SLOT(output_discreteTet()));
-    connect(ui->pushButton_output_discretedTet_obj, SIGNAL(released()), this, SLOT(output_discreteTet_obj()));
-    connect(ui->pushButton_output_materialRot_4CAE, SIGNAL(released()), this, SLOT(output_materialRot_4CAE()));
+    //connect(ui->pushButton_output_vectorVSobjective, SIGNAL(released()), this, SLOT(output_vectorVSobjective()));
+    //connect(ui->pushButton_output_userWaypoints, SIGNAL(released()), this, SLOT(output_userWaypoints()));
+    //connect(ui->pushButton_output_streeField, SIGNAL(released()), this, SLOT(output_stress_field()));
+    //connect(ui->pushButton_output_QvectorField, SIGNAL(released()), this, SLOT(output_Qvector_field()));
+    //connect(ui->pushButton_output_ScalarOrHeight_Field, SIGNAL(released()), this, SLOT(output_ScalarOrHeight_field()));
+    //connect(ui->pushButton_output_deformedTet, SIGNAL(released()), this, SLOT(output_deformedTet()));
+    //connect(ui->pushButton_output_discretedTet, SIGNAL(released()), this, SLOT(output_discreteTet()));
+    //connect(ui->pushButton_output_discretedTet_obj, SIGNAL(released()), this, SLOT(output_discreteTet_obj()));
+    //connect(ui->pushButton_output_materialRot_4CAE, SIGNAL(released()), this, SLOT(output_materialRot_4CAE()));
 
     connect(ui->pushButton_calDist_scanAndmodel, SIGNAL(released()), this, SLOT(cal_Dist_scanAndmodel()));
     
@@ -170,29 +174,29 @@ void MainWindow::createActions()
     connect(ui->spinBox_ShowLayerIndex_2, SIGNAL(valueChanged(int)), this, SLOT(changeWaypointDisplay()));
     connect(ui->pushButton_ShowAllLayers, SIGNAL(released()), this, SLOT(all_isoLayer_Display()));  
     connect(ui->pushButton_ShowAllLayersORToolpathes, SIGNAL(released()), this, SLOT(all_isoLayer_Display()));
-    connect(ui->horizontalSlider_slice_Multi_dir, SIGNAL(valueChanged(int)), this, SLOT(split_Show_TET_Mesh()));/* split show the tet mesh */
-    connect(ui->pushButton_drawScaleValue, SIGNAL(released()), this, SLOT(show_ScaleValue()));/* show the scale value of tet mesh */
+    //connect(ui->horizontalSlider_slice_Multi_dir, SIGNAL(valueChanged(int)), this, SLOT(split_Show_TET_Mesh()));/* split show the tet mesh */
+    //connect(ui->pushButton_drawScaleValue, SIGNAL(released()), this, SLOT(show_ScaleValue()));/* show the scale value of tet mesh */
     connect(ui->radioButton_compatibleLayer, SIGNAL(released()), this, SLOT(change_maxLayerNum_normalORcompatible()));
     connect(ui->checkBox_showSingularityNode, SIGNAL(released()), this, SLOT(special_Draw_Command()));
     connect(ui->checkBox_showSolveSelection, SIGNAL(released()), this, SLOT(special_Draw_Command()));
 
     //Fabrication
-    connect(ui->pushButton_model_move_rotation, SIGNAL(released()), this, SLOT(model_ROT_MOVE()));
-    connect(ui->pushButton_collisionChecking_vector, SIGNAL(released()), this, SLOT(concave_Detect_vector()));
-    connect(ui->pushButton_concaveSmooth, SIGNAL(released()), this, SLOT(concave_Smooth_vector()));
-    connect(ui->pushButton_concaveRelaxLoop, SIGNAL(released()), this, SLOT(concave_Detect_Smooth_vector()));
-    connect(ui->pushButton_collisionChecking, SIGNAL(released()), this, SLOT(collisionChecking_layer()));
-    connect(ui->pushButton_remarkCollisionTetra, SIGNAL(released()), this, SLOT(reMark_collisionVector()));
-    connect(ui->pushButton_collisionAware_flattening, SIGNAL(released()), this, SLOT(collisionAware_Flattening()));
+    //connect(ui->pushButton_model_move_rotation, SIGNAL(released()), this, SLOT(model_ROT_MOVE()));
+    //connect(ui->pushButton_collisionChecking_vector, SIGNAL(released()), this, SLOT(concave_Detect_vector()));
+    //connect(ui->pushButton_concaveSmooth, SIGNAL(released()), this, SLOT(concave_Smooth_vector()));
+    //connect(ui->pushButton_concaveRelaxLoop, SIGNAL(released()), this, SLOT(concave_Detect_Smooth_vector()));
+    //connect(ui->pushButton_collisionChecking, SIGNAL(released()), this, SLOT(collisionChecking_layer()));
+    //connect(ui->pushButton_remarkCollisionTetra, SIGNAL(released()), this, SLOT(reMark_collisionVector()));
+    //connect(ui->pushButton_collisionAware_flattening, SIGNAL(released()), this, SLOT(collisionAware_Flattening()));
     
     //Support Generation
-    connect(ui->pushButton_Comp_initialGuess_envelopSupport, SIGNAL(released()), this, SLOT(initial_Guess_SupportEnvelope_Generation()));
-    connect(ui->pushButton_MeshCombination, SIGNAL(released()), this, SLOT(initial_Guess_SupportEnvelope_Generation_plus()));
-    connect(ui->pushButton_compatibleLayer_generation, SIGNAL(released()), this, SLOT(compatibleLayer_Generation()));
-    connect(ui->pushButton_markOverhangFace, SIGNAL(released()), this, SLOT(mark_OverhangFace()));
-    connect(ui->pushButton_remarkOverhangFace, SIGNAL(released()), this, SLOT(reMark_OverhangFace()));
-    connect(ui->pushButton_treeSkeletonGeneration, SIGNAL(released()), this, SLOT(build_Support_Tree_Skeleton()));
-    connect(ui->pushButton_slimmedSupportGeneration, SIGNAL(released()), this, SLOT(generate_slim_supportLayer()));
+    //connect(ui->pushButton_Comp_initialGuess_envelopSupport, SIGNAL(released()), this, SLOT(initial_Guess_SupportEnvelope_Generation()));
+    //connect(ui->pushButton_MeshCombination, SIGNAL(released()), this, SLOT(initial_Guess_SupportEnvelope_Generation_plus()));
+    //connect(ui->pushButton_compatibleLayer_generation, SIGNAL(released()), this, SLOT(compatibleLayer_Generation()));
+    //connect(ui->pushButton_markOverhangFace, SIGNAL(released()), this, SLOT(mark_OverhangFace()));
+    //connect(ui->pushButton_remarkOverhangFace, SIGNAL(released()), this, SLOT(reMark_OverhangFace()));
+    //connect(ui->pushButton_treeSkeletonGeneration, SIGNAL(released()), this, SLOT(build_Support_Tree_Skeleton()));
+    //connect(ui->pushButton_slimmedSupportGeneration, SIGNAL(released()), this, SLOT(generate_slim_supportLayer()));
 
     //ToolPath Generation
     //connect(ui->pushButton_toolPathGeneration, SIGNAL(released()), this, SLOT(toolPath_Generation()));
@@ -201,7 +205,7 @@ void MainWindow::createActions()
     //Gcode Generation
     connect(ui->pushButton_readGcodeSourceData, SIGNAL(released()), this, SLOT(readGcodeSourceData()));
     connect(ui->pushButton_calDWH, SIGNAL(released()), this, SLOT(runDHWcalculation()));
-    connect(ui->pushButton_output2Robot, SIGNAL(released()), this, SLOT(output_preProcess_waypoints_4_Robot()));
+    //connect(ui->pushButton_output2Robot, SIGNAL(released()), this, SLOT(output_preProcess_waypoints_4_Robot()));
     connect(ui->pushButton_calSingularOpt, SIGNAL(released()), this, SLOT(runSingularityOpt()));
     connect(ui->pushButton_calCollision, SIGNAL(released()), this, SLOT(runCollisionCheck()));
     connect(ui->pushButton_calCollisionElimination, SIGNAL(released()), this, SLOT(runCollisionElimination()));
@@ -744,7 +748,7 @@ void MainWindow::_updateFrameworkParameter() {
     else if (modelName == "bunny_cut_refined")     this->_setParameter(1, 7, SUPPORT_LESS, 15.0, 0.0, 0.0, 0.0, 3.0, 1.0, 40.0, 30.0, 0.0, 0.0);
     else if (modelName == "calibration")     this->_setParameter(1, 7, SUPPORT_LESS, 15.0, 0.0, 0.0, 0.0, 3.0, 1.0, 40.0, 30.0, 0.0, 0.0);
     else if (modelName == "planar_calibration")     this->_setParameter(1, 7, SUPPORT_LESS, 15.0, 0.0, 0.0, 0.0, 3.0, 1.0, 40.0, 30.0, 0.0, 0.0);
-
+    else if (modelName == "yuhu_model")  this->_setParameter(1, 7, SUPPORT_LESS, 15.0, 0.0, 0.0, 0.0, 3.0, 1.0, 40.0, 30.0, 0.0, 0.0);
 
     else if (modelName == "bridgeSmall")    this->_setParameter(1, 7, STRENGTH_REINFORCEMENT, 0.0, 8.0, 0.0, 0.0, 3.0, 1.0, 50.0, 0.0, 0.3, 0.0);
     else if (modelName == "bridgeSmall_new")this->_setParameter(1, 7, STRENGTH_REINFORCEMENT, 0.0, 8.0, 0.0, 0.0, 3.0, 1.0, 50.0, 0.0, 0.3, 0.0);
@@ -757,6 +761,9 @@ void MainWindow::_updateFrameworkParameter() {
     else if (modelName == "bunny_cut1")     this->_setParameter(1, 7, STRENGTH_REINFORCEMENT, 0.0, 8.0, 0.0, 0.0, 3.0, 1.0, 50.0, 0.0, 0.02, 0.02);
     else if (modelName == "bunnyhead3")     this->_setParameter(1, 7, STRENGTH_REINFORCEMENT, 0.0, 8.0, 0.0, 0.0, 3.0, 1.0, 50.0, 0.0, 0.1, 0.1);
     else if (modelName == "armadillo5")     this->_setParameter(1, 7, STRENGTH_REINFORCEMENT, 0.0, 8.0, 0.0, 0.0, 3.0, 1.0, 50.0, 0.0, 0.2, 0.0);
+    else if (modelName == "connecter3DSimple")this->_setParameter(1, 1, STRENGTH_REINFORCEMENT, 0.0, 12.0, 0.0, 0.0, 4.0, 6.0, 150.0, 0.0, 0.0, 0.0);
+    else if (modelName == "topopt")         this->_setParameter(1, 7, STRENGTH_REINFORCEMENT, 0.0, 8.0, 0.0, 0.0, 3.0, 1.0, 80.0, 0.0, 0.0, 0.0);
+    else if (modelName == "GEbracket")      this->_setParameter(1, 7, STRENGTH_REINFORCEMENT, 0.0, 10.0, 0.0, 0.0, 3.0, 1.0, 50.0, 0.0, 0.0, 0.0);
 
     else if (modelName == "AnkleBaseV1")    this->_setParameter(1, 7, SURFACE_QUALITY, 0.0, 0.0, 24.0, 15.0, 3.0, 0.1, 6.0, 0.0, 0.0, 0.0);
     else if (modelName == "CSquare")        this->_setParameter(1, 7, SURFACE_QUALITY, 0.0, 0.0, 15.0, 15.0, 3.0, 0.7, 12.5, 0.0, 0.0, 0.0);
@@ -789,7 +796,7 @@ void MainWindow::_updateFrameworkParameter() {
     else if (modelName == "armadillo2")     this->_setParameter(1, 7, HYBRID_SL_SQ, 15.0, 0.0, 35.0, 15.0, 3.0, 1.0, 40.0, 40.0, 0.0, 0.0);
     else if (modelName == "teapot")         this->_setParameter(1, 7, HYBRID_SL_SQ, 15.0, 0.0, 30.0, 15.0, 3.0, 1.0, 40.0, 30.0, 0.0, 0.0);
     else if (modelName == "curved_Bar1")    this->_setParameter(1, 7, HYBRID_SL_SQ, 15.0, 0.0, 30.0, 15.0, 3.0, 1.0, 40.0, 30.0, 0.0, 0.0);
-    //else if (modelName == "wing_mirror_step1")this->_setParameter(1, 7, HYBRID_SL_SQ, 15.0, 0.0, 30.0, 15.0, 3.0, 1.0, 40.0, 43.0, 0.0, 0.0);
+    else if (modelName == "turbine_blade")this->_setParameter(1, 7, HYBRID_SL_SQ, 15.0, 0.0, 30.0, 15.0, 3.0, 1.0, 40.0, 1.0, 0.0, 0.0);
 
     else if (modelName == "topopt_new3")    this->_setParameter(2, 7, HYBRID_SR_SQ, 0.0, 5.0, 40.0, 20.0, 3.0, 0.6, 10.0, 0.0, 0.1, 0.1);
     else if (modelName == "GEbracket3")     this->_setParameter(1, 7, HYBRID_SR_SQ, 0.0, 8.0, 15.0, 15.0, 3.0, 1.0, 50.0, 0.0, 0.1, 0.1);
@@ -1005,7 +1012,7 @@ void MainWindow::runBest_Orientation_calculation() {
     DeformTet* ShapeUpOperator = new DeformTet();
     ShapeUpOperator->initial(tet_Model);
     ShapeUpOperator->m_supportFreeAngle = ui->doubleSpinBox_supportFreeAngle->value();
-    ShapeUpOperator->find_bestPrintingOrientation(ui->checkBox_computeBestOrientation->isChecked());
+    //ShapeUpOperator->find_bestPrintingOrientation(ui->checkBox_computeBestOrientation->isChecked());
     delete ShapeUpOperator;
 
     std::cout << "Finish Best Printing Orientation calculation. " << std::endl;
@@ -1146,6 +1153,74 @@ void MainWindow::runDeformation_strengthReinforcement_ASAP() {
     delete ShapeUpOperator;
     pGLK->refresh(true);
     pGLK->Zoom_All_in_View();
+}
+
+void MainWindow::readStressField_strengthReinforcement_ASAP_stressLine() {
+
+    PolygenMesh* tet_Model = this->_detectPolygenMesh(TET_MODEL);
+    if (tet_Model == NULL) {
+        std::cerr << "There is no Tet mesh, please check." << std::endl; return;
+    }
+
+    DeformTet* ShapeUpOperator = new DeformTet();
+    ShapeUpOperator->initial(tet_Model,
+        ui->spinBox_shapeUpIterNum->value(),
+        ui->spinBox_innerIterNum->value(),
+        ui->doubleSpinBox_criticalTETWeight_SL->value(),
+        ui->doubleSpinBox_criticalTETWeight_SR->value(),
+        ui->doubleSpinBox_criticalTETWeight_SQC->value(),
+        ui->doubleSpinBox_criticalTETWeight_SQV->value(),
+        ui->doubleSpinBox_neighborScaleWeight->value(),
+        ui->doubleSpinBox_regularScaleWeight->value(),
+        ui->doubleSpinBox_globalQuatSmoothWeight->value(),
+        STRENGTH_REINFORCEMENT);
+    ShapeUpOperator->m_tensileRegionRatio = ui->doubleSpinBox_tensileRegionRatio->value();
+    ShapeUpOperator->m_compressRegionRatio = ui->doubleSpinBox_compressRegionRatio->value();
+
+    bool preProcessFinish = ShapeUpOperator->preProcess_4StrengthReinforcement_stressLine();
+    if (preProcessFinish) {
+        std::cout << "Pre-process finish. " << std::endl;
+        ShapeUpOperator_stressLine = ShapeUpOperator;
+    }
+    else {
+        std::cout << "Pre-process did not finish, please check the FEM file read. " << std::endl;
+    }
+
+    pGLK->refresh(true);
+    pGLK->Zoom_All_in_View();
+}
+
+
+void MainWindow::deleteFEAselection_strengthReinforcement_ASAP_stressLine() {
+
+    if (ShapeUpOperator_stressLine != NULL) {
+        ShapeUpOperator_stressLine->delete_selected_ele_stress_line();
+        std::cout << "delete_selected_ele_stress_line finish. " << std::endl;
+    }
+    else {
+        std::cout << "ShapeUpOperator_stressLine == NULL, please check the FEM file read. " << std::endl;
+    }
+
+    pGLK->refresh(true);
+    //pGLK->Zoom_All_in_View();
+}
+
+void MainWindow::runDeformation_strengthReinforcement_ASAP_stressLine() {
+
+    if (ShapeUpOperator_stressLine != NULL) {
+
+        ShapeUpOperator_stressLine->runASAP_StrengthReinforcement_stressLine();
+        ShapeUpOperator_stressLine->postProcess();
+        std::cout << "Finish strengthReinforcement ASAP deformation. " << std::endl;
+        ui->pushButton_s3DeformFDM_inverseDeform->setEnabled(true);
+    }
+    else {
+        std::cout << "ShapeUpOperator_stressLine == NULL, please check the FEM file read. " << std::endl;
+    }
+
+    pGLK->refresh(true);
+    pGLK->Zoom_All_in_View();
+
 }
 
 void MainWindow::output_stress_field() {
@@ -1565,8 +1640,8 @@ void MainWindow::inverseDeformation() {
         //ui->checkBox_outputLayer->setChecked(true);
     }
     //ui->pushButton_isoLayerGeneration->setEnabled(true);
-    ui->pushButton_output_QvectorField->setEnabled(true);
-    ui->pushButton_output_ScalarOrHeight_Field->setEnabled(true);
+    //ui->pushButton_output_QvectorField->setEnabled(true);
+    //ui->pushButton_output_ScalarOrHeight_Field->setEnabled(true);
     tetMesh->drawStressField = false;
     std::cout << "\nFinish inverse deformation. " << std::endl;
     pGLK->refresh(true);
@@ -1593,7 +1668,7 @@ void MainWindow::output_ScalarOrHeight_field() {
         std::cerr << "There is no Tet mesh, please check." << std::endl; return;
     }
     FileIO* IO_operator = new FileIO();
-    IO_operator->output_ScalarOrHeight_field(tet_Model, ui->checkBox_scalarOrHeight_field->isChecked());
+    //IO_operator->output_ScalarOrHeight_field(tet_Model, ui->checkBox_scalarOrHeight_field->isChecked());
     delete IO_operator;
 
     std::cout << "Finish outputing Scalar/Height field. " << std::endl;
@@ -2069,7 +2144,7 @@ void MainWindow::adaptiveHeight_curvedLayer_Generation() {
 void MainWindow::show_ScaleValue() {
 
     //0-NONE;1-X;2-Y;3-Z;4-Average
-    int scaleValue_Direction = ui->comboBox_scaleValueDirection->currentIndex();
+    int scaleValue_Direction = 0;// ui->comboBox_scaleValueDirection->currentIndex();
 
     PolygenMesh* tetModel = this->_detectPolygenMesh(TET_MODEL);
     if (tetModel == nullptr) { std::cerr << "No tet mesh detected!" << std::endl; return; }
@@ -2126,7 +2201,7 @@ void MainWindow::show_ScaleValue() {
 void MainWindow::split_Show_TET_Mesh() {
 
     //0-X;1-Y;2-Z
-    int plane_Move = ui->comboBox_planeDir->currentIndex();
+    int plane_Move = 0;// ui->comboBox_planeDir->currentIndex();
 
     PolygenMesh* tetModel = this->_detectPolygenMesh(TET_MODEL);
     if (tetModel == nullptr) { std::cerr << "No tet mesh detected!" << std::endl; return; }
@@ -2149,7 +2224,7 @@ void MainWindow::split_Show_TET_Mesh() {
     xmax *= 1.1;	ymax *= 1.1;	zmax *= 1.1;
 
     //get plane position
-    double t = ui->horizontalSlider_slice_Multi_dir->value() / 100.0;
+    double t = 0;// ui->horizontalSlider_slice_Multi_dir->value() / 100.0;
     Eigen::Vector3d plane_Position =
     { (1 - t) * xmin + t * xmax,(1 - t) * ymin + t * ymax,(1 - t) * zmin + t * zmax };
 
@@ -2277,8 +2352,8 @@ void MainWindow::model_ROT_MOVE() {
 
     fabriOperator = new Fabrication();
     fabriOperator->initial(model);
-    fabriOperator->mode_RotMov_4fabrication(ui->doubleSpinBox_rot_phi->value(), 
-        ui->doubleSpinBox_rot_theta->value(), ui->doubleSpinBox_modelHeight_y->value());
+    //fabriOperator->mode_RotMov_4fabrication(ui->doubleSpinBox_rot_phi->value(), 
+    //    ui->doubleSpinBox_rot_theta->value(), ui->doubleSpinBox_modelHeight_y->value());
     delete fabriOperator;
 
     this->_scalarField_2_vectorField(true);//update vector field
@@ -2290,9 +2365,9 @@ void MainWindow::model_ROT_MOVE() {
 
 void MainWindow::_setParameter(double rot_phi, double rot_theta, double modelHeight_y) {
 
-    ui->doubleSpinBox_rot_phi->setValue(rot_phi);
-    ui->doubleSpinBox_rot_theta->setValue(rot_theta);
-    ui->doubleSpinBox_modelHeight_y->setValue(modelHeight_y);
+    //ui->doubleSpinBox_rot_phi->setValue(rot_phi);
+    //ui->doubleSpinBox_rot_theta->setValue(rot_theta);
+    //ui->doubleSpinBox_modelHeight_y->setValue(modelHeight_y);
 }
 
 void MainWindow::concave_Detect_vector() {
@@ -2326,10 +2401,10 @@ void MainWindow::concave_Detect_Smooth_vector() {
     fabriOperator = new Fabrication();
     fabriOperator->initial(model);
 
-    for (int i = 0; i < ui->spinBox_concaveDetecSmooth_loopTime->value(); i++) {
-        fabriOperator->concaveVector_detection();
-        fabriOperator->concaveVector_smooth();
-    }
+    //for (int i = 0; i < ui->spinBox_concaveDetecSmooth_loopTime->value(); i++) {
+    //    fabriOperator->concaveVector_detection();
+    //    fabriOperator->concaveVector_smooth();
+    //}
     delete fabriOperator;
 
     this->_vectorField_2_scalarField(false);
@@ -2359,14 +2434,14 @@ void MainWindow::collisionChecking_layer() {
         polygenMeshList.Remove(isoLayerSet);
 
         std::cout << "There is no collision after checking each layer.\n" << std::endl;
-        ui->pushButton_collisionAware_flattening->setEnabled(false);
+        //ui->pushButton_collisionAware_flattening->setEnabled(false);
         delete fabriOperator;
 
     }
     else {
         std::cout << "There is collision, please do the flattening operation.\n" << std::endl;
-        ui->pushButton_collisionAware_flattening->setEnabled(true);
-        ui->pushButton_remarkCollisionTetra->setEnabled(true);
+        //ui->pushButton_collisionAware_flattening->setEnabled(true);
+        //ui->pushButton_remarkCollisionTetra->setEnabled(true);
     }
     updateTree();
     pGLK->refresh(true);
@@ -2755,7 +2830,7 @@ void MainWindow::compatibleLayer_Generation() {
     ui->spinBox_ShowLayerIndex->setMinimum((int)0);
     ui->radioButton_compatibleLayer->setEnabled(true);
     ui->spinBox_ShowLayerIndex->setMaximum(compatible_isoLayerSet->GetMeshList().GetCount() - 1);
-    ui->pushButton_remarkOverhangFace->setEnabled(true);
+    //ui->pushButton_remarkOverhangFace->setEnabled(true);
 
     //organize the compatible layers
     supportGene->organize_compatibleLayer_Index(compatible_isoLayerSet,
@@ -2824,8 +2899,8 @@ void MainWindow::mark_OverhangFace() {
 
     ui->spinBox_ShowLayerIndex->setMinimum((int)0);
     ui->radioButton_compatibleLayer->setEnabled(true);
-    ui->pushButton_treeSkeletonGeneration->setEnabled(true);
-    ui->pushButton_remarkOverhangFace->setEnabled(true);
+    //ui->pushButton_treeSkeletonGeneration->setEnabled(true);
+    //ui->pushButton_remarkOverhangFace->setEnabled(true);
     ui->radioButton_compatibleLayer->setChecked(false);
     ui->spinBox_ShowLayerIndex->setMaximum(compatible_isoLayerSet->GetMeshList().GetCount() - 1);
 
@@ -2881,7 +2956,7 @@ void MainWindow::reMark_OverhangFace() {
 void MainWindow::build_Support_Tree_Skeleton() {
 
     supportGene->build_support_tree();
-    ui->pushButton_slimmedSupportGeneration->setEnabled(true);
+    //ui->pushButton_slimmedSupportGeneration->setEnabled(true);
 
     std::cout << "\nFinish tree skeleton generation." << std::endl;
     updateTree();
@@ -3028,7 +3103,7 @@ void MainWindow::readGcodeSourceData() {
     ui->spinBox_GcodeGeneFromIndex->setMaximum(layerNum - 1);
     ui->spinBox_GcodeGeneToIndex->setMaximum(layerNum - 1);
     ui->spinBox_GcodeGeneToIndex->setValue(layerNum - 1);
-    ui->pushButton_output_userWaypoints->setEnabled(true);
+    //ui->pushButton_output_userWaypoints->setEnabled(true);
 
     updateTree();
     pGLK->refresh(true);
@@ -3083,6 +3158,8 @@ void MainWindow::_updateFabractionParameter() {
     if (modelName == "wing_mirror_step4") this->_setParameter(true, 0, 0, 118.2035);
 
     if (modelName == "yoga_icra") this->_setParameter(false, 0.0, 0.0, 0.0);
+
+    if (modelName == "turbine_blade_surface") this->_setParameter(true, 0.0, 0.0, 108.0);
 }
 
 void MainWindow::_setParameter(bool Yup2Zup, double Xmove, double Ymove, double Zmove) {
@@ -3158,7 +3235,7 @@ void MainWindow::runSingularityOpt() {
         GcodeGene->singularityOpt_newConfig();
     }
     GcodeGene->testXYZBCE(true);
-    ui->pushButton_output2Robot->setEnabled(true);
+    //ui->pushButton_output2Robot->setEnabled(true);
     pGLK->refresh(true);
     pGLK->Zoom_All_in_View();
 }
@@ -3323,7 +3400,9 @@ void MainWindow::doTimerGcodeMoving() {
 
             if (cncPatch->patchName == "c_axis"|| 
                 cncPatch->patchName == "fixture_5AM"|| cncPatch->patchName == "baseModel_5AM" ||
-                cncPatch->patchName == "fixture_self" || cncPatch->patchName == "baseModel_self") {
+                cncPatch->patchName == "fixture_self" || cncPatch->patchName == "baseModel_self" ||
+                cncPatch->patchName == "fixture_after_machining_5AX" 
+                || cncPatch->patchName == "baseModel_after_machining_5AX") {
 
                 cnc_New_Position = _calPartGuesture(true, cnc_Base_Position, 0.0, 0.0, 0.0, 0.0, machine_C);
             }

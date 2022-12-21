@@ -274,6 +274,8 @@ public:
 
 	double m_icpDist; // icp distance
 
+	bool specialDraw = false;
+
 };
 
 #endif

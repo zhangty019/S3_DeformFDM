@@ -22,7 +22,7 @@ PolygenMesh::PolygenMesh(mesh_type type)
 {
     ClearAll();
     m_drawListID=-1;
-    m_bVertexNormalShading=true;
+    m_bVertexNormalShading=false;
     isTransparent = false;
     m_drawListNumber = 6;
     meshType = type;
@@ -92,7 +92,7 @@ void PolygenMesh::_buildDrawShadeList(bool bVertexNormalShading)
     glEnable(GL_NORMALIZE);
     glEnable(GL_LIGHTING);
 
-    //drawOriginalCoordinate();
+    drawOriginalCoordinate();
     if (isTransparent) {
         glEnable(GL_DEPTH_TEST);
         glDepthMask(GL_FALSE);
@@ -126,7 +126,7 @@ void PolygenMesh::_buildDrawShadeList(bool bVertexNormalShading)
                     if (face->GetLeftTetra() == NULL) Tetra = face->GetRightTetra();
                     else Tetra = face->GetLeftTetra();
                     //_changeValueToColor(-10,10, Tetra->eleStress[0], rr, gg, bb);
-                    _changeValueToColor(mesh->maxStressValue, mesh->minStressValue, Tetra->eleStress[0], rr, gg, bb);
+                    _changeValueToColor(mesh->maxStressValue, mesh->minStressValue, Tetra->sigma_max, rr, gg, bb);
                     glColor3f(rr, gg, bb);
                 }
                 if (face->show_scale_value) {
@@ -412,7 +412,7 @@ void PolygenMesh::_buildDrawMeshList()
     }
 
     if (this->meshType == TOOL_PATH) {
-        glLineWidth(4.0);
+        glLineWidth(1.8);
         for (GLKPOSITION Pos = meshList.GetHeadPosition(); Pos != NULL; ) {
             QMeshPatch* mesh = (QMeshPatch*)(meshList.GetNext(Pos));
 
@@ -444,6 +444,9 @@ void PolygenMesh::_buildDrawMeshList()
                         rr = 0.9; gg = 0.4; bb = 0;
                     }
                 }
+                //if (edge->isConnectEdge || edge->isConnectEdge_zigzag) { rr = 0.0; gg = 0.0; bb = 1.0; }
+                if (edge->GetIndexNo() == 0) { rr = 1.0; gg = 0.0; bb = 0.0; }
+                if (edge->isSpecialShow) { rr = 1.0; gg = 0.1; bb = 0.0; }
                 glColor3f(rr, gg, bb);
 
                 this->drawSingleEdge(edge);
@@ -495,6 +498,8 @@ void PolygenMesh::_buildDrawMeshList()
 
             for (GLKPOSITION PosEdge = (mesh->GetEdgeList()).GetHeadPosition(); PosEdge != NULL;) {
                 QMeshEdge* edge = (QMeshEdge*)((mesh->GetEdgeList()).GetNext(PosEdge));
+
+                if (edge->GetLeftFace() == NULL || edge->GetRightFace() == NULL) continue;
 
                 // only show the boundary eadge
                 Eigen::Vector3d normal_Lface, normal_Rface;
@@ -677,7 +682,7 @@ void PolygenMesh::_buildDrawNodeList()
     }
 
     if (this->meshType == TOOL_PATH) {
-        glPointSize(5.0);
+        glPointSize(4.0);
         glBegin(GL_POINTS);
         for (GLKPOSITION Pos = meshList.GetHeadPosition(); Pos != NULL; ) {
             QMeshPatch* mesh = (QMeshPatch*)(meshList.GetNext(Pos));
@@ -692,9 +697,9 @@ void PolygenMesh::_buildDrawNodeList()
 
                 _changeValueToColor(17, rr, gg, bb);
                 if (node->GetIndexNo() == 0) { rr = 1.0f; gg = 0.0f; bb = 0.0f; }
-                /*if (node->resampleChecked == false) { rr = 0.0f; gg = 0.0f; bb = 0.0f; }
-                else { rr = 1.0f; gg = 0.0f; bb = 1.0f; }*/
-                if (node->isZigzag_sideNode) { rr = 0.7f; gg = 0.0f; bb = 0.5f; }
+                //if (node->resampleChecked == false) { rr = 0.0f; gg = 0.0f; bb = 0.0f; }
+                //else { rr = 1.0f; gg = 0.0f; bb = 1.0f; }
+                //if (node->isZigzag_sideNode) { rr = 0.7f; gg = 0.0f; bb = 0.5f; }
 
                 //for collision detection       
                 if (node->iscollided) { rr = 0; gg = 0; bb = 0; }
@@ -719,6 +724,8 @@ void PolygenMesh::_buildDrawNodeList()
                     //}
                     else { rr = 0.2; gg = 0.60; bb = 0.00; }
                 }
+
+                //if(node->specialDraw)  { rr = 0.00; gg = 1.00; bb = 0.00; }
 
                 glColor3f(rr, gg, bb);
                 drawSingleNode(node);

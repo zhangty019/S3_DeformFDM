@@ -49,7 +49,7 @@ void heatMethodField::compZigZagFieldValue() {
     // -- plane cut direction -- //
     Eigen::Vector3d direction = Eigen::Vector3d::Zero();
     //cross-section infill
-    if (surfaceMesh->compatible_layer_Index % 2 == 0) {
+    if (surfaceMesh->compatible_layer_Index % 2 == 0) { // the model shoule be Y up, please check!
         direction[0] = -1.0; direction[2] = 1.0;}
     else { direction[0] = 1.0; direction[2] = 1.0;}
     ////temp_bunny use
@@ -81,15 +81,15 @@ void heatMethodField::compZigZagFieldValue() {
     }
 
     //temp use for yuming
-    //direction = Eigen::Vector3d::Zero();
-    //if (surfaceMesh->compatible_layer_Index % 2 == 0) {
-    //    direction[0] = 1.0; direction[1] = 1.0;
-    //}
-    //else { direction[0] = -1.0; direction[1] = 1.0; }
-    //for (GLKPOSITION Pos = surfaceMesh->GetFaceList().GetHeadPosition(); Pos;) {
-    //    QMeshFace* Face = (QMeshFace*)surfaceMesh->GetFaceList().GetNext(Pos);
-    //    Face->printingDir = direction.normalized();
-    //}
+    direction = Eigen::Vector3d::Zero();
+    if (surfaceMesh->compatible_layer_Index % 2 == 0) {
+        direction[0] = 1.0; direction[1] = 0.0;
+    }
+    else { direction[0] = 1.0; direction[1] = -0.0; }
+    for (GLKPOSITION Pos = surfaceMesh->GetFaceList().GetHeadPosition(); Pos;) {
+        QMeshFace* Face = (QMeshFace*)surfaceMesh->GetFaceList().GetNext(Pos);
+        Face->printingDir = direction.normalized();
+    }
     this->scalarFieldCompute_zigzag();
 }
 

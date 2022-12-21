@@ -138,6 +138,8 @@ public:
 
 	int FieldIndexNumber = -1;
 	bool visited = false;
+
+	bool isSpecialShow = false;
 };
 
 #endif

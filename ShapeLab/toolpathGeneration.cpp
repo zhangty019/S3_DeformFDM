@@ -168,7 +168,7 @@ void toolpathGeneration::generate_all_toolPath() {
 
 QMeshPatch* toolpathGeneration::generate_each_bundaryToolPath(QMeshPatch* surfaceMesh) {
 
-	int curveNum = autoComputeTPathNum(surfaceMesh, true); int boundaryTp_num = 5;
+	int curveNum = autoComputeTPathNum(surfaceMesh, true); int boundaryTp_num = 3;
 
 	if (curveNum > 100) {
 		std::cout << "layer = " << surfaceMesh->GetIndexNo() << " high curve num " << curveNum << "." << std::endl;
@@ -372,6 +372,7 @@ void toolpathGeneration::linkEachIsoNode(QMeshPatch* singlePath, double startIso
 		}
 	}
 	QMeshNode* boundFirstNode = X_nearestFirstNode;
+	boundFirstNode->connectTPathProcessed = true;
 
 	// Method 2: get a First Node(boundFirstNode) to start the toolPath (randomly)
 	//QMeshNode* boundFirstNode = nullptr;
@@ -389,6 +390,7 @@ void toolpathGeneration::linkEachIsoNode(QMeshPatch* singlePath, double startIso
 
 	QMeshNode* sNode = boundFirstNode;
 	QMeshNode* eNode = findNextBoundaryToolPath(sNode, singlePath);
+
 	/* Link all of iso-Node in one Layer*/
 	do {
 		
@@ -551,7 +553,7 @@ void toolpathGeneration::resampleToolpath(QMeshPatch* patch) {
 
 	if (patch == NULL) return;
 
-	double length = this->toolpath_Distance * 0.9;
+	double length = this->toolpath_Distance;
 
 	for (GLKPOSITION Pos = patch->GetNodeList().GetHeadPosition(); Pos;) {
 		QMeshNode* Node = (QMeshNode*)patch->GetNodeList().GetNext(Pos);
@@ -561,7 +563,6 @@ void toolpathGeneration::resampleToolpath(QMeshPatch* patch) {
 	QMeshEdge* sEdge = (QMeshEdge*)patch->GetEdgeList().GetHead();
 	QMeshNode* sNode = sEdge->GetStartPoint(); // the first Node of Toolpath
 	if (sEdge->GetStartPoint()->GetEdgeNumber() > 1) sNode = sEdge->GetEndPoint();
-	sNode->resampleChecked = true;
 
 	QMeshNode* sPoint = sNode;	QMeshNode* ePoint;	double lsum = 0.0;// temp distance record
 	// mark the resampleChecked nodes
@@ -579,7 +580,7 @@ void toolpathGeneration::resampleToolpath(QMeshPatch* patch) {
 			break;
 		}
 		// give the ancor points (Linkage point)
-		if (Edge->isConnectEdge == true) {
+		if (Edge->isConnectEdge || Edge->isConnectEdge_zigzag) {
 
 			sPoint->resampleChecked = true;	ePoint->resampleChecked = true;
 
@@ -890,6 +891,7 @@ void toolpathGeneration::generate_all_hybrid_toolPath() {
 
 			QMeshPatch* singlePath = this->generate_each_hybrid_bundaryToolPath(layer);
 			this->resampleToolpath(singlePath);
+			this->calToolPath_length(singlePath);
 
 			if (singlePath != NULL) {
 				if (layer->is_SupportLayer) {
@@ -921,7 +923,7 @@ void toolpathGeneration::generate_all_hybrid_toolPath() {
 
 QMeshPatch* toolpathGeneration::generate_each_hybrid_bundaryToolPath(QMeshPatch* surfaceMesh) {
 
-	int curveNum = autoComputeTPathNum(surfaceMesh, true);	int boundaryTp_num = 4;
+	int curveNum = autoComputeTPathNum(surfaceMesh, true);	int boundaryTp_num = 2;
 
 	bool only_boundary = false;
 
@@ -1512,6 +1514,25 @@ void toolpathGeneration::_getFaceNeighbor(QMeshFace* face) {
 		if (face->neighFace.size() == 0 || face->neighFace.size() > 3)
 			std::cout << "neighFace size error!" << std::endl;
 	}
+}
+
+void toolpathGeneration::calToolPath_length(QMeshPatch* patch) {
+	if (patch == NULL) return;
+
+	double total_length = 0.0;
+	double threshold_jump = toolpath_Width * 4.5;
+	for (GLKPOSITION Pos = patch->GetEdgeList().GetHeadPosition(); Pos;) {
+		QMeshEdge* Edge = (QMeshEdge*)patch->GetEdgeList().GetNext(Pos);
+		Edge->isSpecialShow = false;
+
+		double length = Edge->CalLength();
+		if (length < threshold_jump)
+			total_length += length;
+		else
+			Edge->isSpecialShow = true;
+	}
+
+	//std::cout << "total_length = " << total_length << std::endl;
 }
 
 

@@ -15,11 +15,34 @@ UI_DIR += ./GeneratedFiles
 INCLUDEPATH += $$PWD/../ThirdPartyDependence/eigen3
 INCLUDEPATH += $$PWD/../ThirdPartyDependence
 
-HEADERS  +=MainWindow.h
+HEADERS  +=MainWindow.h\
+DeformTet.h\
+dirent.h\
+Fabrication.h\
+FileIO.h\
+GcodeGeneration.h\
+Graph.h\
+heatMethod.h\
+heatmethodfield.h\
+IsoLayerGeneration.h\
+PrincipleStressField.h
+toolpathGeneration.h\
+SupportGeneration.h
 
 #ui_MainWindow not included.
 SOURCES += main.cpp\
-MainWindow.cpp
+MainWindow.cpp\
+DeformTet.cpp\
+Fabrication.cpp\
+FileIO.cpp\
+heatMethod.cpp\
+heatmethodfield.cpp\
+IsoLayerGeneration.cpp\
+PrincipleStressField.cpp\
+toolpathGeneration.cpp\
+GcodeGeneration.cpp\
+Graph.cpp\
+SupportGeneration.cpp
 
 
 FORMS += ./MainWindow.ui

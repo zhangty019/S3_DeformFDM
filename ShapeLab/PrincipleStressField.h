@@ -10,8 +10,12 @@ public:
 	QMeshPatch* tetMesh;
 
 	bool InputFEMResult(std::string filename);
+	bool InputFEMResult_stressLine(std::string filename);
+	bool PrincipalStressRead(std::string filename);
 	void ComputeElementPrincipleStress();
+	void PrincipalStressAnalysis(bool ABSResult, bool isTensileCase);
 	void DetermineCriticalTensileandCompressRegion(double rangeT, double rangeC);
+	void SelectTensileandCompressiveElements_stressLine();
 	void DetectSmallCriticalRegionandClear();
 
 private:

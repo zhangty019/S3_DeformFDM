@@ -135,7 +135,7 @@ private:
 	int layerDepth = 40; // Collision detecte depth // for calibration can choose 1
 	int delta_Z = 30, delta_X = 10; // The delta of candidate collision-free Normals
 	double h = 0.0;     // tool length
-	double r = 63.64;   // C head rotation radius 
+	double r = 63.75;   // C head rotation radius 
 
 	double maxDeltaC = 5.0;   // the max angle of C change when use inserting method
 	int toolpath_filter_threshold = 30; //skip little patch

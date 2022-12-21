@@ -1,4 +1,4 @@
-set File_dir=C:\PHD\Code\S3_DeformFDM\DataSet\remesh_operation
+set File_dir=C:\Users\zhang\Desktop\S3_DeformFDM\DataSet\remesh_operation
 set MeshLab_dir=C:\Program Files\VCG\MeshLab
 
 DIR %File_dir%\layers_unremeshed /B >fileName.txt

@@ -137,6 +137,9 @@ void DeformTet::_moveModelup2ZeroHeight(QMeshPatch* patch){
 
 void DeformTet::_record_initial_coord3D() {
 
+	 tetPatch->ComputeBoundingBox(inital_range);
+	 std::cout <<" X range:" << inital_range[0] << " " << inital_range[1] << std::endl;
+
 	for (GLKPOSITION Pos = tetPatch->GetNodeList().GetHeadPosition(); Pos;) {
 		QMeshNode* node = (QMeshNode*)tetPatch->GetNodeList().GetNext(Pos);
 
@@ -2769,6 +2772,35 @@ bool DeformTet::preProcess_4StrengthReinforcement() {
 	return successful_Read;
 }
 
+bool DeformTet::preProcess_4StrengthReinforcement_stressLine() {
+
+	bool new_Read_Method = true;
+	bool successful_Read = false;
+
+	PrincipleStressField* stressFieldComp = new PrincipleStressField(tetPatch);
+	if (new_Read_Method) {
+
+		
+		successful_Read = stressFieldComp->PrincipalStressRead(tetModel_Name);
+		if (successful_Read) {
+			stressFieldComp->SelectTensileandCompressiveElements_stressLine();
+		}
+	}
+
+	else {
+		successful_Read = stressFieldComp->InputFEMResult_stressLine(tetModel_Name);
+		if (successful_Read) {
+			stressFieldComp->PrincipalStressAnalysis(false, true);
+			stressFieldComp->SelectTensileandCompressiveElements_stressLine();
+		}
+	}
+
+	delete stressFieldComp;
+
+	return successful_Read;
+}
+
+
 void DeformTet::runASAP_StrengthReinforcement() {
 
 	//---------------------------------------------------------------------------------------------------------------
@@ -3454,10 +3486,15 @@ void DeformTet::_globalQuaternionSmooth1_strengthReinforcement() {
 				= -m_globalSmooth_weight / Tetra->neighborCell.size();
 		}
 
-		if (Tetra->isTensileorCompressSelect || Tetra->isBottomTet) {
+		if (Tetra->isBottomTet) {
+			matLap_A.insert(keep_constraint_lineNum + tet_Num, m) = 155;
+			keep_constraint_lineNum++;
+		}
+		else if(Tetra->isTensileorCompressSelect) {
 			matLap_A.insert(keep_constraint_lineNum + tet_Num, m) = m_keep_SR;
 			keep_constraint_lineNum++;
 		}
+
 	}// finish Lap matrix build
 	matLap_A.makeCompressed();
 	matLap_AT = matLap_A.transpose();
@@ -3916,6 +3953,327 @@ void DeformTet::runASAP_StrengthReinforcement_test() {
 
 			double weight = 1.0;
 			if (Tetra->isTensileorCompressSelect)		weight = m_criticalTet_weight_SR;
+
+			for (int i = 0; i < 4; i++) {
+				matrix_A_4x.insert((fdx * 4 + i), (node_Num + fdx)) = -weight * frame_Local_new[fdx](0, i); // x row
+				matrix_A_4y.insert((fdx * 4 + i), (node_Num + fdx)) = -weight * frame_Local_new[fdx](1, i); // y row
+				matrix_A_4z.insert((fdx * 4 + i), (node_Num + fdx)) = -weight * frame_Local_new[fdx](2, i); // z row
+			}
+		}
+		// Block 21 equals to zero
+		// Block 22 for x,y,z
+		int constraint_ind = 0;
+		for (GLKPOSITION Pos = tetPatch->GetFaceList().GetHeadPosition(); Pos;) {
+			QMeshFace* Face = (QMeshFace*)tetPatch->GetFaceList().GetNext(Pos);
+
+			if (Face->GetLeftTetra() == NULL || Face->GetRightTetra() == NULL) continue;
+
+			matrix_A_4x.insert(4 * tet_Num + constraint_ind, node_Num + Face->GetLeftTetra()->GetIndexNo()) = m_neighborScale_weight;
+			matrix_A_4x.insert(4 * tet_Num + constraint_ind, node_Num + Face->GetRightTetra()->GetIndexNo()) = -m_neighborScale_weight;
+
+			matrix_A_4y.insert(4 * tet_Num + constraint_ind, node_Num + Face->GetLeftTetra()->GetIndexNo()) = m_neighborScale_weight;
+			matrix_A_4y.insert(4 * tet_Num + constraint_ind, node_Num + Face->GetRightTetra()->GetIndexNo()) = -m_neighborScale_weight;
+
+			matrix_A_4z.insert(4 * tet_Num + constraint_ind, node_Num + Face->GetLeftTetra()->GetIndexNo()) = m_neighborScale_weight;
+			matrix_A_4z.insert(4 * tet_Num + constraint_ind, node_Num + Face->GetRightTetra()->GetIndexNo()) = -m_neighborScale_weight;
+
+			constraint_ind++;
+		}
+		// Block 31 equals to zero
+		// Block 32 for x,y,z
+		constraint_ind = 0;
+		for (GLKPOSITION Pos = tetPatch->GetTetraList().GetHeadPosition(); Pos;) {
+			QMeshTetra* Tetra = (QMeshTetra*)tetPatch->GetTetraList().GetNext(Pos);
+			int fdx = Tetra->GetIndexNo();
+
+			matrix_A_4x.insert((4 * tet_Num + neighborScale_face_num + constraint_ind), (node_Num + fdx)) = m_regularScale_weight;
+			matrix_A_4y.insert((4 * tet_Num + neighborScale_face_num + constraint_ind), (node_Num + fdx)) = m_regularScale_weight;
+			matrix_A_4z.insert((4 * tet_Num + neighborScale_face_num + constraint_ind), (node_Num + fdx)) = m_regularScale_weight;
+
+			constraint_ind++;
+		}
+
+		std::cout << "Finish fill A matrix." << std::endl;
+
+		long time = clock();
+
+		// Factorize A matrix
+		matrix_A_4x.makeCompressed();
+		Eigen::SparseMatrix<double> matATA_4x(node_Num + tet_Num, node_Num + tet_Num);
+		matrix_A_transpose_4x = matrix_A_4x.transpose();
+		matATA_4x = matrix_A_transpose_4x * matrix_A_4x;
+		Solver_ASAP_4x.compute(matATA_4x);
+
+		matrix_A_4y.makeCompressed();
+		Eigen::SparseMatrix<double> matATA_4y(node_Num + tet_Num, node_Num + tet_Num);
+		matrix_A_transpose_4y = matrix_A_4y.transpose();
+		matATA_4y = matrix_A_transpose_4y * matrix_A_4y;
+		Solver_ASAP_4y.compute(matATA_4y);
+
+		matrix_A_4z.makeCompressed();
+		Eigen::SparseMatrix<double> matATA_4z(node_Num + tet_Num, node_Num + tet_Num);
+		matrix_A_transpose_4z = matrix_A_4z.transpose();
+		matATA_4z = matrix_A_transpose_4z * matrix_A_4z;
+		Solver_ASAP_4z.compute(matATA_4z);
+
+		std::printf("Finish factorize materix A\n");
+
+		std::printf("The compress spends %f s.\n", (double(clock() - time)) / CLOCKS_PER_SEC);
+
+		// Fill b vector for x,y,z
+		//special case of regular term
+		constraint_ind = 0;
+		for (GLKPOSITION Pos = tetPatch->GetTetraList().GetHeadPosition(); Pos;) {
+			QMeshTetra* Tetra = (QMeshTetra*)tetPatch->GetTetraList().GetNext(Pos);
+
+			for (int i = 0; i < 3; i++) {
+
+				vector_b[i](4 * tet_Num + neighborScale_face_num + constraint_ind) = m_regularScale_weight;
+			}
+			constraint_ind++;
+		}
+
+		// Solve x vector
+		Eigen::VectorXd ATb_4x = matrix_A_transpose_4x * vector_b[0];
+		vector_X_Pos_Scale[0] = Solver_ASAP_4x.solve(ATb_4x);
+
+		Eigen::VectorXd ATb_4y = matrix_A_transpose_4y * vector_b[1];
+		vector_X_Pos_Scale[1] = Solver_ASAP_4y.solve(ATb_4y);
+
+		Eigen::VectorXd ATb_4z = matrix_A_transpose_4z * vector_b[2];
+		vector_X_Pos_Scale[2] = Solver_ASAP_4z.solve(ATb_4z);
+
+		// Update vertex
+		for (GLKPOSITION Pos = tetPatch->GetNodeList().GetHeadPosition(); Pos;) {
+			QMeshNode* node = (QMeshNode*)tetPatch->GetNodeList().GetNext(Pos);
+			int idx = node->GetIndexNo();
+
+			double xx, yy, zz;
+			node->SetCoord3D(vector_X_Pos_Scale[0](idx), vector_X_Pos_Scale[1](idx), vector_X_Pos_Scale[2](idx));
+			node->GetCoord3D(xx, yy, zz);
+			//std::printf("New coordinate xx %f , yy %f , zz %f.\n", xx, yy, zz);
+		}
+
+		// record the scale value
+		for (GLKPOSITION Pos = tetPatch->GetTetraList().GetHeadPosition(); Pos;) {
+			QMeshTetra* Tetra = (QMeshTetra*)tetPatch->GetTetraList().GetNext(Pos);
+			int fdx = Tetra->GetIndexNo();
+
+			for (int i = 0; i < 3; i++) {
+				Tetra->scaleValue_vector[i] = vector_X_Pos_Scale[i](node_Num + fdx);
+				//std::cout << vector_X_Pos_Scale[i](node_Num + fdx) << " ";
+			}
+			//std::cout << std::endl;
+		}
+
+		std::printf("End calculation of loop %d.\n\n", loop);
+	}
+
+	std::printf("End calculation.\n");
+}
+
+void DeformTet::runASAP_StrengthReinforcement_stressLine() {
+
+	//---------------------------------------------------------------------------------------------------------------
+	// Initialize size of nodes, faces and tets
+	int node_Num = tetPatch->GetNodeNumber();
+	int tet_Num = tetPatch->GetTetraNumber();
+	int face_Num = tetPatch->GetFaceNumber();
+
+	int neighborScale_face_num = 0;
+	for (GLKPOSITION pos = tetPatch->GetFaceList().GetHeadPosition(); pos != nullptr;) {
+		QMeshFace* face = (QMeshFace*)tetPatch->GetFaceList().GetNext(pos);
+
+		if (face->GetLeftTetra() != NULL && face->GetRightTetra() != NULL)	neighborScale_face_num++;
+	}
+
+	std::printf("All face num %d , neighborScale_face_num %d.\n", face_Num, neighborScale_face_num);
+	std::printf("A matrix sixe %d x %d\n", (5 * tet_Num + neighborScale_face_num), (node_Num + tet_Num));
+
+	//---------------------------------------------------------------------------------------------------------------
+	// Define variables
+	std::vector<Eigen::MatrixXd> frame_Local_new, frame_Local_initial_inverse, frame_Local_initial;
+	std::vector<Eigen::VectorXd> vector_X_Pos_Scale, vector_b;
+	// Initialize variables
+	frame_Local_new.resize(tet_Num);
+	frame_Local_initial_inverse.resize(tet_Num);
+	frame_Local_initial.resize(tet_Num);
+	vector_X_Pos_Scale.resize(3);
+	vector_b.resize(3);
+
+	for (int i = 0; i < 3; i++) {
+		vector_X_Pos_Scale[i] = Eigen::VectorXd::Zero(node_Num + tet_Num);
+		vector_b[i] = Eigen::VectorXd::Zero(5 * tet_Num + neighborScale_face_num);
+	}
+	std::cout << "initial ASAP matrices" << std::endl;
+
+	//---------------------------------------------------------------------------------------------------------------
+	// Pre-compute the initial frame and inverse of initla frame
+	for (GLKPOSITION Pos = tetPatch->GetTetraList().GetHeadPosition(); Pos;) {
+		QMeshTetra* Tet = (QMeshTetra*)tetPatch->GetTetraList().GetNext(Pos);
+
+		int fdx = Tet->GetIndexNo();
+		Eigen::MatrixXd P = Eigen::MatrixXd::Zero(3, 4);
+		double center[3] = { 0 };
+		QMeshNode* nodes[4];
+
+		for (int i = 0; i < 4; i++) {
+			nodes[i] = Tet->GetNodeRecordPtr(i + 1);
+			nodes[i]->GetCoord3D_last(P(0, i), P(1, i), P(2, i));
+			for (int j = 0; j < 3; j++) center[j] += P(j, i);
+		} for (int j = 0; j < 3; j++) center[j] /= 4;
+		for (int i = 0; i < 4; i++) for (int j = 0; j < 3; j++) P(j, i) -= center[j];
+
+		frame_Local_initial[fdx] = P;
+		frame_Local_initial_inverse[fdx] = Eigen::MatrixXd::Zero(3, 4);
+		frame_Local_initial_inverse[fdx] = (P.transpose()).completeOrthogonalDecomposition().pseudoInverse();
+		//std::cout << frame_Local_initial[fdx] << std::endl << std::endl;
+	}
+	std::printf("Finish compute local frame and its inverse!\n\n");
+
+	//---------------------------------------------------------------------------------------------------------------
+	// Main function of ASAP iteration
+	for (int loop = 0; loop < m_loopTime; loop++) {
+
+		/*debug
+		for (int i = 0; i < tetPatch->GetTetraNumber(); i++) {
+			QMeshTetra* Tetra = tetraPatch_elementSet[i];
+			if (Tetra->isTensileorCompressSelect) {
+				//std::cout << "\n------->this is strength ele" << std::endl;
+				for (int i = 0; i < 4; i++) {
+					Tetra->GetFaceRecordPtr(i + 1)->isSpecialShow = true;
+				}
+			}
+		}
+		*/
+
+		this->_calFabricationEnergy_StrengthReinforcement(frame_Local_initial_inverse);
+
+		for (int innerLoop = 0; innerLoop < m_innerLoopTime; innerLoop++) {
+
+#pragma omp parallel
+			{
+#pragma omp for 
+				// local rotation and scaling operation (frame_Local_new)
+				for (int i = 0; i < tetPatch->GetTetraNumber(); i++) {
+					QMeshTetra* Tetra = tetraPatch_elementSet[i];
+
+					int fdx = Tetra->GetIndexNo();
+					//add here
+					if (innerLoop == 0) {
+
+						Eigen::Vector3d center = { 0.0,0.0,0.0 };
+						Tetra->CalCenterPos(center[0], center[1], center[2]);
+
+						//This tP is each current frame in each tet.
+						Eigen::MatrixXd tP = Eigen::MatrixXd::Zero(4, 3);
+						QMeshNode* nodes[4];
+						for (int i = 0; i < 4; i++) {
+							nodes[i] = Tetra->GetNodeRecordPtr(i + 1);
+							nodes[i]->GetCoord3D(tP(i, 0), tP(i, 1), tP(i, 2));
+						}
+						for (int i = 0; i < 4; i++) for (int j = 0; j < 3; j++) tP(i, j) -= center[j];
+
+						Eigen::Matrix3d T = Eigen::Matrix3d::Zero(3, 3);
+						Eigen::Matrix3d T_transpose = Eigen::Matrix3d::Zero(3, 3);
+						Eigen::Matrix3d R = Eigen::Matrix3d::Zero(3, 3);
+
+						T = frame_Local_initial_inverse[fdx] * tP;
+						T_transpose = T.transpose();
+
+						///// R1 //// Eigen SVD decomposition /////
+						Eigen::JacobiSVD<Eigen::MatrixXd> svd(T_transpose, Eigen::ComputeThinU | Eigen::ComputeThinV);
+						Eigen::Matrix3d V = svd.matrixV(), U = svd.matrixU();
+						R = U * V.transpose();
+						Tetra->R_estimate = R;
+						frame_Local_new[fdx] = R * frame_Local_initial[fdx];
+					}
+
+					///// R2 //// Fabrication requirement /////
+					if (Tetra->isTensileorCompressSelect) {
+						Eigen::Vector3d principal_Stress_Dir = Tetra->R_estimate * Tetra->tau_max;
+
+						//Eigen::Matrix3d rotationMatrix = this->_cal_rotationMatrix_strengthReinforcement_stressLine(principal_Stress_Dir, Tetra); // bar
+						Eigen::Matrix3d rotationMatrix = this->_cal_rotationMatrix_strengthReinforcement(principal_Stress_Dir); // topopt
+						Tetra->R_estimate = rotationMatrix * Tetra->R_estimate;
+						frame_Local_new[fdx] = rotationMatrix * frame_Local_new[fdx];
+					}
+				}
+			}
+			std::printf("Finish new local frame calculation!\n");
+
+			this->_globalQuaternionSmooth1_strengthReinforcement();
+
+			for (int i = 0; i < tetPatch->GetTetraNumber(); i++) {
+				QMeshTetra* Tetra = tetraPatch_elementSet[i];
+				frame_Local_new[i] = Tetra->R_estimate * frame_Local_initial[i];
+			}
+			std::printf("Finish quaternion smooth calculation.\n");
+
+			this->_get_energy_innerLoop_strengthReinforcement();
+		}
+		// Define variables
+		Eigen::SparseMatrix<double> matrix_A_4x;
+		Eigen::SparseMatrix<double> matrix_A_transpose_4x;
+		Eigen::PardisoLDLT <Eigen::SparseMatrix<double>> Solver_ASAP_4x;
+		//
+		Eigen::SparseMatrix<double> matrix_A_4y;
+		Eigen::SparseMatrix<double> matrix_A_transpose_4y;
+		Eigen::PardisoLDLT <Eigen::SparseMatrix<double>> Solver_ASAP_4y;
+		//
+		Eigen::SparseMatrix<double> matrix_A_4z;
+		Eigen::SparseMatrix<double> matrix_A_transpose_4z;
+		Eigen::PardisoLDLT <Eigen::SparseMatrix<double>> Solver_ASAP_4z;
+		// Initialize variables
+		matrix_A_4x.resize((5 * tet_Num + neighborScale_face_num), (node_Num + tet_Num));
+		matrix_A_transpose_4x.resize((node_Num + tet_Num), (5 * tet_Num + neighborScale_face_num));
+		matrix_A_4y.resize((5 * tet_Num + neighborScale_face_num), (node_Num + tet_Num));
+		matrix_A_transpose_4y.resize((node_Num + tet_Num), (5 * tet_Num + neighborScale_face_num));
+		matrix_A_4z.resize((5 * tet_Num + neighborScale_face_num), (node_Num + tet_Num));
+		matrix_A_transpose_4z.resize((node_Num + tet_Num), (5 * tet_Num + neighborScale_face_num));
+
+		// Fill A matrix for x,y,z
+		// Block 11 for x,y,z
+		// Important issues
+		//give memory to sparse matrix, to accerate the insert speed
+		matrix_A_4x.reserve(Eigen::VectorXi::Constant(5 * tet_Num + neighborScale_face_num, 1000));
+		matrix_A_4y.reserve(Eigen::VectorXi::Constant(5 * tet_Num + neighborScale_face_num, 1000));
+		matrix_A_4z.reserve(Eigen::VectorXi::Constant(5 * tet_Num + neighborScale_face_num, 1000));
+
+		float c1 = -0.25, c2 = 0.75;
+		for (GLKPOSITION Pos = tetPatch->GetTetraList().GetHeadPosition(); Pos;) {
+			QMeshTetra* Tetra = (QMeshTetra*)tetPatch->GetTetraList().GetNext(Pos);
+
+			int fdx = Tetra->GetIndexNo() * 4;	int vdxArr[4];
+			for (int i = 0; i < 4; i++) vdxArr[i] = Tetra->GetNodeRecordPtr(i + 1)->GetIndexNo();
+
+			double weight = 1.0;
+			if (Tetra->isTensileorCompressSelect)		weight = m_criticalTet_weight_SR;
+
+			for (int i = 0; i < 4; i++) {
+				for (int j = 0; j < 4; j++) {
+					if (i == j) {
+						matrix_A_4x.insert(fdx + j, vdxArr[i]) = c2 * weight;
+						matrix_A_4y.insert(fdx + j, vdxArr[i]) = c2 * weight;
+						matrix_A_4z.insert(fdx + j, vdxArr[i]) = c2 * weight;
+					}
+					else {
+						matrix_A_4x.insert(fdx + j, vdxArr[i]) = c1 * weight;
+						matrix_A_4y.insert(fdx + j, vdxArr[i]) = c1 * weight;
+						matrix_A_4z.insert(fdx + j, vdxArr[i]) = c1 * weight;
+					}
+				}
+			}
+		}
+
+		// Block 12 for x,y,z
+		for (GLKPOSITION Pos = tetPatch->GetTetraList().GetHeadPosition(); Pos;) {
+			QMeshTetra* Tetra = (QMeshTetra*)tetPatch->GetTetraList().GetNext(Pos);
+			int fdx = Tetra->GetIndexNo();
+
+			double weight = 1.0;
+			if (Tetra->isTensileorCompressSelect)		weight = m_criticalTet_weight_SR;
+			if (Tetra->isBottomTet)						weight = 155;
 
 			for (int i = 0; i < 4; i++) {
 				matrix_A_4x.insert((fdx * 4 + i), (node_Num + fdx)) = -weight * frame_Local_new[fdx](0, i); // x row
@@ -7628,6 +7986,35 @@ Eigen::Matrix3d DeformTet::_cal_rotationMatrix_strengthReinforcement(Eigen::Vect
 	return rotationMatrix;
 }
 
+Eigen::Matrix3d DeformTet::_cal_rotationMatrix_strengthReinforcement_stressLine(
+	Eigen::Vector3d principal_Stress_Dir, QMeshTetra* Tetra) {
+
+	Eigen::Matrix3d rotationMatrix = Eigen::Matrix3d::Identity();
+	Eigen::Vector3d coord3D_eleCenter = Eigen::Vector3d::Zero();
+	Tetra->CalCenterPos(coord3D_eleCenter[0], coord3D_eleCenter[1], coord3D_eleCenter[2]);
+		
+	if (coord3D_eleCenter[0] > 60 && coord3D_eleCenter[0] < 140 )
+	{
+
+		Eigen::Vector3d projectDir; // assume the printing direction is (0,1,0)
+		projectDir << principal_Stress_Dir(0), 0.0, principal_Stress_Dir(2);
+		projectDir.normalized();
+
+		rotationMatrix = Eigen::Quaterniond().setFromTwoVectors(principal_Stress_Dir, projectDir);
+	}
+	
+	if (coord3D_eleCenter[0] > 0)
+	{
+		Eigen::Vector3d source = { 0.0, 1.0, 0.0 };
+		double t = ((inital_range[1] - coord3D_eleCenter[0]) / (inital_range[1] - inital_range[0])) * PI * 0.7;
+		Eigen::Vector3d target = { 0.0, sin(t), cos(t) };
+		//std::cout << "target vector :" << target.transpose() << std::endl;
+		rotationMatrix = rotationMatrix * Eigen::Quaterniond().setFromTwoVectors(source, target);
+	}
+
+	return rotationMatrix;
+}
+
 // one tet only has one kept face
 QMeshFace* DeformTet::_get_initial_kept_face(QMeshTetra* Tetra){
 
@@ -8246,4 +8633,30 @@ Eigen::Vector3d DeformTet::_rotate_vector_deg(Eigen::Vector3d pnt,
 	Eigen::AngleAxis<double> R = Eigen::AngleAxis<double>(rotation_angle, rotate_axis);
 	Eigen::Vector3d new_pnt = R.matrix()* pnt;
 	return new_pnt;
+}
+
+//
+void DeformTet::delete_selected_ele_stress_line(){
+
+	for (GLKPOSITION pos = tetPatch->GetTetraList().GetHeadPosition(); pos != nullptr;) {
+		QMeshTetra* tetra = (QMeshTetra*)tetPatch->GetTetraList().GetNext(pos);
+
+		int selectedNUM = 0;
+		for (int i = 0; i < 4; i++) {
+			if (tetra->GetNodeRecordPtr(i + 1)->isHandle)
+				selectedNUM++;
+		}
+
+		if (selectedNUM == 4) {
+			tetra->isTensileorCompressSelect = false;
+			//std::cout << "delete 1 selected_ele stress_line. " << std::endl;
+		}
+
+	}
+
+	for (GLKPOSITION Pos = tetPatch->GetNodeList().GetHeadPosition(); Pos;) {
+		QMeshNode* node = (QMeshNode*)tetPatch->GetNodeList().GetNext(Pos);
+
+		node->isHandle = false;
+	}
 }

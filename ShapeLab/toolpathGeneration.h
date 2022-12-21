@@ -25,6 +25,7 @@ private:
 
 	QMeshPatch* generate_each_bundaryToolPath(QMeshPatch* surfaceMesh);
 	void resampleToolpath(QMeshPatch* patch);
+	void calToolPath_length(QMeshPatch* patch);
 	int autoComputeTPathNum(QMeshPatch* surfaceMesh, bool boundaryORzigzag);
 	void generateBoundaryIsoNode(QMeshPatch* singlePath, QMeshPatch* surfaceMesh, double isoValue);
 	void linkEachIsoNode(QMeshPatch* singlePath, double startIsoValue);

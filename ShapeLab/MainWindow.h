@@ -75,7 +75,7 @@ private:
     QSignalMapper *signalMapper;
     QStandardItemModel *treeModel;
 
-    //DeformTet* Deformation;
+    DeformTet* ShapeUpOperator_stressLine = NULL;
     //FileIO* IO_operator;
     Fabrication* fabriOperator;
     SupportGeneration* supportGene;
@@ -151,6 +151,10 @@ private slots:
     void runDeformation_SR_SQ_ASAP();
     void runDeformation_SL_SR_ASAP();
     void runDeformation_SL_SR_SQ_ASAP();
+ 
+    void readStressField_strengthReinforcement_ASAP_stressLine();
+    void deleteFEAselection_strengthReinforcement_ASAP_stressLine();
+    void runDeformation_strengthReinforcement_ASAP_stressLine();
 
     void inverseDeformation();
     void curvedLayer_Generation();

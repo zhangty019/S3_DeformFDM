@@ -36,6 +36,7 @@ public:
 	void runASAP_SupportLess_test3();
 	void runASAP_StrengthReinforcement();
 	void runASAP_StrengthReinforcement_test(); //--> for testing new method
+
 	void runASAP_SurfaceQuality();
 	void runASAP_SurfaceQuality_test();
 	void runASAP_SurfaceQuality_test2();
@@ -52,6 +53,11 @@ public:
 	void runASAP_Hybrid_SL_SR_SQ();
 	// post process after deformation
 	void postProcess();
+
+	//
+	bool preProcess_4StrengthReinforcement_stressLine();
+	void runASAP_StrengthReinforcement_stressLine();
+	void delete_selected_ele_stress_line();
 
 private:
 	void _index_initial(QMeshPatch* patch, bool is_TetMesh);
@@ -111,6 +117,8 @@ private:
 		Eigen::Vector3d normal, QMeshTetra* Tetra, QMeshFace* criticalFace, bool update_coverFlag);
 	//local rotation (strength-reinforcement)
 	Eigen::Matrix3d _cal_rotationMatrix_strengthReinforcement(Eigen::Vector3d principal_Stress_Dir);
+	Eigen::Matrix3d _cal_rotationMatrix_strengthReinforcement_stressLine(
+		Eigen::Vector3d principal_Stress_Dir, QMeshTetra* Tetra);
 	//local rotation (support-less and surface-quality)
 	Eigen::Matrix3d _cal_rotationMatrix_SL_SQ(Eigen::Vector3d overhangFace_normal_new, QMeshTetra* Tetra);
 	//local ratation (strength-reinforcement and surface-quality)
@@ -144,6 +152,11 @@ public:
 	double m_supportFreeAngle = 0.0; //supportLess case
 	double m_tensileRegionRatio = 0.0; //strengthReinforcement
 	double m_compressRegionRatio = 0.0; //strengthReinforcement
+
+public:
+	//xmin xmax ymin ymax zmin zmax
+	double inital_range[6] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+
 
 private:
 	Eigen::Vector3d printDir = { 0.0 ,1.0 ,0.0 };

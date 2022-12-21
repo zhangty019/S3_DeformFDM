@@ -119,7 +119,8 @@ public:
 	Eigen::Quaterniond R_quaternion = Eigen::Quaterniond::Identity();
 	Eigen::Vector3d scaleValue_vector = Eigen::Vector3d::Zero();
 	//Stress from Abaqus analysis
-	Eigen::VectorXd eleStress;  //stress tensor in format
+	Eigen::VectorXd eleStress;
+								//stress tensor in format
 								//eleStress(1), eleStress(4), eleStress(5),
 								//eleStress(4), eleStress(2), eleStress(6),
 								//eleStress(5), eleStress(6), eleStress(3)
@@ -150,6 +151,10 @@ public:
 	int select_coverLayer = 0; 
 
 	bool isBoundaryTet = false;
+
+	//stress line
+	int PSLNum = -1;
+
 };
 
 #endif 
