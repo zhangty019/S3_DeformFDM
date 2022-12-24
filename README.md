@@ -51,3 +51,10 @@ Click button '**Get Tool-Path**' to generate toolpath with parameters - Width an
 Please refer to this project [link](https://github.com/zhangty019/MultiAxis_3DP_MotionPlanning) for the G-code generation.
 
 ![](DataSet/figures/printingResult.jpg)
+
+## Contact Information
+Tianyu Zhang (tianyu.zhang-10@postgrad.manchester.ac.uk)
+
+Guoxin Fang  (guoxin.fang@manchester.ac.uk)
+
+Charlie C.L. Wang  (changling.wang@manchester.ac.uk)
