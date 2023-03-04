@@ -1,4 +1,4 @@
-# [S^3-Slicer: A General Slicing Framework for Multi-Axis 3D Printing](https://guoxinfang.github.io/S3_Slicer)(Technical Papers' Best Paper Award)
+# [S^3-Slicer: A General Slicing Framework for Multi-Axis 3D Printing](https://guoxinfang.github.io/S3_Slicer) (Technical Papers' Best Paper Award)
 
 ![](DataSet/figures/teaser.jpg)
 
