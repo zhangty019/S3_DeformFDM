@@ -18,8 +18,11 @@ OpenMKL Qt
 
 **Install Steps**: 
 `mkdir build && cd build`
+
 `cmake .. && cmake --build . --target ShapeLab -j 12 && cd ShapeLab`
+
 `./ShapeLab`
+
 
 ![](DataSet/figures/pipline.jpg)
 
