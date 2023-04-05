@@ -17,6 +17,7 @@ Please compile the code with QMake file “ShapeLab.pro”.
 OpenMKL Qt
 
 **Install Steps**: 
+
 `mkdir build && cd build`
 
 `cmake .. && cmake --build . --target ShapeLab -j 12 && cd ShapeLab`
