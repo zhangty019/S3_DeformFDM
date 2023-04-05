@@ -11,16 +11,15 @@ Multi-axis motion introduces more degrees of freedom into the process of 3D prin
 
 Please compile the code with QMake file “ShapeLab.pro”.
 
-**Platform**: Windows + Visual Studio + QT-plugin (tested version: VS2019 + QT5.12.3 + msvc2017_64)
+**Platform**: Ubuntu20.02LTS + QT-plugin-5.12 + CMake-3.24.2
+
+**Required**:
+OpenMKL Qt
 
 **Install Steps**: 
-- **Install Visual Studio Extension plug-in (QT VS Tool)** to open the *.pro file and generate the project
-- **Set 'ShapeLab' as the start up project**
-- **Enable OpenMP to get best performace** at: ShapeLab Property Pages -> Configuration Properties -> C/C++ -> Language -> Open MP Support -> Select '**Yes (/openmp)**'
-- **Open Console** at: ShapeLab Property Pages -> Configuration Properties -> Linker -> System -> SubSystem -> Select '**Console (/SUBSYSTEM:CONSOLE)**'
-- **Support large obj** at: ShapeLab Property Pages -> Configuration Properties -> C/C++ -> Command Line -> Additional Options -> add "/bigobj"
-- **Install Intel oneAPI Math Kernel Library (oneMKL [download](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html?operatingsystem=window&distributions=online))** and enable it at: ShapeLab Property Pages -> Configuration Properties -> Intel Libraries for oneAPI -> Intel oneAPI Math Kernel Library (oneMKL) -> Use oneMKL -> Select '**Parallel**'
-- **And** change the code generation method at: ShapeLab & QMeshLab & GLKLib Property Pages -> Configuration Properties -> C/C++ -> Code Generation -> Runtime Library -> Select '**Multi-threaded(/MT)** for release configuration'. Note that this option will be '**Multi-threaded Debug (/MTd)** for debug configuration.
+`mkdir build && cd build`
+`cmake .. && cmake --build . --target ShapeLab -j 12 && cd ShapeLab`
+`./ShapeLab`
 
 ![](DataSet/figures/pipline.jpg)
 

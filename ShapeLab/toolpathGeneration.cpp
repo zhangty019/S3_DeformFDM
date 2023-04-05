@@ -1,4 +1,4 @@
-#include "toolpathgeneration.h"
+#include "toolpathGeneration.h"
 #include <iostream>
 #include <fstream>
 #include "GLKGeometry.h"

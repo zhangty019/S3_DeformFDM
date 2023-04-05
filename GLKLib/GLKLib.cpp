@@ -5,8 +5,9 @@
 #include "../QMeshLib/QMeshNode.h"
 #include "../QMeshLib/QMeshFace.h"
 #include "GLKGeometry.h"
-#include <gl/glu.h>
+#include <GL/glu.h>
 #include <QPainter>
+#include <QPainterPath>
 #include <QtDebug>
 #include <QGLWidget>
 #include <QApplication>

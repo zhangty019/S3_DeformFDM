@@ -44,7 +44,7 @@ private:
 
 	QMeshPatch* _getToolpath_with_CompatibleLayer_ind(
 		int compatibleLayer_ind, PolygenMesh* toolPath, bool find_Support);
-	int toolpathGeneration::_getSplitNumber_with_CompatibleLayer_ind(
+	int _getSplitNumber_with_CompatibleLayer_ind(
 		int compatibleLayer_ind, PolygenMesh* toolPath, bool isSupport);
 	int _remove_allFile_in_Dir(std::string dirPath);
 

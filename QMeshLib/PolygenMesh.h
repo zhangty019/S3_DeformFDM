@@ -12,7 +12,7 @@
 #include "../QMeshLib/QMeshEdge.h"
 #include "../QMeshLib/QMeshNode.h"
 
-typedef enum mesh_type {
+enum mesh_type {
     UNDEFINED,
     TET_MODEL,
     SURFACE_MESH,

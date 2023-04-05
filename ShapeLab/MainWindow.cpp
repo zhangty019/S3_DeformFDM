@@ -1,4 +1,5 @@
-﻿#include <QFileDialog>
+﻿
+#include <QFileDialog>
 #include <QtDebug>
 #include <QDesktopWidget>
 #include <QCoreApplication>

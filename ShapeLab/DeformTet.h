@@ -20,7 +20,7 @@ public:
 
 	void initial(PolygenMesh* polygenMesh_TetModel);
 
-	void DeformTet::update_quaternionSmooth_weight(
+	void update_quaternionSmooth_weight(
 		double keepWeight_SL, double keepWeight_SR,
 		double keepWeight_SQC, double keepWeight_SQV);
 

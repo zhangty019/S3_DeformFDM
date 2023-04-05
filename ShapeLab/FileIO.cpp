@@ -1,4 +1,3 @@
-#pragma once
 #include <fstream>
 
 #include "io.h"
@@ -226,9 +225,10 @@ void FileIO::_splitSingleSurfacePatch_splitmesh(
 
 int FileIO::_remove_allFile_in_Dir(std::string dirPath) {
 
+    /*
 	struct _finddata_t fb;   //find the storage structure of the same properties file.
 	std::string path;
-	intptr_t    handle;
+	intptr_t handle;
 	int  resultone;
 	int   noFile;            // the tag for the system's hidden files
 
@@ -270,6 +270,8 @@ int FileIO::_remove_allFile_in_Dir(std::string dirPath) {
 		_findclose(handle);
 		return 0;
 	}
+     */
+    return 0;
 }
 
 void FileIO::_output_OneSurfaceMesh(QMeshPatch* eachLayer, std::string path) {
@@ -744,7 +746,7 @@ void FileIO::output_ScalarOrHeight_field(PolygenMesh* tet_Model, bool output_sca
 	}
 	else {
 		std::sprintf(targetFilename, "%s%s%s", baseDir.c_str(), model_Name.c_str(), "_heightField.txt");
-		std::cout << "\Height field on deformed model is written into:\n" << targetFilename << std::endl;
+		std::cout << "\nHeight field on deformed model is written into:\n" << targetFilename << std::endl;
 	}
 
 	FILE* fp = fopen(targetFilename, "w");

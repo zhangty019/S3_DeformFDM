@@ -4,7 +4,7 @@
 #include "GLKLib.h"
 #include <QPoint>
 
-typedef enum select_type { NODE, EDGE, FACE, FIX, NHANDLE };
+enum select_type { NODE, EDGE, FACE, FIX, NHANDLE };
 
 class InteractiveTool : public GLKMouseTool
 {

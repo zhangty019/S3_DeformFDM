@@ -10,7 +10,7 @@
 #include "../QMeshLib/QMeshEdge.h"
 #include "../QMeshLib/QMeshNode.h"
 
-#define INF 1E10
+#define INF 1e10
 
 // Dijk_Pair ==> Pair (double weight, int Index)
 typedef std::pair<double, int> Dijk_Pair;

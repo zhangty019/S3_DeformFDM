@@ -156,7 +156,7 @@ bool SupportGeneration::_find_targetNode(
 		if (ROTATE_TO_DEGREE(radian_angle) < descend_angle) step_Direction = descend_dir; // in the range of support angle, directly downward
 		else {
 			// only rotate a support angle
-			Eigen::AngleAxisd V1(DEGREE_TO_ROTATE(descend_angle), rotateAxis);//rotateAxis£¬rotate tau(deg)
+			Eigen::AngleAxisd V1(DEGREE_TO_ROTATE(descend_angle), rotateAxis);//rotateAxisï¿½ï¿½rotate tau(deg)
 			step_Direction = V1 * step_Direction;
 		}
 	}
@@ -647,7 +647,9 @@ void SupportGeneration::_markSupportFace() {
 	//reset flag (needsupport) of node 
 	for (GLKPOSITION PosNode = (m_tetPatch->GetNodeList()).GetHeadPosition(); PosNode != NULL;) {
 		QMeshNode* node = (QMeshNode*)((m_tetPatch->GetNodeList()).GetNext(PosNode));
-		node->need_Support == false;
+		// @TODO Need to check with Tian yu
+        // node->need_Support == false;
+        node->need_Support = false;
 	}
 	for (GLKPOSITION PosFace = (m_tetPatch->GetFaceList()).GetHeadPosition(); PosFace != NULL;) {
 		QMeshFace* face = (QMeshFace*)((m_tetPatch->GetFaceList()).GetNext(PosFace));
@@ -1368,7 +1370,7 @@ void SupportGeneration::output_compatibleLayer_4_remesh(PolygenMesh* compatible_
 }
 
 int SupportGeneration::_remove_allFile_in_Dir(std::string dirPath) {
-
+    /*
 	struct _finddata_t fb;   //find the storage structure of the same properties file.
 	std::string path;
 	intptr_t    handle;
@@ -1377,9 +1379,9 @@ int SupportGeneration::_remove_allFile_in_Dir(std::string dirPath) {
 
 	noFile = 0;
 	handle = 0;
-
-	path = dirPath + "/*";
-
+    */
+	//path = dirPath + "\/*";
+    /*
 	handle = _findfirst(path.c_str(), &fb);
 
 	//find the first matching file
@@ -1413,6 +1415,8 @@ int SupportGeneration::_remove_allFile_in_Dir(std::string dirPath) {
 		_findclose(handle);
 		return 0;
 	}
+     */
+    return 0;
 }
 
 void SupportGeneration::update_inputMesh_4treeSkeleton_Generation(
@@ -1518,7 +1522,8 @@ void SupportGeneration::_natSort(std::string dirctory, std::vector<std::string>&
 	//dp = opendir("../Waypoints");
 
 	if (dp != NULL) {
-		while (ep = readdir(dp)) {
+        // TODO
+		while (ep == readdir(dp)) {
 			//cout << ep->d_name << endl;
 			if ((std::string(ep->d_name) != ".") && (std::string(ep->d_name) != "..")) {
 				//cout << ep->d_name << endl;
@@ -2026,7 +2031,7 @@ void SupportGeneration::_compute_descend_Dir_hostNode(QMeshNode* hostNode, bool 
 		hostNode->descend_From_TreeNode_Dir = descend_dir; // in the range of support angle, directly downward
 	else {
 		// only rotate a support angle
-		Eigen::AngleAxisd V(DEGREE_TO_ROTATE(tau), rotateAxis);//rotateAxis£¬rotate tau(deg)
+		Eigen::AngleAxisd V(DEGREE_TO_ROTATE(tau), rotateAxis);//rotateAxisï¿½ï¿½rotate tau(deg)
 		hostNode->descend_From_TreeNode_Dir = V * face_normal;
 	}
 	//hostNode->descend_From_TreeNode_Dir = face_normal;//tianyu test going
@@ -2177,7 +2182,7 @@ bool SupportGeneration::_compute_descend_Dir_followNode(QMeshNode* followNode, Q
 	}
 	else {
 		// only rotate a support angle
-		Eigen::AngleAxisd V(DEGREE_TO_ROTATE(tau), rotateAxis);	//rotateAxis£¬rotate tau(deg)
+		Eigen::AngleAxisd V(DEGREE_TO_ROTATE(tau), rotateAxis);	//rotateAxisï¿½ï¿½rotate tau(deg)
 		followNode->descend_From_TreeNode_Dir = V * face_normal;
 		is_merged = false;
 	}

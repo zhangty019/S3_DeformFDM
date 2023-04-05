@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "QMeshTetra.h"
 #include "QMeshFace.h"
 #include "QMeshEdge.h"
@@ -100,8 +100,9 @@ bool QMeshTetra::IsInner()
 	}*/
 
 	for (int i = 0; i < 4; i++) {
-		if (GetFaceRecordPtr(i + 1)->GetLeftTetra() == false || 
-			GetFaceRecordPtr(i + 1)->GetRightTetra() == false) {
+        // @TODO need to check with Tianyu
+		if (GetFaceRecordPtr(i + 1)->GetLeftTetra() == NULL ||
+			GetFaceRecordPtr(i + 1)->GetRightTetra() == NULL) {
 			a = false; break;
 		}
 	}

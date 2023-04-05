@@ -19,7 +19,7 @@ bool PrincipleStressField::InputFEMResult(std::string filename)
 	char* p = strtok(cstr, split);
 
 	char input_filename[256];
-	strcpy(input_filename, "..\\DataSet\\fem_result\\");
+	strcpy(input_filename, "../DataSet/fem_result/");
 	strcat(input_filename, cstr);
 	char filetype[64];
 	strcpy(filetype, ".txt");

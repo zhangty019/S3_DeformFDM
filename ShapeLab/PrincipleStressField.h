@@ -1,5 +1,5 @@
 #pragma once
-#include "..\QMeshLib\PolygenMesh.h"
+#include "PolygenMesh.h"
 
 class PrincipleStressField
 {

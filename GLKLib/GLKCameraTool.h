@@ -6,7 +6,7 @@
 #ifndef _GLKCAMERATOOL
 #define _GLKCAMERATOOL
 
-typedef enum camera_type {ORBIT,PAN,ZOOM,ORBITPAN,ZOOMWINDOW};
+enum camera_type {ORBIT,PAN,ZOOM,ORBITPAN,ZOOMWINDOW};
 
 class GLKCameraTool : public GLKMouseTool
 {
@@ -35,7 +35,14 @@ public:
         switch(m_ct) {
         case ORBITPAN	:{
             if (event_type == MOUSE_WHEELE_MOVE) {
-                m_ct = ZOOM; break;}
+                m_ct = ZOOM;
+                QWheelEvent *e = (QWheelEvent*)event;
+                if (e->delta() >= 0.0)
+                    pView->Zoom(1.15);
+                else
+                    pView->Zoom(0.85);
+                pView->refresh();
+                break;}
 
             QMouseEvent *e = (QMouseEvent*)event;
 
@@ -144,7 +151,12 @@ public:
                 pView->refresh();
             }
         }break;
-        case ZOOM		:{	if (event_type != MOUSE_WHEELE_MOVE) { m_ct = ORBITPAN; lastPos = ((QMouseEvent*)event)->pos();	break;}
+        case ZOOM		:{
+            if (event_type != MOUSE_WHEELE_MOVE) {
+                m_ct = ORBITPAN;
+                lastPos = ((QMouseEvent*)event)->pos();
+                break;
+            }
             QWheelEvent *e = (QWheelEvent*)event;
             if (e->delta() >= 0.0)
                 pView->Zoom(1.15);

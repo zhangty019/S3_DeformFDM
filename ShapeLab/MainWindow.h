@@ -15,10 +15,11 @@
 #include "GcodeGeneration.h"
 
 #define PI		3.141592654
-#define DEGREE_TO_ROTATE(x)		0.0174532922222*x
-#define ROTATE_TO_DEGREE(x)		57.295780490443*x
+#define DEGREE_TO_ROTATE(x)		(0.0174532922222*x)
+#define ROTATE_TO_DEGREE(x)		(57.295780490443*x)
+#define INFINITE 1e20
 
-typedef enum S_type {
+enum S_type {
     //for SIGGRAPH paper
     NONE,
     SUPPORT_LESS,
@@ -85,7 +86,7 @@ private:
 private:
     PolygenMesh* _buildPolygenMesh(mesh_type type, std::string name);
     PolygenMesh* _detectPolygenMesh(mesh_type type);
-    QMeshPatch* MainWindow::_detectPolygenMesh(mesh_type type, std::string patch_name); // detect certain patch by patchName
+    QMeshPatch* _detectPolygenMesh(mesh_type type, std::string patch_name); // detect certain patch by patchName
     void _updateFrameworkParameter();
     /*void _setParameter(int loopTime, S_type caseType, double criticalTet_weight,
         double neighborScale_weight, double regularScale_weight, double globalSmooth_weight,

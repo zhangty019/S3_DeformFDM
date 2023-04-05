@@ -8,7 +8,7 @@
 #include "GLKCameraTool.h"
 #include <QMouseEvent>
 #include <QApplication>
-#include <qDebug>
+#include <QDebug>
 
 InteractiveTool::InteractiveTool(GLKLib *pGLKLib, QMeshPatch *meshPatch_,  GLKMouseTool *mouseTool, select_type selectType, bool Select)
 {

@@ -60,7 +60,9 @@ void GcodeGeneration::_getFileName_Set(std::string dirctory, std::vector<std::st
     //dp = opendir("../Waypoints");
 
     if (dp != NULL) {
-        while (ep = readdir(dp)) {
+        // @TODO: Need to check with tianyu
+        //        while (ep = readdir(dp)) {
+        while (ep == readdir(dp)) {
             //cout << ep->d_name << endl;
             if ((std::string(ep->d_name) != ".") && (std::string(ep->d_name) != "..")) {
                 //cout << ep->d_name << endl;
@@ -673,7 +675,7 @@ void GcodeGeneration::_output_DHW() {
 }
 
 int GcodeGeneration::_remove_allFile_in_Dir(std::string dirPath) {
-
+    /*
     struct _finddata_t fb;   //find the storage structure of the same properties file.
     std::string path;
     intptr_t    handle;
@@ -717,7 +719,8 @@ int GcodeGeneration::_remove_allFile_in_Dir(std::string dirPath) {
         // when Handle is created, it should be closed at last.
         _findclose(handle);
         return 0;
-    }
+    }*/
+    return 0;
 }
 
 void GcodeGeneration::singularityOpt() {
@@ -2320,11 +2323,10 @@ void GcodeGeneration::_get_GraphNode_List(QMeshPatch* patch, std::vector<collisi
                         layerLoop++;
                     }
                     // speed up the code about the _checkSingleNodeCollision();
-#pragma omp parallel
-                    {
-#pragma omp for  
+                    volatile bool flag=false;
+#pragma omp parallel for
                         for (int i = 0; i < check_below_WpSet.size(); i++) {
-
+                            if(flag){ continue;}
                             for (GLKPOSITION prevWpNodePos = check_below_WpSet[i]->GetNodeList().GetHeadPosition(); prevWpNodePos;) {
                                 QMeshNode* prevWpNode = (QMeshNode*)check_below_WpSet[i]->GetNodeList().GetNext(prevWpNodePos);
 
@@ -2336,12 +2338,16 @@ void GcodeGeneration::_get_GraphNode_List(QMeshPatch* patch, std::vector<collisi
 
                                 if (isInHull) {
                                     iscollision_candidate_cNode = true;
-                                    break;
+                                    //break;
+                                    flag = true;
                                 }
                             }
-                            if (iscollision_candidate_cNode == true) break;
+                            if (iscollision_candidate_cNode == true){
+                                flag = true;
+                                // break;
+                            }
                         }
-                    }
+
 
                     //add platform collision detection
                     for (GLKPOSITION eHead_NodePos = eHeadPatch->GetNodeList().GetHeadPosition(); eHead_NodePos;) {
@@ -2438,11 +2444,10 @@ void GcodeGeneration::_get_GraphNode_List_newConfig(QMeshPatch* patch, std::vect
                         layerLoop++;
                     }
                     // speed up the code about the _checkSingleNodeCollision();
-#pragma omp parallel
-                    {
-#pragma omp for  
-                        for (int i = 0; i < check_below_WpSet.size(); i++) {
-
+                    volatile bool flag=false;
+#pragma omp parallel for shared(flag)
+                    for (int i = 0; i < check_below_WpSet.size(); i++) {
+                        if(flag) continue;
                             for (GLKPOSITION prevWpNodePos = check_below_WpSet[i]->GetNodeList().GetHeadPosition(); prevWpNodePos;) {
                                 QMeshNode* prevWpNode = (QMeshNode*)check_below_WpSet[i]->GetNodeList().GetNext(prevWpNodePos);
 
@@ -2454,12 +2459,16 @@ void GcodeGeneration::_get_GraphNode_List_newConfig(QMeshPatch* patch, std::vect
 
                                 if (isInHull) {
                                     iscollision_candidate_cNode = true;
-                                    break;
+                                    flag=true;
+                                    //break;
                                 }
                             }
-                            if (iscollision_candidate_cNode == true) break;
+                            if (iscollision_candidate_cNode == true){
+                                flag = true;
+                                //break;
+                            }
                         }
-                    }
+
 
                     //add platform collision detection
                     for (GLKPOSITION eHead_NodePos = eHeadPatch->GetNodeList().GetHeadPosition(); eHead_NodePos;) {
@@ -3254,8 +3263,12 @@ void GcodeGeneration::writeGcode(std::string GcodeDir) {
                     std::cout << "Node->insertNodesInfo.size()" << Node->insertNodesInfo.size() << std::endl;
                     for (int i = 0; i < Node->insertNodesInfo.size(); i++) {
                         std::fprintf(fp, "G1 X%.2f Y%.2f Z%.2f B%.2f C%.2f A%.2f F%d\n",
-                            Node->insertNodesInfo[i](0), Node->insertNodesInfo[i](1), Node->insertNodesInfo[i](2),
-                            -Node->insertNodesInfo[i](3), -Node->insertNodesInfo[i](4), Node->insertNodesInfo[i](5)), F;
+                            Node->insertNodesInfo[i](0),
+                            Node->insertNodesInfo[i](1),
+                            Node->insertNodesInfo[i](2),
+                            -Node->insertNodesInfo[i](3),
+                            -Node->insertNodesInfo[i](4),
+                            Node->insertNodesInfo[i](5), F);
                     }
                 }
             }

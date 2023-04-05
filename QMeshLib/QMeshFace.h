@@ -11,7 +11,7 @@
 
 #define MAX_EDGE_NUM 10
 
-typedef enum face_type {
+enum face_type {
 	KEEP,
 	CUT_2,// 2+1- get two triangles;
 	CUT_1,// 1+2- get one triangle;	
