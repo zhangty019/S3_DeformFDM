@@ -54,9 +54,4 @@ Please refer to this project [link](https://github.com/zhangty019/MultiAxis_3DP_
 
 ## Contact Information
 Tianyu Zhang (tianyu.zhang-10@postgrad.manchester.ac.uk)
-
-Guoxin Fang  (guoxin.fang@manchester.ac.uk)
-
 Tao Liu      (tao.liu-2@postgrad.manchester.ac.uk)
-
-Charlie C.L. Wang  (changling.wang@manchester.ac.uk)
