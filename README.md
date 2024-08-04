@@ -21,6 +21,7 @@ Please compile the code with QMake file “ShapeLab.pro”.
 - **Support large obj** at: ShapeLab Property Pages -> Configuration Properties -> C/C++ -> Command Line -> Additional Options -> add "/bigobj"
 - **Install Intel oneAPI Math Kernel Library (oneMKL [download](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html?operatingsystem=window&distributions=online))** and enable it at: ShapeLab Property Pages -> Configuration Properties -> Intel Libraries for oneAPI -> Intel oneAPI Math Kernel Library (oneMKL) -> Use oneMKL -> Select '**Parallel**'
 - **And** change the code generation method at: ShapeLab & QMeshLab & GLKLib Property Pages -> Configuration Properties -> C/C++ -> Code Generation -> Runtime Library -> Select '**Multi-threaded(/MT)** for release configuration'. Note that this option will be '**Multi-threaded Debug (/MTd)** for debug configuration.
+- Please ensure the MKL is added into the **Environment Variables** (e.g. C:\Program Files (x86)\Intel\oneAPI\compiler\2024.1\bin)
 
 ![](DataSet/figures/pipline.jpg)
 
