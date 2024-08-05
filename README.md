@@ -28,6 +28,7 @@ Please compile the code with QMake file “ShapeLab.pro”.
 ## Usage
 **Step 0: Input tetrahedron mesh into the system**
 Click button **Open** at the left up corner of UI. For example, **bunny_cut6** is opened.
+Note: If you want to try out a new model, please make sure to generate the required *.tet model files and stress field files. See the [documentation](DataSet/figures/printingResult.jpg) for details.
 
 **Step 1: Run fabrication objective-driven deformation**
 Click button **1.x fabrication objective (Support free - SF, Strength reinforcement - SR, and Surface quality - SQ)** at the right side of UI. For example, **1.7 SF_SR_SQ** is enabled for **bunny_cut6** model.
