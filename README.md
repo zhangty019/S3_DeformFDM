@@ -5,7 +5,7 @@
 [Tianyu Zhang](https://www.linkedin.com/in/tianyu-zhang-49b8231b5/), Guoxin Fang, Yuming Huang, Neelotpal Dutta, Sylvain Lefebvre, Zekai Murat Kilic, and [Charlie C.L. Wang](https://mewangcl.github.io/), [*ACM Transactions on Graphics (SIGGRAPH Asia 2022)*, vol.41, no.6, article no.277 (15 pages), December 2022](https://dl.acm.org/doi/10.1145/3550454.3555516)
 
 ## Abstract
-Multi-axis motion introduces more degrees of freedom into the process of 3D printing to enable different objectives of fabrication by accumulating materials layers upon curved layers. An existing challenge is how to effectively generate the curved layers satisfying multiple objectives simultaneously. This paper presents a general slicing framework for achieving multiple fabrication objectives including support free, strength reinforcement and surface quality. These objectives are formulated as local printing directions varied in the volume of a solid, which are achieved by computing the rotation-driven deformation for the input model. The height field of a deformed model is mapped into a scalar field on its original shape, the isosurfaces of which give the curved layers of multi-axis 3D printing. The deformation can be effectively optimized with the help of quaternion fields to achieve the fabrication objectives. The effectiveness of our method has been verified on a variety of models. [Video Link](https://www.youtube.com/watch?v=qNm1ierKuUk)
+Multi-axis motion introduces more degrees of freedom into the process of 3D printing to enable different objectives of fabrication by accumulating materials layers upon curved layers. An existing challenge is how to effectively generate the curved layers satisfying multiple objectives simultaneously. This paper presents a general slicing framework for achieving multiple fabrication objectives including support-free, strength reinforcement and surface quality. These objectives are formulated as local printing directions varied in the volume of a solid, which are achieved by computing the rotation-driven deformation for the input model. The height field of a deformed model is mapped into a scalar field on its original shape, the isosurfaces of which give the curved layers of multi-axis 3D printing. The deformation can be effectively optimized with the help of quaternion fields to achieve the fabrication objectives. The effectiveness of our method has been verified on a variety of models. [Video Link](https://www.youtube.com/watch?v=qNm1ierKuUk)
 
 ## Installation
 
@@ -27,14 +27,14 @@ Please compile the code with QMake file “ShapeLab.pro”.
 
 ## Usage
 **Step 0: Input tetrahedron mesh into the system**
-Click button **Open** at the left up corner of UI. For example, **bunny_cut6** is opened.
-Note: If you want to try out a new model, please make sure to generate the required *.tet model files and stress field files. See the [documentation](DataSet/figures/printingResult.jpg) for details.
+Click button **Open** at the left-up corner of UI. For example, **bunny_cut6** is opened.
+- **Note**: If you want to try out a new model, please make sure to generate the required *.tet model files and stress field files. See the [documentation](Pre_processing.docx) for details.
 
 **Step 1: Run fabrication objective-driven deformation**
 Click button **1.x fabrication objective (Support free - SF, Strength reinforcement - SR, and Surface quality - SQ)** at the right side of UI. For example, **1.7 SF_SR_SQ** is enabled for **bunny_cut6** model.
 
 **Step 2: Run inverse deformation**
-Click button **2. Inverse Deformation** to resume deformed model and generate the scalar field for slicing.
+Click button **2. Inverse Deformation** to resume the deformed model and generate the scalar field for slicing.
 
 **Step 3: Curved layer slicing**
 Move to the next page **Slicing_Toolpath**, click button **3.0 Layer Generation (scalar)** to generate curved layers, and use **Output** to save the layers into **\DataSet\remesh_operation\layers_unremeshed**.
