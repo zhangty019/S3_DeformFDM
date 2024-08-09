@@ -52,6 +52,13 @@ Click button '**Get Tool-Path**' to generate toolpath with parameters - Width an
 **Step 6: Singularity-Aware Motion Planning for Multi-Axis Additive Manufacturing**
 Please refer to this project [link](https://github.com/zhangty019/MultiAxis_3DP_MotionPlanning) for the G-code generation.
 
+- **Note**:
+1) the support generation is based on 
+Tianyu Zhang, Yuming Huang, Piotr Kukulski, Neelotpal Dutta, Guoxin Fang, and Charlie C.L. Wang, "Support generation for robot-assisted 3D printing with curved layers", IEEE International Conference on Robotics and Automation (ICRA 2023), London, United Kingdom, May 29 - June 2, 2023.
+
+2) the toolpath generation on surface is based on
+Guoxin Fang, Tianyu Zhang, Sikai Zhong, Xiangjia Chen, Zichun Zhong, and Charlie C.L. Wang, "Reinforced FDM: Multi-axis filament alignment with controlled anisotropic strength", ACM Transactions on Graphics (SIGGRAPH Asia 2020), vol.39, no.6, article no.204 (15 pages), November 2020.
+
 ![](DataSet/figures/printingResult.jpg)
 
 ## Contact Information
