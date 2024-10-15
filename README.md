@@ -62,6 +62,8 @@ Tianyu Zhang, Yuming Huang, Piotr Kukulski, Neelotpal Dutta, Guoxin Fang, and Ch
 Guoxin Fang, Tianyu Zhang, Sikai Zhong, Xiangjia Chen, Zichun Zhong, and Charlie C.L. Wang, "[Reinforced FDM: Multi-axis filament alignment with controlled anisotropic strength](https://dl.acm.org/doi/abs/10.1145/3414685.3417834)", ACM Transactions on Graphics (SIGGRAPH Asia 2020), vol.39, no.6, article no.204 (15 pages), November 2020.
 
 ## Contact Information
-Tianyu Zhang (tianyu.zhang-10@postgrad.manchester.ac.uk)
+Tianyu Zhang      (tianyu.zhang@manchester.ac.uk)
 
-Tao Liu      (tao.liu-2@postgrad.manchester.ac.uk)
+Tao Liu           (tao.liu-2@postgrad.manchester.ac.uk)
+
+Charlie C.L. Wang (changling.wang@manchester.ac.uk)
