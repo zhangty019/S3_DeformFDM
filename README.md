@@ -7,6 +7,8 @@
 ## Abstract
 Multi-axis motion introduces more degrees of freedom into the process of 3D printing to enable different objectives of fabrication by accumulating materials layers upon curved layers. An existing challenge is how to effectively generate the curved layers satisfying multiple objectives simultaneously. This paper presents a general slicing framework for achieving multiple fabrication objectives including support-free, strength reinforcement and surface quality. These objectives are formulated as local printing directions varied in the volume of a solid, which are achieved by computing the rotation-driven deformation for the input model. The height field of a deformed model is mapped into a scalar field on its original shape, the isosurfaces of which give the curved layers of multi-axis 3D printing. The deformation can be effectively optimized with the help of quaternion fields to achieve the fabrication objectives. The effectiveness of our method has been verified on a variety of models. [Video Link](https://www.youtube.com/watch?v=qNm1ierKuUk)
 
+The extension work "S4 Slicer: Simple S3 Slicer" develped by @Joshua Bird is also available.[[github]](https://github.com/jyjblrd/S4_Slicer) [[Video@YouTube]](https://www.youtube.com/watch?v=M51bMMVWbC8)
+
 ## Installation
 
 Please compile the code with QMake file “ShapeLab.pro”.
