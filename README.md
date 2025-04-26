@@ -18,12 +18,44 @@ OpenMKL Qt
 
 **Install Steps**: 
 
-`mkdir build && cd build`
+Clone this repository
+```bash
+git clone https://github.com/zhangty019/S3_DeformFDM.git
+cd S3_DeformFDM
+git checkout main-ubuntu
+```
 
-`cmake .. && cmake --build . --target ShapeLab -j 12 && cd ShapeLab`
+Install required Qt dependencies
+```bash
+sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake freeglut3-dev
+```
 
-`./ShapeLab`
+Download Intel oneAPI Math Kernel Library installer file: [Offline Installer](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html?operatingsystem=linux&linux-install=offline)
 
+Run the installer from the driectory the file was downloaded to
+```bash
+sudo sh <installer.sh>
+```
+
+Source the setvars.sh file to set environment variables correctly
+```bash
+`source /opt/intel/oneapi/setvars.sh
+```
+
+Create the build directory
+```bash
+mkdir build && cd build
+```
+
+Build with CMake
+```bash
+`cmake .. && cmake --build . --target ShapeLab -j 12 && cd ShapeLab
+```
+
+Launch the ShapeLab application
+```bash
+./ShapeLab
+```
 
 ![](DataSet/figures/pipline.jpg)
 
